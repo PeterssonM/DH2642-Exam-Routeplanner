@@ -12,7 +12,7 @@ function getCoord(origin, destination){
             var lines = data.split("\n")
             let ori, des;
             lines.forEach(line => {
-                d = line.split(",");
+                let d = line.split(",");
                 
                 if (d[1] == origin && d[6] == "\r") {
                     ori = d;
