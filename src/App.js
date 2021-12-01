@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
+
+import {
+  Route,
+  Routes,
+} from 'react-router-dom';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="app">
-      <h1>Hello World!</h1>
-    </div>
-  );
+import Feed from "./Feed"
+
+export default class App extends Component {
+
+  render() {
+    return (
+      <div className="app">
+        <Routes>
+          <Route path='/jek' element={<Feed />}></Route>
+        </Routes>
+      </div>
+      
+    )
+  }
 }
 
-export default App;
