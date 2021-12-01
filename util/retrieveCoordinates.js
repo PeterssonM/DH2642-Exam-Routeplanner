@@ -36,9 +36,7 @@ function getCoord(origin, destination){
                     }
                 })
             }
-            
-    
-            
+               
         });        
     })
 
