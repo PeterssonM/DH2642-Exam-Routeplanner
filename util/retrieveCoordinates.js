@@ -45,6 +45,7 @@ function getCoord(origin, destination){
                     }
                 })
             }
+
         });
     })
 }
