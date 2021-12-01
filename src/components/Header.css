@@ -6,6 +6,7 @@
     border-bottom: 0.2px solid lightgray;
     background-color: lightblue;
     width: 100%;
+    z-index: 999;
 }
 
 .left-header {
@@ -13,7 +14,6 @@
 }
 
 .header_search {
-    padding: 10px;
     display: flex;
     border-radius: 10px;
     align-items: center; 
@@ -25,25 +25,23 @@
 }
 
 .right-header {
-    padding: 20px;
-    height: 30px;  
-    margin-right: 40px;
-    display: flex; 
-    align-items: center; 
-    margin-left: 50px;
-    
-    
+    display: flex;
 }
 
 .headerButtons {
-    padding: 20px;
-    margin-top: 30px;
-    margin-left: 50px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    color: grey;
+    cursor: pointer; 
+    margin-top: 10px;
 }
 
-.headerButtonTitle {
-    margin-bottom: 30px;
-    
+.headerButtons:hover {
+    color: black;
 }
+
+
+
 
 

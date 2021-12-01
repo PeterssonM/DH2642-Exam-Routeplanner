@@ -15,7 +15,7 @@ export default function Header() {
 
             <div className="right-header">
                <HeaderButtons icon={"home"} title="Home"/>
-               <HeaderButtons icon={"sign-out-alt"} title="SignOut"/>
+               <HeaderButtons className="signOutButton" icon={"sign-out-alt"} title="Sign Out"/>
             </div>
         </div>
     );
@@ -25,7 +25,7 @@ export default function Header() {
 function HeaderButtons({icon, title}) {
     return (
         <div className="headerButtons">
-            <Icon icon = {icon}/>
+            <Icon className="headerIcons" icon = {icon}/>
             <h3 className="headerButtonTitle">{title}</h3>
         </div>
     )
