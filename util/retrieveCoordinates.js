@@ -1,5 +1,5 @@
 /*
-  --- This file will be discontinued due to uncompatible data in "stops.txt" ---
+  --- This file will be discontinued due to uncompatible data in "stops.txt" --- 
   Given an origin and a destination, this function returnes the coordinates for each of the stations.
 */
 var fs = require('fs');
