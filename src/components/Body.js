@@ -1,9 +1,10 @@
 import React from 'react';
 import './Body.css';
+import Icon from './Icon';
 
 export default function Body() {
     return (
-        <div className= "boxes">
+        <div>
             <div className="squares">
                 <CreatingSquares title="SquareOne" body="MASSA BAJS"/>
                 <CreatingSquares title="SquareTwo" body="MASSA BAJS"/>
@@ -21,6 +22,10 @@ function CreatingSquares({title, body, style}) {
         <div className="box">
             <h2>{title}</h2>
             <p>{body}</p>
+            <div className="boxButtons">
+                <Icon className="editButton" icon = {"edit"}/>
+                <Icon className="trashButton" icon = {"trash"}/>
+            </div>
         </div>
     )
 }

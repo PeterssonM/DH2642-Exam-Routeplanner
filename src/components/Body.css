@@ -3,7 +3,6 @@
     font-family: 'Lato';
     background:#666;
     color:#fff;
-    text-decoration:none;
     color:#000;
     background:rgb(204, 222, 255);
     display:block;
@@ -33,7 +32,11 @@
     background:rgb(204, 222, 255);
     cursor: pointer;
     font-size: 200px;
-    color: rgba(0, 0, 0, 0.5)
-    
+    color: rgba(0, 0, 0, 0.5)   
+}
+
+.boxButtons {
+    padding-left: 130px;
+    padding-top: 50px;
 }
 
