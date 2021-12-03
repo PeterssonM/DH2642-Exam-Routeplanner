@@ -8,21 +8,21 @@ export default function Header() {
 
             <div className="left-header">
                 <div className="header_search">
-                    <Icon icon={"search"} style={"icc"} />
+                    <Icon icon={"search"} style={"searchIcon"} />
                     <input type="text"></input>
                 </div>
             </div>
 
             <div className="right-header">
                <HeaderButtons icon={"home"} title="Home"/>
-               <HeaderButtons className="signOutButton" icon={"sign-out-alt"} title="Sign Out"/>
+               <HeaderButtons icon={"sign-out-alt"} title="Sign Out"/>
             </div>
         </div>
     );
 }
 
 //Template function for creating buttons
-function HeaderButtons({icon, title}) {
+function HeaderButtons({icon, title, style}) {
     return (
         <div className="headerButtons">
             <Icon className="headerIcons" icon = {icon}/>

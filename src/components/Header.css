@@ -35,13 +35,14 @@
     color: grey;
     cursor: pointer; 
     margin-top: 10px;
+    margin-left: 20px;
 }
 
 .headerButtons:hover {
     color: black;
 }
 
-.icc {
+.searchIcon {
     color: black;
 }
 
