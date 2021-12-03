@@ -8,22 +8,25 @@ import {
 import './App.css';
 
 import Feed from "./Feed"
+import Signup from './Signup';
 
 import { AuthProvider } from './contexts/AuthContext';
+
+import StopFinder from './service/stopFinder.js';
 
 export default class App extends Component {
 
   render() {
     return (
       <div className="app">
-        <Routes>
-          
-            <Route path='/home' element={<Feed />}></Route>
-          
-        </Routes>
+        <AuthProvider>
+          <Routes>
+              <Route path='/home' element={<Feed />}></Route>
+              <Route path="signup" element={<Signup />}></Route>
+          </Routes>
+        </AuthProvider>
       </div>
-      
+
     )
   }
 }
-

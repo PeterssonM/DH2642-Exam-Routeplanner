@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react'
 import { useAuth } from './contexts/AuthContext'
 
+import Field from "./components/Field"
+
 export default function Signup() {
     
     const emailRef = useRef()
@@ -29,10 +31,17 @@ export default function Signup() {
 
         setLoading(false)
     }
-    
+
     return (
         <div>
-            
+            <form className="signup">
+                <Field ref={emailRef} label={"Email: "} type={"text"} />
+                <Field ref={passwordRef} label={"Password: "} type="password" />
+                <Field ref={passwordConfirmRef} label={"Confirm password: "} type={"password"} />
+                <div>
+                    <button type="submit">Signup</button>
+                </div>
+            </form>
         </div>
     )
 }
