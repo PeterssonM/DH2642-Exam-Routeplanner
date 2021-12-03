@@ -13,9 +13,9 @@ export default function StopFinder(){
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'X-Requested-With'
+        'Access-Control-Allow-Origin': '*'
       }
     }).then( (data) => { resolve(data.json())})
   })
 }
+
