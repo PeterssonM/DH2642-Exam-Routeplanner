@@ -12,6 +12,8 @@ import Signup from './Signup';
 
 import { AuthProvider } from './contexts/AuthContext';
 
+import StopFinder from './service/stopFinder.js';
+
 export default class App extends Component {
 
   render() {
@@ -24,8 +26,7 @@ export default class App extends Component {
           </Routes>
         </AuthProvider>
       </div>
-      
+
     )
   }
 }
-
