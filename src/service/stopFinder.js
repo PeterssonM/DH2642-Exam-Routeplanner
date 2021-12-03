@@ -10,12 +10,16 @@ const API_KEY="8914fa48-04a5-4511-94c8-61d49831bd6a";
 */
 export default function StopFinder(params){
   return new Promise((resolve, reject)=>{
-    const respons = fetch("http://localhost:3000/stop", {
+
+
+
+    fetch("http://localhost:3000/stop", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
-      }
+      },
+      body: JSON.stringify({url: BASE_URL_STOP_LOOKUP + new URLSearchParams(params)})
     }).then( (data) => { resolve(data.json())})
   })
 }
