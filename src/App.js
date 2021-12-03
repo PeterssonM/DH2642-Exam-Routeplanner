@@ -14,6 +14,11 @@ import { AuthProvider } from './contexts/AuthContext';
 
 import StopFinder from './service/stopFinder.js';
 
+StopFinder()
+  .then( (data) => {
+    console.log(data)
+  })
+
 export default class App extends Component {
 
   render() {
