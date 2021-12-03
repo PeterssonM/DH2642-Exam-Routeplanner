@@ -8,7 +8,7 @@ export default function Header() {
 
             <div className="left-header">
                 <div className="header_search">
-                    <Icon icon={"search"}/>
+                    <Icon icon={"search"} style={"icc"} />
                     <input type="text"></input>
                 </div>
             </div>
