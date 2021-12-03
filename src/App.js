@@ -14,9 +14,17 @@ import { AuthProvider } from './contexts/AuthContext';
 
 import StopFinder from './service/stopFinder.js';
 
-StopFinder()
+// API call test
+StopFinder({
+  key: "8914fa48-04a5-4511-94c8-61d49831bd6a",
+  input: "Kista",
+  id: "740012883",
+  format: "json"
+})
   .then( (data) => {
     console.log(data)
+  }).catch((error)=>{
+    console.log(error)
   })
 
 export default class App extends Component {
