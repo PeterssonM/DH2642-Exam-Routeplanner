@@ -17,9 +17,9 @@ export default class App extends Component {
     return (
       <div className="app">
         <Routes>
-          <AuthProvider>
+          
             <Route path='/home' element={<Feed />}></Route>
-          </AuthProvider>
+          
         </Routes>
       </div>
       
