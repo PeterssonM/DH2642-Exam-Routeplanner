@@ -13,15 +13,7 @@ const Feed = () =>  {
                 console.log(data.Trip);
             })
     }*/
-<<<<<<< HEAD
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            notes: [
-=======
         const [notes, setNotes] = useState([
->>>>>>> c688ca1192a01d94784bba18b846553f203f1833
             {
                 id: nanoid(),
                 title: "Title1",
@@ -54,14 +46,6 @@ const Feed = () =>  {
                 text: "test",
                 date: "4/12/2020"
             }
-<<<<<<< HEAD
-            ]
-        }
-
-    }
-    render() {
-        const {notes} = this.state;
-=======
             ]);
         
     
@@ -78,20 +62,12 @@ const Feed = () =>  {
 
 
         }
->>>>>>> c688ca1192a01d94784bba18b846553f203f1833
         return (
             <div className="feed">
                 <Header/>
                 <Body notes={notes} handleAddNote={addNote}/>
             </div>
         );
-    }
-<<<<<<< HEAD
-=======
-    
+}
     export default Feed;
 
-
->>>>>>> c688ca1192a01d94784bba18b846553f203f1833
-
-}

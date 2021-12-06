@@ -11,11 +11,11 @@ const AddNote = ( {handleAddNote} ) => {
 
     const handleChangeTitle = (event) => {setNoteTitle(event.target.value); }
 
-    const handleSaveClicked = () => { handleAddNote(noteText); }
+    const handleSaveClicked = () => { handleAddNote(noteText, noteTitle); }
 
     return(
         <div className="addNote">
-            <textarea className="title-area"
+            <textarea className="titleArea"
                 rows="1" 
                 cols="10"
                 placeholder="Enter a title.."
