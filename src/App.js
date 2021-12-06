@@ -9,6 +9,7 @@ import './App.css';
 
 import Feed from "./components/presenter/FeedPresenter"
 import Signup from "./components/presenter/SignupPresenter"
+import EditPage from "./components/presenter/EditPagePresenter"
 
 import { AuthProvider } from './contexts/AuthContext';
 
@@ -22,6 +23,7 @@ export default class App extends Component {
         <AuthProvider>
           <Routes>
               <Route path='/home' element={<Feed />}></Route>
+              <Route path="/edit" element={<EditPage />}></Route>
               <Route path="signup" element={<Signup />}></Route>
           </Routes>
         </AuthProvider>

@@ -31,7 +31,7 @@ const AddNote = ( {handleAddNote} ) => {
             ></textarea>
             <div className="note-footer">
                 <button className="save" onClick={handleSaveClicked}> Create </button>
-                <Icon className="editButton" icon = {"edit"}/>
+                <Icon className="editButton" icon = {"edit"} onClick="location.href = 'http://localhost:3000/edit'; "/>
             </div>
         </div>
     )
