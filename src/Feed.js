@@ -1,24 +1,61 @@
-import React, {Component} from 'react';
 import './App.css';
 import Header from "./components/Header"
 import Planner from "./service/sl"
 import Body from "./components/Body"
+import { nanoid } from '@reduxjs/toolkit';
+import {useState} from 'react';
 
-export default class Feed extends Component {
 
-    componentDidMount() {
+const Feed = () => {
+
+    /*componentDidMount() {
         Planner(740021730, 740012883)
             .then( (data) => {
                 console.log(data.Trip);
             })
-    }
+    }*/
 
-    render() {
-        return (
-            <div className="feed">
-              <Header/>
-              <Body/>
-            </div>
-          );
-    }
-}
+    const[notes, setNotes] = useState([{
+            id: nanoid(),
+            title: "Title1",
+            text: "test",   
+            date: "15/12/2020"
+        },
+        {
+            id: nanoid(),
+            title: "Title2",
+            text: "test",
+            date: "15/12/2020"
+        },
+        {
+            id: nanoid(),
+            title: "Title3",
+            text: "test",
+            date: "15/12/2020"
+        },
+        {
+            id: nanoid(),
+            title: "Title4",
+            text: "test",
+            date: "15/12/2020"
+        },
+        {
+            id: nanoid(),
+            title: "Title5",
+            text: "test",
+            date: "15/12/2020"
+        }
+
+    ]);
+    
+    return (
+        <div className="feed">
+        <Header/>
+        <Body notes={notes}/>
+        </div>
+    );
+    
+};
+export default Feed;
+
+

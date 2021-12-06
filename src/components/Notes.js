@@ -2,11 +2,12 @@ import React from 'react';
 import Icon from './Icon';
 import './Notes.css';
 
-const Notes = () => {
+const Notes = ({id, title, text, date}) => {
     return <div className="note">
-        <span>Title</span>
+        <h3>{title}</h3>
+        <span>{text}</span>
         <div className="note-foot">
-            <small>DATE</small>
+            <small>{date}</small>
             <div className="note-buttons">
                 <Icon className="editButton" icon = {"edit"}/>
                 <Icon className="trashButton" icon = {"trash"}/>
