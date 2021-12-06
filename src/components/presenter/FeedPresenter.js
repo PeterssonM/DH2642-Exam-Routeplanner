@@ -16,11 +16,14 @@ export default class Feed extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            notes: [{
+            notes: [
+            {
                 id: nanoid(),
                 title: "Title1",
-                text: "test",   
-                date: "15/12/2020"
+                text: "test",
+                origin: "Kista",
+                destination: "T-centralen",
+                date: "15/12/2020" 
             },
             {
                 id: nanoid(),
@@ -48,7 +51,7 @@ export default class Feed extends Component {
             }
             ]
         }
-    
+
     }
     render() {
         const {notes} = this.state;
@@ -59,8 +62,5 @@ export default class Feed extends Component {
             </div>
         );
     }
-    
+
 }
-
-
-

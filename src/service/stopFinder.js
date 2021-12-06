@@ -11,8 +11,6 @@ const API_KEY="8914fa48-04a5-4511-94c8-61d49831bd6a";
 export default function StopFinder(params){
   return new Promise((resolve, reject)=>{
 
-
-
     fetch("http://localhost:3000/stop", {
       method: 'POST',
       headers: {
@@ -23,4 +21,3 @@ export default function StopFinder(params){
     }).then( (data) => { resolve(data.json())})
   })
 }
-
