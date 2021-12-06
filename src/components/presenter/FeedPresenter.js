@@ -2,9 +2,10 @@ import Header from "../view/HeaderView"
 import Planner from "../../service/sl"
 import Body from "../view/BodyView"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
+import '../view/AddNoteView';
 
-export default class Feed extends Component {
+const Feed = () =>  {
 
     /*componentDidMount() {
         Planner(740021730, 740012883)
@@ -12,11 +13,15 @@ export default class Feed extends Component {
                 console.log(data.Trip);
             })
     }*/
+<<<<<<< HEAD
 
     constructor(props) {
         super(props);
         this.state = {
             notes: [
+=======
+        const [notes, setNotes] = useState([
+>>>>>>> c688ca1192a01d94784bba18b846553f203f1833
             {
                 id: nanoid(),
                 title: "Title1",
@@ -49,18 +54,44 @@ export default class Feed extends Component {
                 text: "test",
                 date: "4/12/2020"
             }
+<<<<<<< HEAD
             ]
         }
 
     }
     render() {
         const {notes} = this.state;
+=======
+            ]);
+        
+    
+        const addNote = (text, title) => {
+            const date = new Date();
+            const newNote = {
+                id: nanoid(),
+                title: title,
+                text: text,
+                date: date.toLocaleDateString()
+            }
+            const newNotes = [...notes, newNote];
+            setNotes(newNotes);
+
+
+        }
+>>>>>>> c688ca1192a01d94784bba18b846553f203f1833
         return (
             <div className="feed">
                 <Header/>
-                <Body notes={notes}/>
+                <Body notes={notes} handleAddNote={addNote}/>
             </div>
         );
     }
+<<<<<<< HEAD
+=======
+    
+    export default Feed;
+
+
+>>>>>>> c688ca1192a01d94784bba18b846553f203f1833
 
 }
