@@ -1,6 +1,7 @@
 import React from 'react';
 import './Body.css';
 import Notes from './Notes';
+import  AddNote from './AddNote';
 
 export default function Body({notes}) {
     return (
@@ -13,6 +14,7 @@ export default function Body({notes}) {
                        text={note.text} 
                        date={note.date}/>
                 ))}
+                <AddNote/>
             </div>
         </div>
     );
