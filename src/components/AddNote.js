@@ -5,7 +5,7 @@ const AddNote = () => {
         <div className="addNote">
             <textarea className="title-area"
                 rows="1" 
-                cols="0"
+                cols="10"
                 placeholder="Enter a title.."
             ></textarea>
             <textarea className="text-area"
