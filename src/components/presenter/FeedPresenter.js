@@ -3,6 +3,7 @@ import Planner from "../../service/sl"
 import Body from "../view/BodyView"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 import React, {Component} from 'react';
+import '../view/AddNoteView';
 
 export default class Feed extends Component {
 
@@ -48,14 +49,17 @@ export default class Feed extends Component {
             }
             ]
         }
-    
     }
+
     render() {
         const {notes} = this.state;
+        const addNote = (text) => {
+            console.log(text);
+        }
         return (
             <div className="feed">
                 <Header/>
-                <Body notes={notes}/>
+                <Body notes={notes} handleAddNote={addNote}/>
             </div>
         );
     }
