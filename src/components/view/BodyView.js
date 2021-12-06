@@ -1,7 +1,7 @@
 import React from 'react';
 import './Body.css';
-import Notes from './Notes';
-import  AddNote from './AddNote';
+import Notes from '../NotesView';
+import  AddNote from './AddNoteView';
 
 export default function Body({notes}) {
     return (

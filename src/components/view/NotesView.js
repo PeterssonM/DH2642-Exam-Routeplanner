@@ -1,7 +1,7 @@
 import React from 'react';
-import Icon from './Icon';
+import Icon from './IconView';
 import './Notes.css';
-import './AddNote';
+import './AddNoteView';
 
 const Notes = ({id, title, text, date}) => {
     return <div className="note">
