@@ -7,8 +7,8 @@ import {
 
 import './App.css';
 
-import Feed from "./Feed"
-import Signup from './Signup';
+import Feed from "./components/presenter/FeedPresenter"
+import Signup from './components/presenter/SignupPresenter';
 
 import { AuthProvider } from './contexts/AuthContext';
 

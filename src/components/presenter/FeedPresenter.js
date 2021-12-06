@@ -1,7 +1,7 @@
-import './App.css';
-import Header from "./components/Header"
-import Planner from "./service/sl"
-import Body from "./components/Body"
+import './src/App.css';
+import Header from "./components/view/HeaderView"
+import Planner from "../../service/sl"
+import Body from "./components/view/BodyView"
 import { nanoid } from '@reduxjs/toolkit';
 import React, {Component} from 'react';
 

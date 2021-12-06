@@ -5,7 +5,6 @@ import Icon from './Icon';
 export default function Header() {
     return (
         <div className="header">
-
             <div className="left-header">
                 <div className="header_search">
                     <Icon icon={"search"} style={"searchIcon"} />

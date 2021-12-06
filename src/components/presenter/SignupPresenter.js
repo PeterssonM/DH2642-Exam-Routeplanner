@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
-import { useAuth } from './contexts/AuthContext'
+import { useAuth } from '../../contexts/AuthContext'
 
-import Field from "./components/Field"
+import Field from "../view/FieldView"
 
 export default function Signup() {
     

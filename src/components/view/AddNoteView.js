@@ -8,7 +8,7 @@ const AddNote = () => {
                 cols="10"
                 placeholder="Enter a title.."
             ></textarea>
-            <textarea className="text-area"
+            <textarea className="textArea"
                 rows="8" 
                 cols="10"
                 placeholder="Type to add a new note..."
@@ -17,7 +17,6 @@ const AddNote = () => {
                 <button className="save"> Save </button>
                 <button className="edit"> Edit </button>
             </div>
-
         </div>
     )
 }
