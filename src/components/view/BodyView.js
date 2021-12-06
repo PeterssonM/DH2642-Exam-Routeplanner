@@ -7,12 +7,15 @@ export default function Body({notes, handleAddNote}) {
     return (
         <div>
             <div className="notes">
-                {notes.map((note) => ( 
-                <Notes 
-                       id={note.id} 
-                       title={note.title} 
-                       text={note.text} 
-                       date={note.date}/>
+                {notes.map((note) => (
+                    <Notes
+                           id={note.id}
+                           title={note.title}
+                           text={note.text}
+                           origin={note.origin}
+                           destination={note.destination}
+                           date={note.date}
+                    />
                 ))}
                 <AddNote handleAddNote={handleAddNote}/>
             </div>

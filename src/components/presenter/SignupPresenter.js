@@ -3,7 +3,7 @@ import { useAuth } from '../../contexts/AuthContext'
 import Field from "../view/FieldView"
 
 export default function Signup() {
-    
+
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
@@ -16,8 +16,8 @@ export default function Signup() {
     async function handleSubmit(e) {
         e.preventDefault()
 
-        if (passwordRef.current.value !== passwordConfirmRef.current.value) { 
-            return setError("Password does not match with confirm password") 
+        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+            return setError("Password does not match with confirm password")
         }
 
         try {
