@@ -1,24 +1,9 @@
-.box {
-    margin: 20px;
-    font-family: 'Lato';
-    background:#666;
-    color:#fff;
-    color:#000;
-    background:rgb(204, 222, 255);
-    display:block;
-    height:10em;
-    width:10em;
-    padding:2em;
-    border-radius: 25px;
-    cursor: pointer;
-    resize: none; 
-}
-
-.box:hover {
-    box-shadow:10px 10px 7px rgba(0,0,0,.7);
-    transform: scale(1.05);
-    position:relative;
-    z-index:5;
+.notes {
+    padding-left: 40em;
+    padding-top: 1rem;
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(4, 250px);
 }
 
 .add-button {

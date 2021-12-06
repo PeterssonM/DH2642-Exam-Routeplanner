@@ -1,0 +1,19 @@
+.note {
+    margin: 20px;
+    height:15em;
+    width:15em;
+    padding:2em;
+    border-radius: 25px;
+    font-family: 'Lato';
+    background:rgb(204, 222, 255);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer; 
+}
+
+.note-foot {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}

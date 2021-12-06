@@ -1,11 +1,30 @@
 import React from 'react';
 import './Body.css';
 import Icon from './Icon';
+import Notes from './Notes';
 
 export default function Body() {
     return (
         <div>
-            <div className="squares">
+            <div className="notes">
+                <Notes/>
+                <Notes/>
+                <Notes/>
+                <Notes/>
+                <Notes/>
+                <Notes/>
+            </div>
+        </div>
+    )
+
+}
+
+
+
+
+    /*return (
+        <div>
+            <div className="notes">
                 <CreatingSquares title="SquareOne" body="MASSA BAJS"/>
                 <CreatingSquares title="SquareTwo" body="MASSA BAJS"/>
                 <CreatingSquares title="SquareThree" body="MASSA BAJS"/>
@@ -28,4 +47,4 @@ function CreatingSquares({title, body, style}) {
             </div>
         </div>
     )
-}
+}*/
