@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import Icon from './Icon';
+import Icon from './IconView';
 
 export default function Header() {
     return (

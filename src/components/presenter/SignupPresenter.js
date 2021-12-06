@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
-
 import Field from "../view/FieldView"
 
 export default function Signup() {
