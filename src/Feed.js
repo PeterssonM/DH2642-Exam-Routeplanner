@@ -3,7 +3,7 @@ import Header from "./components/Header"
 import Planner from "./service/sl"
 import Body from "./components/Body"
 import { nanoid } from '@reduxjs/toolkit';
-import {useState} from 'react';
+import React, {component, useState} from 'react';
 
 
 const Feed = () => {
@@ -25,33 +25,33 @@ const Feed = () => {
             id: nanoid(),
             title: "Title2",
             text: "test",
-            date: "15/12/2020"
+            date: "11/12/2020"
         },
         {
             id: nanoid(),
             title: "Title3",
             text: "test",
-            date: "15/12/2020"
+            date: "12/12/2020"
         },
         {
             id: nanoid(),
             title: "Title4",
             text: "test",
-            date: "15/12/2020"
+            date: "9/12/2020"
         },
         {
             id: nanoid(),
             title: "Title5",
             text: "test",
-            date: "15/12/2020"
+            date: "4/12/2020"
         }
 
     ]);
     
     return (
         <div className="feed">
-        <Header/>
-        <Body notes={notes}/>
+            <Header/>
+            <Body notes={notes}/>
         </div>
     );
     
