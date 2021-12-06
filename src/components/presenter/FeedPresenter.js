@@ -1,11 +1,9 @@
-import './src/App.css';
-import Header from "./components/view/HeaderView"
+import './src/App.css'
+import Header from "./src/components/view/HeaderView"
 import Planner from "../../service/sl"
-import Body from "./components/view/BodyView"
-import { nanoid } from '@reduxjs/toolkit';
+import Body from "./src/components/view/BodyView"
+import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 import React, {Component} from 'react';
-
-
 
 export default class Feed extends Component {
 
