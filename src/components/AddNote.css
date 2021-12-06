@@ -10,6 +10,15 @@
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;  
+    opacity: 0.6;
+}
+
+.addNote:hover {
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    transform: scale(1.05);
+    position:relative;
+    z-index:5;
+    opacity: 1.0;
 }
 
 .note-footer{
