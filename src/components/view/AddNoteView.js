@@ -5,8 +5,11 @@ import { useState } from 'react';
 const AddNote = ( {handleAddNote} ) => {
 
     const[noteText, setNoteText] = useState('');
+    const [noteTitle, setNoteTitle] = useState('');
 
-    const handleChangeWritten = (event) => { setNoteText(event.target.value); }
+    const handleChangeText = (event) => { setNoteText(event.target.value); }
+
+    const handleChangeTitle = (event) => {setNoteTitle(event.target.value); }
 
     const handleSaveClicked = () => { handleAddNote(noteText); }
 
@@ -16,12 +19,14 @@ const AddNote = ( {handleAddNote} ) => {
                 rows="1" 
                 cols="10"
                 placeholder="Enter a title.."
+                onChange={handleChangeTitle}
+                value = {noteTitle}
             ></textarea>
             <textarea className="textArea"
                 rows="8" 
                 cols="10"
                 placeholder="Type to add a new note..."
-                onChange={handleChangeWritten}
+                onChange={handleChangeText}
                 value = {noteText}
             ></textarea>
             <div className="note-footer">
