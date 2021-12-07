@@ -10,6 +10,7 @@ import './App.css';
 import Feed from "./components/presenter/FeedPresenter"
 import Signup from "./components/presenter/SignupPresenter"
 import EditPage from "./components/presenter/EditPagePresenter"
+import Header from "./components/view/HeaderView"
 
 import { AuthProvider } from './contexts/AuthContext';
 
@@ -20,6 +21,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
+        <Header />
         <AuthProvider>
           <Routes>
               <Route path='/home' element={<Feed />}></Route>

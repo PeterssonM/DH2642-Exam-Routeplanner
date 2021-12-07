@@ -34,7 +34,6 @@ export default function Signup() {
 
     return (
         <div>
-            <Header/>
             <form className="signup">
                 <Field ref={emailRef} label={"Email: "} type={"text"} />
                 <Field ref={passwordRef} label={"Password: "} type="password" />

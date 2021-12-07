@@ -1,5 +1,6 @@
 import './AddNote.css'
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 
 const AddNote = ( {handleAddNote} ) => {
 
@@ -44,7 +45,9 @@ const AddNote = ( {handleAddNote} ) => {
             <div className="note-footer">
                 <button className="save" onClick={handleSaveClicked}> Create </button>
                 <div className="editButton">
-                    <i  class="fas fa-edit fa-1g"></i>
+                    <Link to="/edit">
+                    <i  className="fas fa-edit fa-1g"></i>
+                    </Link>
                 </div>
             </div>
         </div>

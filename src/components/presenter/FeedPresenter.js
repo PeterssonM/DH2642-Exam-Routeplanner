@@ -71,7 +71,6 @@ const Feed = () =>  {
 
         return (
             <div className="feed">
-                <Header/>
                 <Body 
                     notes={notes} 
                     handleAddNote={addNote}
