@@ -46,7 +46,7 @@ const AddNote = ( {handleAddNote} ) => {
                 <button className="save" onClick={handleSaveClicked}> Create </button>
                 <div className="editButton">
                     <Link to="/edit">
-                    <i  className="fas fa-edit fa-1g"></i>
+                    <i className="fas fa-edit fa-1g"></i>
                     </Link>
                 </div>
             </div>
