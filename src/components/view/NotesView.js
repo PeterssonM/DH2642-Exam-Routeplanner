@@ -3,7 +3,7 @@ import './Notes.css';
 import './AddNoteView';
 
 const Notes = ({id, title, text, origin, destination, date, handleDeleteNote}) => {
-    return <div className="note">
+    return <div className="note" onClick>
         {/*<p>{id}</p> debugging*/}
         <h3 className="title">{title}</h3>
         <p className= "paragraph">{text}</p>
@@ -14,7 +14,7 @@ const Notes = ({id, title, text, origin, destination, date, handleDeleteNote}) =
         <div className="note-foot">
             <small>{date}</small>
             <div className="note-buttons">
-                <i class="fas fa-trash fa-1g" onClick={()=> handleDeleteNote(id)}></i>
+                <i className="fas fa-trash fa-1g" onClick={()=> handleDeleteNote(id)}></i>
             </div>
         </div>
     </div>

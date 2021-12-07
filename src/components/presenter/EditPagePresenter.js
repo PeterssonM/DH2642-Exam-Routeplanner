@@ -1,9 +1,9 @@
 import React from 'react'
+import Header from "../view/HeaderView"
 
 function EditPagePresenter() {
     return (
-        <div>
-            
+        <div className= "editPage">
         </div>
     )
 }

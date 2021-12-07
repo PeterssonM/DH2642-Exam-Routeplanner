@@ -1,20 +1,24 @@
 import React from 'react';
 import './Header.css';
-import Icon from './IconView';
+import {Link} from 'react-router-dom';
+
 
 export default function Header() {
     return (
         <div className="header">
             <div className="left-header">
                 <div className="header_search">
-                    <Icon icon={"search"} style={"searchIcon"} />
+                    <i className= {"fas fa-search fa-1g"} title="Search"/>
                     <input type="text"></input>
                 </div>
             </div>
 
             <div className="right-header">
-               <HeaderButtons icon={"home"} title="Home"/>
-               <HeaderButtons icon={"sign-out-alt"} title="Sign Out"/>
+                <Link to='/home'>
+               <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
+               </Link>
+               <HeaderButtons icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out"/>
+ 
             </div>
         </div>
     );
@@ -24,7 +28,7 @@ export default function Header() {
 function HeaderButtons({icon, title, style}) {
     return (
         <div className="headerButtons">
-            <Icon className="headerIcons" icon = {icon}/>
+            <i className= {icon}/>
             <h3 className="headerButtonTitle">{title}</h3>
         </div>
     )
