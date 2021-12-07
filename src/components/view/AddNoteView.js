@@ -36,7 +36,7 @@ const AddNote = ( {handleAddNote} ) => {
                 onChange={handleChangeText}
                 value = {noteText}
             ></textarea>
-            <div>
+            <div className="characterLimit">
                 <small>{characterLimit - noteText.length}</small>
             </div>
             <div className="note-footer">
