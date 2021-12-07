@@ -41,6 +41,9 @@
 
 .editButton:hover{
     cursor: pointer;
+    transform: scale(1.20);
+    position:relative;
+    z-index:5;
 }
 
 .characterLimit {
