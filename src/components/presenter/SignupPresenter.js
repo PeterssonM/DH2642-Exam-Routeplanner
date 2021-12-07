@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import Field from "../view/FieldView"
+import Header from "../view/HeaderView"
 
 export default function Signup() {
 
@@ -33,6 +34,7 @@ export default function Signup() {
 
     return (
         <div>
+            <Header/>
             <form className="signup">
                 <Field ref={emailRef} label={"Email: "} type={"text"} />
                 <Field ref={passwordRef} label={"Password: "} type="password" />
