@@ -1,6 +1,6 @@
 import './AddNote.css'
 import Icon from './IconView';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const AddNote = ( {handleAddNote} ) => {
 
