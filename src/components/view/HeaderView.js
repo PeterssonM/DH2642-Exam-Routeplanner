@@ -10,6 +10,9 @@ export default function Header( {handleSearchNote} ) {
                 <div className="header_search">
                     <i className= {"fas fa-search fa-1g"} title="Search"/>
                     <input 
+                        onChange={(event) => 
+                            handleSearchNote(event.target.value)
+                        }
                         type="text" placeholder="Type to search...">
                     </input>
                 </div>

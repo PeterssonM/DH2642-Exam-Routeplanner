@@ -4,11 +4,11 @@ import {useState} from 'react'
 
 export default function HeaderPresenter() {
     
-    const [searchText, setSearchTest] = useState('');
+    const [searchText, setSearchText] = useState('');
 
     return (
-        <div classname="Header">
-            <Header/> 
+        <div className="header">
+            <Header handleSearchNote={setSearchText}/> 
         </div>
     )
 }
