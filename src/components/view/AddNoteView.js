@@ -1,5 +1,4 @@
 import './AddNote.css'
-import Icon from './IconView';
 import React, { useState } from 'react';
 
 const AddNote = ( {handleAddNote} ) => {

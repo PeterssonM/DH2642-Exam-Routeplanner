@@ -1,5 +1,4 @@
 import React from 'react';
-import Icon from './IconView';
 import './Notes.css';
 import './AddNoteView';
 
