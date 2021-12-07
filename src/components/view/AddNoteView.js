@@ -8,7 +8,10 @@ const AddNote = ( {handleAddNote} ) => {
     const [noteTitle, setNoteTitle] = useState('');
     const characterLimit= 200;
 
-    const handleChangeText = (event) => { setNoteText(event.target.value); }
+    const handleChangeText = (event) => { 
+        if(characterLimit - event.target.value.length >= 0) {
+            setNoteText(event.target.value); }
+        }
 
     const handleChangeTitle = (event) => {setNoteTitle(event.target.value); }
 
