@@ -6,6 +6,7 @@ const AddNote = ( {handleAddNote} ) => {
 
     const[noteText, setNoteText] = useState('');
     const [noteTitle, setNoteTitle] = useState('');
+    const characterLimit= 200;
 
     const handleChangeText = (event) => { setNoteText(event.target.value); }
 
@@ -35,6 +36,9 @@ const AddNote = ( {handleAddNote} ) => {
                 onChange={handleChangeText}
                 value = {noteText}
             ></textarea>
+            <div>
+                <small>{characterLimit - noteText.length}</small>
+            </div>
             <div className="note-footer">
                 <button className="save" onClick={handleSaveClicked}> Create </button>
                 <Icon className="editButton" icon = {"edit"} onClick="location.href = 'http://localhost:3000/edit'; "/>
