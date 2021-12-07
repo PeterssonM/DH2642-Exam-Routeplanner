@@ -15,7 +15,6 @@ const Notes = ({id, title, text, origin, destination, date}) => {
         <div className="note-foot">
             <small>{date}</small>
             <div className="note-buttons">
-                <Icon className="editButton" icon = {"edit"}/>
                 <Icon className="trashButton" icon = {"trash"}/>
             </div>
         </div>
