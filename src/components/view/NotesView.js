@@ -3,7 +3,7 @@ import Icon from './IconView';
 import './Notes.css';
 import './AddNoteView';
 
-const Notes = ({id, title, text, origin, destination, date}) => {
+const Notes = ({id, title, text, origin, destination, date, handleDeleteNote}) => {
     return <div className="note">
         {/*<p>{id}</p> debugging*/}
         <h3 className="title">{title}</h3>
@@ -15,7 +15,7 @@ const Notes = ({id, title, text, origin, destination, date}) => {
         <div className="note-foot">
             <small>{date}</small>
             <div className="note-buttons">
-                <Icon className="trashButton" icon = {"trash"}/>
+                <i class="fas fa-trash fa-1g" onClick={()=> handleDeleteNote(id)}></i>
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@ import './Body.css';
 import Notes from './NotesView';
 import  AddNote from './AddNoteView';
 
-export default function Body({notes, handleAddNote}) {
+export default function Body({notes, handleAddNote, handleDeleteNote}) {
     return (
         <div>
             <div className="notes">
@@ -15,6 +15,7 @@ export default function Body({notes, handleAddNote}) {
                            origin={note.origin}
                            destination={note.destination}
                            date={note.date}
+                           handleDeleteNote={handleDeleteNote}
                     />
                 ))}
                 <AddNote handleAddNote={handleAddNote}/>
