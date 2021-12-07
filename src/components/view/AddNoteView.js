@@ -44,7 +44,9 @@ const AddNote = ( {handleAddNote} ) => {
             </div>
             <div className="note-footer">
                 <button className="save" onClick={handleSaveClicked}> Create </button>
-                <Icon className="editButton" icon = {"edit"} onClick="location.href = 'http://localhost:3000/edit'; "/>
+                <div className="editButton">
+                    <i  class="fas fa-edit fa-1g"></i>
+                </div>
             </div>
         </div>
     )
