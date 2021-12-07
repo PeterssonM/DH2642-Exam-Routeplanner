@@ -11,8 +11,14 @@ const AddNote = ( {handleAddNote} ) => {
 
     const handleChangeTitle = (event) => {setNoteTitle(event.target.value); }
 
-    const handleSaveClicked = () => { handleAddNote(noteText, noteTitle); }
-
+    const handleSaveClicked = () => { 
+        if(noteText.trim().length > 0) {
+            handleAddNote(noteText, noteTitle);
+            setNoteText('');
+            setNoteTitle('');
+        }
+    };
+    
     return(
         <div className="addNote">
             <textarea className="titleArea"
