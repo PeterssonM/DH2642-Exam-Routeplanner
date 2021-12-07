@@ -6,8 +6,8 @@ import './AddNoteView';
 const Notes = ({id, title, text, origin, destination, date}) => {
     return <div className="note">
         {/*<p>{id}</p> debugging*/}
-        <h3>{title}</h3>
-        <p>{text}</p>
+        <h3 className="title">{title}</h3>
+        <p className= "paragraph">{text}</p>
         <div className="routeCards"> {/*Klassen har ännu inte specificerats :)*/}
             <p>Origin: {origin}</p>
             <p>Destination: {destination}</p>

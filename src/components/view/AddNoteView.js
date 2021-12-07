@@ -10,13 +10,13 @@ const AddNote = ( {handleAddNote} ) => {
 
     const handleChangeText = (event) => { 
         if(characterLimit - event.target.value.length >= 0) {
-            setNoteText(event.target.value); }
-        }
+        setNoteText(event.target.value); }
+    }
 
     const handleChangeTitle = (event) => {setNoteTitle(event.target.value); }
 
     const handleSaveClicked = () => { 
-        if(noteText.trim().length > 0) {
+        if(noteText.trim().length > 0 && noteTitle.trim().length > 0 ) {
             handleAddNote(noteText, noteTitle);
             setNoteText('');
             setNoteTitle('');
