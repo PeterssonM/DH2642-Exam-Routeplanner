@@ -3,7 +3,7 @@ import './Notes.css';
 import './AddNoteView';
 
 const Notes = ({id, title, text, origin, destination, date, handleDeleteNote}) => {
-    return <div className="note" onClick>
+    return <div className="note">
         {/*<p>{id}</p> debugging*/}
         <h3 className="title">{title}</h3>
         <p className= "paragraph">{text}</p>
