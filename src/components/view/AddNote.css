@@ -51,4 +51,12 @@
     font-size: 20px;
 }
 
+.titleArea {
+    resize: none;
+}
+
+.textArea {
+    resize: none;
+}
+
 

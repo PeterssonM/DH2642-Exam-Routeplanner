@@ -1,10 +1,8 @@
-import Header from "../view/HeaderView"
 import Planner from "../../service/sl"
 import Body from "../view/BodyView"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 import React, {Component, useState} from 'react';
 import '../view/AddNoteView';
-import { NotesRounded } from "@mui/icons-material";
 
 const Feed = () =>  {
 
@@ -67,14 +65,13 @@ const Feed = () =>  {
             setNotes(newNotes);
         }
 
-
-
         return (
             <div className="feed">
                 <Body 
                     notes={notes} 
                     handleAddNote={addNote}
-                    handleDeleteNote={deleteNote} />
+                    handleDeleteNote={deleteNote}
+                />
             </div>
         );
 }
