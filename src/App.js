@@ -14,9 +14,28 @@ import Header from "./components/presenter/HeaderPresenter"
 
 import { AuthProvider } from './contexts/AuthContext';
 
+import firebase from "./firebase"
+
 import StopFinder from './service/stopFinder.js';
 
+const app  = firebase.firestore();
+const fetchdata = async() => {
+  const res = app.collection("cards").where("/name=test");
+  const data = await res.get();
+
+  data.docs.forEach(d => {
+    console.log(d.data());
+  })
+}
+
 export default class App extends Component {
+
+  constructor(props) {
+    super(props)
+
+    fetchdata()
+  }
+
   render() {
     return (
       <div className="app">
