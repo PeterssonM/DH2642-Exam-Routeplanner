@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 
 import {
   Route,
@@ -17,7 +17,6 @@ import { AuthProvider } from './contexts/AuthContext';
 import StopFinder from './service/stopFinder.js';
 
 export default class App extends Component {
-
   render() {
     return (
       <div className="app">

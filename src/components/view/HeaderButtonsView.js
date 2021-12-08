@@ -10,8 +10,7 @@ export default function Header( {handleSearchNote} ) {
                <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
                </Link>
                <HeaderButtons icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out"/>
-            </div>
-      
+            </div>   
     );
 }
 

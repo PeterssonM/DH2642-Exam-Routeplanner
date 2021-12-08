@@ -2,6 +2,7 @@ import React from 'react';
 import './Body.css';
 import Notes from './NotesView';
 import  AddNote from './AddNoteView';
+import '../presenter/HeaderPresenter'
 
 export default function Body({notes, handleAddNote, handleDeleteNote}) {
     return (
