@@ -1,19 +1,11 @@
 import React, { Component, useState } from 'react';
-
-import {
-  Route,
-  Routes,
-} from 'react-router-dom';
-
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-
 import Feed from "./components/presenter/FeedPresenter"
 import Signup from "./components/presenter/SignupPresenter"
 import EditPage from "./components/presenter/EditPagePresenter"
 import Header from "./components/presenter/HeaderPresenter"
-
 import { AuthProvider } from './contexts/AuthContext';
-
 import StopFinder from './service/stopFinder.js';
 
 export default class App extends Component {
