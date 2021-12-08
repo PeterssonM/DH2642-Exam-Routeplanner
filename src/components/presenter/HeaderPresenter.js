@@ -12,6 +12,7 @@ export default function HeaderPresenter() {
         <div className={`${darkMode && 'dark-mode'}`}>
             <div className="header">
                 <SearchBar/>
+                <span className="headerTitle">Tenta Schedueler</span>
                 <HeaderButtons/>
                 <DarkModeSwitch handleToggleDarkMode={setDarkMode}/>
              </div>
