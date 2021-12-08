@@ -4,6 +4,7 @@ import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 import React, {Component, useState} from 'react';
 import '../view/AddNoteView';
 
+
 const Feed = () =>  {
 
     /*componentDidMount() {
@@ -68,7 +69,7 @@ const Feed = () =>  {
         return (
             <div className="feed">
                 <Body 
-                    notes={notes} 
+                    notes={notes}
                     handleAddNote={addNote}
                     handleDeleteNote={deleteNote}
                 />

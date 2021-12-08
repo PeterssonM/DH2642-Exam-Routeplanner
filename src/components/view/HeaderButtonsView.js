@@ -1,31 +1,17 @@
 import React from 'react';
-import './Header.css';
+import './HeaderButtons.css';
 import {Link} from 'react-router-dom';
 
 export default function Header( {handleSearchNote} ) {
 
     return (
-        <div className="header">
-            <div className="left-header">
-                <div className="header_search">
-                    <i className= {"fas fa-search fa-1g"} title="Search"/>
-                    <input 
-                        onChange={(event) => 
-                            handleSearchNote(event.target.value)
-                        }
-                        type="text" placeholder="Type to search...">
-                    </input>
-                </div>
-            </div>
-
             <div className="right-header">
                 <Link to='/home' style={{ textDecoration: 'none' }}>
                <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
                </Link>
                <HeaderButtons icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out"/>
- 
             </div>
-        </div>
+      
     );
 }
 

@@ -9,14 +9,6 @@
     z-index: 999;
 }
 
-.left-header {
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 400px;
-}
-
-
 .right-header {
     display: flex;
 }
@@ -35,26 +27,6 @@
     color: black;
 }
 
-.searchIcon {
-    color: black;
-}
 
-.header_search input {
-    border: none;
-    background-color: rgb(233, 233, 233);  
-}
-
-.header_search {
-    display: flex;
-    align-items: center;
-    background-color: rgb(233, 233, 233); 
-    border-radius: 5px;
-    padding: 5px;
-
-}
-
-.header_search input:focus {
-    outline: none;
-}
 
 

@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import Field from "../view/FieldView"
-import Header from "../view/HeaderView"
 
 export default function Signup() {
 
