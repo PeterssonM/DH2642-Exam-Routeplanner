@@ -4,8 +4,7 @@ import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 import React, {Component, useState} from 'react';
 import '../view/AddNoteView';
 
-
-const Feed = () =>  {
+export default function Feed() {
 
     /*componentDidMount() {
         Planner(740021730, 740012883)
@@ -67,14 +66,14 @@ const Feed = () =>  {
         }
 
         return (
-            <div className="feed">
-                <Body 
-                    notes={notes}
-                    handleAddNote={addNote}
-                    handleDeleteNote={deleteNote}
-                />
-            </div>
+                <div className="feed">
+                    <Body 
+                        notes={notes}
+                        handleAddNote={addNote}
+                        handleDeleteNote={deleteNote}
+                    />
+                </div>
+    
         );
 }
-    export default Feed;
 
