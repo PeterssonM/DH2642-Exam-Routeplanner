@@ -7,7 +7,7 @@ export default function DarkModeSwitchView( {handleToggleDarkMode} ) {
             <label className="switch">
                 <input 
                     onClick={()=> 
-                    handleToggleDarkMode(
+                        handleToggleDarkMode(
                         (previousDarkMode)=>!previousDarkMode
                     )} 
                     type="checkbox"> 
