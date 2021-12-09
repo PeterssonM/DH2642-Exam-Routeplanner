@@ -15,37 +15,36 @@ export default function Feed() {
         const [notes, setNotes] = useState([
             {
                 id: nanoid(),
-                title: "Title1",
-                text: "test",
-                origin: "Kista",
-                destination: "T-centralen",
+                title: "Diskret Matte",
+                text: "Ta med: penna, sudd, linjal", 
+                origin: "Medborgarplatsen",
+                destination: "Kista",
                 date: "15/12/2020"
             },
             {
                 id: nanoid(),
-                title: "Title2",
-                text: "test",
-                date: "11/12/2020"
+                title: "Pogrammering 1",
+                text: "Ta med: Dator",
+                date: "11/12/2020",
+                origin: "Hötorget",
+                destination: "Tekniska Högskolan",
             },
             {
                 id: nanoid(),
-                title: "Title3",
-                text: "test",
-                date: "12/12/2020"
+                title: "Datalagring",
+                text: "Ta med: penna och sudd           Ät ett äpple",
+                date: "12/12/2020",
+                origin: "Fittja",
+                destination: "Kista",
             },
             {
                 id: nanoid(),
-                title: "Title4",
-                text: "test",
-                date: "9/12/2020"
-            },
-            {
-                id: nanoid(),
-                title: "Title5",
-                text: "test",
-                date: "4/12/2020"
-            }
-            ]);
+                title: "Algoritmer och Datastrukturer",
+                text: "Glöm inte datorladdare",
+                date: "9/12/2020",
+                origin: "Fittja",
+                destination: "Kista",
+            }]);
 
 
         const addNote = (text, title) => {
