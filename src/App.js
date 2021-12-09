@@ -6,9 +6,7 @@ import Signup from "./components/presenter/SignupPresenter"
 import EditPage from "./components/presenter/EditPagePresenter"
 import Header from "./components/presenter/HeaderPresenter"
 import { AuthProvider } from './contexts/AuthContext';
-
 import firebase from "./firebase"
-
 import StopFinder from './service/stopFinder.js';
 
 const app  = firebase.firestore();
@@ -20,6 +18,7 @@ const fetchdata = async() => {
     console.log(d.data());
   })
 }
+
 
 export default class App extends Component {
 
