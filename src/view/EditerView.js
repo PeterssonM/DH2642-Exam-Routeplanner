@@ -34,9 +34,9 @@ export default function EditPageView() {
                 <div className="characterCount">
                     <small>{characterLimit - noteText.length}</small>
                 </div>
-                <div className="footButtons">
-                    <button className="saveButton"> SAVE </button>
-                </div>
+            </div>
+            <div className="buttonPosition">
+                <button className="createButton">Create</button>
             </div>
         </div>
         
