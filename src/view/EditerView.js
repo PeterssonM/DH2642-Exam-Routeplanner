@@ -1,7 +1,7 @@
 import React from 'react'
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import "./EditPage.css"
+import "./Editer.css"
 import { useState } from 'react'
 
 export default function EditPageView() {
@@ -11,13 +11,6 @@ export default function EditPageView() {
 
     return (
         <div>
-            <div ClassName="editTitle">
-                <textarea
-                  rows="1" 
-                  cols="40"
-                  placeholder="Enter a title.."
-                ></textarea>
-            </div>
             <div className="editField">
                 <CKEditor
                     editor={ ClassicEditor }
