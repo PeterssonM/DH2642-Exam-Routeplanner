@@ -6,7 +6,6 @@ import Signup from "./components/presenter/SignupPresenter"
 import EditPage from "./components/presenter/EditPagePresenter"
 import Header from "./components/presenter/HeaderPresenter"
 import { AuthProvider } from './contexts/AuthContext';
-<<<<<<< HEAD
 
 import firebase from "./firebase"
 
@@ -27,22 +26,14 @@ export default class App extends Component {
   constructor(props) {
     super(props)
 
-    fetchdata()
+    //fetchdata()
   }
 
   render() {
-=======
-import StopFinder from './service/stopFinder.js';
-
-export default function App() {
-
-  const[darkMode, setDarkMode] = useState(false);
-
->>>>>>> dba3dad9feb43454402e4f03a96ba583eb348c22
     return (
-      <div className={`${darkMode && 'dark-mode'}`}>
+      <div /*className={`${darkMode && 'dark-mode'}`}*/>
         <div className="app">
-          <Header handleToggleDarkMode={setDarkMode} />
+          <Header/>
           <AuthProvider>
             <Routes>
                 <Route path='/' element={<Feed />}></Route>
@@ -55,5 +46,6 @@ export default function App() {
       </div>
 
     )
+  }
 }
 
