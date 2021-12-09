@@ -1,0 +1,53 @@
+.editTitle {
+    align-self: center;
+    justify-self: center;
+    padding-top: 500px;
+}
+
+.editField {
+    padding-left: 600px;
+    padding-right: 600px;
+    padding-top: 10px;
+}
+
+.editField-Footer {
+    display:flex;
+    justify-content: space-between;
+}
+
+.characterCount {
+    padding-left: 600px;
+    font-size: larger;
+}
+
+.footButtons{
+    padding-right: 600px;
+}
+
+.createButton {
+    color: rgb(63, 174, 202);
+    display: inline-block;
+    padding: 1.0rem 1.2rem;
+    border-radius: 10rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+ 
+.createButton:hover {
+    color: rgb(62, 197, 49);
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    transform: scale(1.05);
+    position:relative;
+    z-index:5;
+    opacity: 1.0;  
+}
+
+.buttonPosition{
+    padding-top: 400px;
+    padding-left: 1050px;
+}

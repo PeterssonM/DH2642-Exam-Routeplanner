@@ -1,5 +1,5 @@
 import React from 'react'
-import EditPage from '../view/EditPageView'
+import EditPage from '../view/EditerView'
 import SlPlanner from '../view/SlPlannerView'
 
 export default function EditPagePresenter() {
