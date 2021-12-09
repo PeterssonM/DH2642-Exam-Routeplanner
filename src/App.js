@@ -6,7 +6,8 @@ import Signup from "./components/presenter/SignupPresenter"
 import EditPage from "./components/presenter/EditPagePresenter"
 import Header from "./components/presenter/HeaderPresenter"
 import { AuthProvider } from './contexts/AuthContext';
-<<<<<<< HEAD
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 import firebase from "./firebase"
 
@@ -22,27 +23,45 @@ const fetchdata = async() => {
   })
 }
 
+
+/*
+<CKEditor
+                    editor={ ClassicEditor }
+                    data="<p>Hello from CKEditor 5!</p>"
+                    onReady={ editor => {
+                        // You can store the "editor" and use when it is needed.
+                        console.log( 'Editor is ready to use!', editor );
+                    } }
+                    onChange={ ( event, editor ) => {
+                        const data = editor.getData();
+                        console.log( { event, editor, data } );
+                    } }
+                    onBlur={ ( event, editor ) => {
+                        console.log( 'Blur.', editor );
+                    } }
+                    onFocus={ ( event, editor ) => {
+                        console.log( 'Focus.', editor );
+                    } }
+                />
+
+*/
+
 export default class App extends Component {
 
   constructor(props) {
     super(props)
 
-    fetchdata()
+    //fetchdata()
   }
 
   render() {
-=======
-import StopFinder from './service/stopFinder.js';
-
-export default function App() {
-
-  const[darkMode, setDarkMode] = useState(false);
-
->>>>>>> dba3dad9feb43454402e4f03a96ba583eb348c22
     return (
-      <div className={`${darkMode && 'dark-mode'}`}>
+      <div>
+
+
+        
         <div className="app">
-          <Header handleToggleDarkMode={setDarkMode} />
+          <Header />
           <AuthProvider>
             <Routes>
                 <Route path='/' element={<Feed />}></Route>
@@ -55,5 +74,6 @@ export default function App() {
       </div>
 
     )
+  }
 }
 
