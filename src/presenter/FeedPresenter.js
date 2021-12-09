@@ -1,4 +1,4 @@
-import Planner from "../service/sl"
+import Planner from "../service/routePlanner"
 import Body from "../view/BodyView"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 import React, {Component, useState} from 'react';
