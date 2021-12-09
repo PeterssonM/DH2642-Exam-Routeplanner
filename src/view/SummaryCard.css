@@ -1,0 +1,57 @@
+.summaryCard {
+    margin: 20px;
+    height:50em;
+    width:50em;
+    padding:2em;
+    border-radius: 25px;
+    font-family: 'Lato';
+    background:rgb(204, 222, 255);
+    display:flex;
+    flex-direction: column;
+    cursor: pointer; 
+    white-space: pre-wrap;
+}
+
+.card {
+    display:flex;
+    align-self: center;
+    padding-left: 720px;
+    padding-top: 30px;
+}
+
+.summaryCardTitle {
+    color: rgb(5, 5, 5);
+    font-size: 40px;
+    align-self: center;
+    justify-self: center;  
+}
+
+.summaryCardRouteCards {
+    color: rgb(5, 5, 5);
+    font-size: 25px;
+}
+
+.summaryCardSlRouteBox {
+    height: 150px;
+    background-color: rgb(233, 233, 233); 
+    border-radius: 10px;
+    
+}
+
+.summaryCardSlRouteBoxLayout {
+    padding-top: 20px;
+}
+
+.summaryCardParagraphBoxLayout{
+    padding-top: 20px;
+}
+
+.summaryCardParagraphBox {
+    height: 400px;
+    background-color: rgb(233, 233, 233); 
+    border-radius: 10px;
+}
+
+.originRoute {
+    padding-top: 30px;
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import './Notes.css';
-import './AddNoteView';
 
 export default function Notes ({id, title, text, origin, destination, date, handleDeleteNote}) {
     return (

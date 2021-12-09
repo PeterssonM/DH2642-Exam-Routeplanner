@@ -12,7 +12,7 @@ export default function EditPageView() {
     return (
         <div>
             <div className="editField">
-                <CKEditor
+                <CKEditor className="ckEditor"
                     editor={ ClassicEditor }
                     onReady={ editor => {
                         // You can store the "editor" and use when it is needed.

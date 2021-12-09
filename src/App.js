@@ -6,8 +6,7 @@ import Signup from "./presenter/SignupPresenter"
 import EditPage from "./presenter/EditPagePresenter"
 import Header from "./presenter/HeaderPresenter"
 import { AuthProvider } from './generatedFiles/contexts/AuthContext';
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import Summary from "./presenter/SummaryCardPresenter"
 
 import firebase from "./firebase"
 
@@ -23,29 +22,6 @@ const fetchdata = async() => {
   })
 }
 
-
-/*
-<CKEditor
-                    editor={ ClassicEditor }
-                    data="<p>Hello from CKEditor 5!</p>"
-                    onReady={ editor => {
-                        // You can store the "editor" and use when it is needed.
-                        console.log( 'Editor is ready to use!', editor );
-                    } }
-                    onChange={ ( event, editor ) => {
-                        const data = editor.getData();
-                        console.log( { event, editor, data } );
-                    } }
-                    onBlur={ ( event, editor ) => {
-                        console.log( 'Blur.', editor );
-                    } }
-                    onFocus={ ( event, editor ) => {
-                        console.log( 'Focus.', editor );
-                    } }
-                />
-
-*/
-
 export default class App extends Component {
 
   constructor(props) {
@@ -57,9 +33,6 @@ export default class App extends Component {
   render() {
     return (
       <div>
-
-
-
         <div className="app">
           <Header />
           <AuthProvider>
@@ -68,6 +41,7 @@ export default class App extends Component {
                 <Route path='/home' element={<Feed />}></Route>
                 <Route path="/edit" element={<EditPage />}></Route>
                 <Route path="signup" element={<Signup />}></Route>
+                <Route path="/summary" element={<Summary />}></Route>
             </Routes>
           </AuthProvider>
         </div>
