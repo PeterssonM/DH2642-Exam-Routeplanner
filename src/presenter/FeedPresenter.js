@@ -1,4 +1,4 @@
-import Planner from "../../service/sl"
+import Planner from "../service/sl"
 import Body from "../view/BodyView"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 import React, {Component, useState} from 'react';
@@ -19,7 +19,7 @@ export default function Feed() {
                 text: "test",
                 origin: "Kista",
                 destination: "T-centralen",
-                date: "15/12/2020" 
+                date: "15/12/2020"
             },
             {
                 id: nanoid(),
@@ -46,8 +46,8 @@ export default function Feed() {
                 date: "4/12/2020"
             }
             ]);
-        
-    
+
+
         const addNote = (text, title) => {
             const date = new Date();
             const newNote = {
@@ -67,13 +67,12 @@ export default function Feed() {
 
         return (
                 <div className="feed">
-                    <Body 
+                    <Body
                         notes={notes}
                         handleAddNote={addNote}
                         handleDeleteNote={deleteNote}
                     />
                 </div>
-    
+
         );
 }
-

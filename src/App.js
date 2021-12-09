@@ -1,11 +1,11 @@
 import React, { Component, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Feed from "./components/presenter/FeedPresenter"
-import Signup from "./components/presenter/SignupPresenter"
-import EditPage from "./components/presenter/EditPagePresenter"
-import Header from "./components/presenter/HeaderPresenter"
-import { AuthProvider } from './contexts/AuthContext';
+import Feed from "./presenter/FeedPresenter"
+import Signup from "./presenter/SignupPresenter"
+import EditPage from "./presenter/EditPagePresenter"
+import Header from "./presenter/HeaderPresenter"
+import { AuthProvider } from './generatedFiles/contexts/AuthContext';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
@@ -59,7 +59,7 @@ export default class App extends Component {
       <div>
 
 
-        
+
         <div className="app">
           <Header />
           <AuthProvider>
@@ -76,4 +76,3 @@ export default class App extends Component {
     )
   }
 }
-
