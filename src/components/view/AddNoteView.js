@@ -43,7 +43,7 @@ const AddNote = ( {handleAddNote} ) => {
                 <small>{characterLimit - noteText.length}</small>
             </div>
             <div className="note-footer">
-                <button className="save" onClick={handleSaveClicked}> Create </button>
+                <button className="create" onClick={handleSaveClicked}> Create </button>
                 <div className="editButton">
                     <Link to="/edit">
                     <i className="fas fa-edit fa-1g"></i>

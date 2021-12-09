@@ -1,6 +1,83 @@
+.editTitle {
+    align-self: center;
+    justify-self: center;
+    padding-top: 500px;
+}
 
 .editField {
-    padding-left: 450px;
-    padding-right: 450px;
+    padding-left: 600px;
+    padding-right: 600px;
     padding-top: 10px;
+}
+
+.editField-Footer {
+    display:flex;
+    justify-content: space-between;
+}
+
+.characterCount {
+    padding-left: 600px;
+    font-size: larger;
+}
+
+.footButtons{
+    padding-right: 600px;
+}
+
+.saveButton {
+    border: none;
+    padding: 5px 10px 5px 10px;
+}
+
+.saveButton:hover{
+    transform: scale(1.20);
+    position:relative;
+    z-index:5;
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.slPlanner{
+    padding-left: 850px;
+    display:flex;
+    align-items: center;
+}
+
+.fromInput input {
+    border: none;
+    background-color: rgb(233, 233, 233);  
+}
+
+.fromInput {
+    display: flex;
+    align-items: center;
+    background-color: rgb(233, 233, 233); 
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+
+}
+
+.fromInput input:focus {
+    outline: none;
+}
+
+
+.toInput input {
+    border: none;
+    background-color: rgb(233, 233, 233);  
+}
+
+.toInput {
+    display: flex;
+    align-items: center;
+    background-color: rgb(233, 233, 233); 
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+
+}
+
+.toInput input:focus {
+    outline: none;
 }
