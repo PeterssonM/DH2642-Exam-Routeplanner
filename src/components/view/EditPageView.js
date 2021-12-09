@@ -18,24 +18,6 @@ export default function EditPageView() {
                   placeholder="Enter a title.."
                 ></textarea>
             </div>
-
-            <div className="slPlanner">
-                <textarea
-                    className="fromInput"
-                    rows="1" 
-                    cols="40"
-                    placeholder="From:"
-                ></textarea>
-                <i className= {"fas fa-exchange-alt fa-1g"} title="exChangeSymbol"/>
-                <textarea
-                    className="toInput"
-                    rows="1" 
-                    cols="40"
-                    placeholder="To:"
-                ></textarea>
-
-
-            </div>
             <div className="editField">
                 <CKEditor
                     editor={ ClassicEditor }
