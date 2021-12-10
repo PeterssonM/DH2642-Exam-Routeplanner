@@ -65,9 +65,6 @@ export default function EditPageView() {
                         />
                     </div>
                     <div className="editField-Footer">
-                        <div className="characterCount">
-                            <small>{characterLimit - noteText.length}</small>
-                        </div>
                     </div>
                     <div className="buttonPosition">
                         <button className="createButton">Create</button>

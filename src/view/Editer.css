@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-.ckEditor {
-    height: 600px;
-    width: 300px;
-}
->>>>>>> 81cb56fd9969b3c959b57b6bf0b89ebd3759f757
 
 .editTitle {
     align-self: center;
@@ -16,6 +9,13 @@
     padding-left: 600px;
     padding-right: 600px;
     padding-top: 50px;
+    width: 650px;
+	height: 600px;
+	padding: 5px;
+    padding-left: 850px;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+    scroll-behavior: auto;
 }
 
 .editField-Footer {
