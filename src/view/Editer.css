@@ -1,30 +1,77 @@
 
-.editTitle {
-    align-self: center;
-    justify-self: center;
-    padding-top: 500px;
+.siteContainer {
+    background:#cce6ff;
+    border-style: solid;
+    border-color: #596d80;
+    height: 1050px;   
+    width: 800px;
+    margin: auto;
+    margin-top: 50px;
 }
 
-.editField {
-    padding-left: 600px;
-    padding-right: 600px;
-    padding-top: 50px;
-    width: 650px;
-	height: 600px;
-	padding: 5px;
-    padding-left: 850px;
-	background-position: bottom right;
-	background-repeat: no-repeat;
-    scroll-behavior: auto;
+.titleContainer {  
+    padding-top: 0px;
+    border-style: solid;
+    border-top-color: #596d80;
+    border-bottom-color: #596d80;
+    border-left-width: 0px;
+    border-right-width: 0px;
 }
 
-.editField-Footer {
-    display:flex;
-    justify-content: space-between;
+.titleArea {
+    height: 50px;
+    width: 794px;  
+    font-size: xxx-large;
+}
+
+.slStationContainer {
+    background-color: rgb(233, 233, 233);
+    text-align: center;
+    border-style: solid;
+    border-top-color: #596d80;
+    border-bottom-color: #596d80;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.slTitle{
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,.4);   
+}
+
+.textBoxLayout {
+    margin: auto;
+}
+
+.stationInputTextArea {
+    height: 30px;
+    width: 300px;
+    resize: none;
+    border-color: black;
+    border-width: 2px;
+    margin: 20px;
+    margin-bottom: 33px;
+    display: inline;
+}
+
+.arrowsIcon {
+    display: inline-block;
+    vertical-align: 45px;
+}
+
+.ckEditorContainer {
+    padding-top: 0px;
+    padding-bottom: 50px;
+    width: auto;
+    height: 600px;
+    overflow-y: scroll;
+}
+
+.ckEditor {
 }
 
 .characterCount {
-    padding-left: 600px;
     font-size: larger;
 }
 
@@ -32,140 +79,22 @@
     padding-right: 600px;
 }
 
-.createButton {
-    color: rgb(63, 174, 202);
-    display: inline-block;
-    padding: 1.0rem 1.2rem;
-    border-radius: 10rem;
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: .15rem;
-    transition: all .3s;
+.buttonPosition {
+    text-align: center;
+    display: block;
     position: relative;
-    overflow: hidden;
-    z-index: 1;
+    bottom:   0;
 }
- 
+.createButton {
+    color: #3faeca;
+    padding: 1.0rem 2.0rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+}
 .createButton:hover {
-    color: rgb(62, 197, 49);
-    box-shadow:10px 10px 7px rgba(0,0,0,.7);
-    transform: scale(1.05);
+    color: #268197;
     position:relative;
     z-index:5;
     opacity: 1.0;  
 }
-
-.buttonPosition{
-    
-}
-
-.titleArea {
-    resize: none;
-    height: 50px;
-    width: 600px;  
-}
-
-.titleBox {  
-    display: flex;
-    align-items: center;
-    padding-left: 860px;
-    padding-top: 30px;
-}
-
-.totalBorder {
-    background:rgb(204, 230, 255);
-    border-radius: 5px;
-    margin: 20px;
-    border-radius: 25px;
-    resize: none;   
-    height: 1050px;   
-}
-
-.siteBox {
-    padding-left: 500px;
-    padding-right: 500px;
-    display:flex;
-    flex-direction: column; 
-}
-
-/***********SL - BOX *************/
-
-.slPlanner{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 850px;
-    display:flex;
-}
-
-
-.fromInput input {
-    border: none;
-    background-color: rgb(233, 233, 233);  
-}
-
-.fromInput {
-    display: flex;
-    align-items: center;
-    background-color: rgb(233, 233, 233); 
-    border-radius: 5px;
-    padding: 5px;
-
-}
-
-.fromInput input:focus {
-    outline: none;
-}
-
-
-.toInput input {
-    border: none;
-    background-color: rgb(233, 233, 233);  
-}
-
-.toInput {
-    display: flex;
-    align-items: center;
-    background-color: rgb(233, 233, 233); 
-    border-radius: 5px;
-    padding: 5px;
-}
-
-.toInput input:focus {
-    outline: none;
-}
-
-.border {
-    height: 150px;
-    background-color: rgb(233, 233, 233); 
-    border-radius: 10px;
-}
-
-.fromInputTextArea {
-    height: 30px;
-    width: 300px;
-    resize: none;
-    border-color: black;
-    border-width: 2px;
-}
-
-.toInputTextArea {
-    height: 30px;
-    width: 300px;
-    resize: none;
-    border-color: black;
-    border-width: 2px;
-}
-
-.layout {
-    padding-top: 22px;
-    align-items: center;
-    display: flex;
-}
-
-.Sltitle{
-    padding-left: 190px;
-    font-size: 25px;
-    text-shadow: 0px 2px 4px rgba(0,0,0,.4);   
-}
-
-
