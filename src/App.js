@@ -13,8 +13,9 @@ import firebase from "./firebase"
 import StopFinder from './service/stopFinder.js';
 
 const app  = firebase.firestore();
+
 const fetchdata = async() => {
-  const res = app.collection("cards").where("/name=test");
+  const res = app.collection("cards");
   const data = await res.get();
 
   data.docs.forEach(d => {
@@ -26,8 +27,10 @@ export default class App extends Component {
 
   constructor(props) {
     super(props)
+  }
 
-    //fetchdata()
+  componentDidMount() {
+    fetchdata()
   }
 
   render() {
