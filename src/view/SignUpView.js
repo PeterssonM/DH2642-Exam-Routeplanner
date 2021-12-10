@@ -25,7 +25,7 @@ export default function SignUpView( {signup, emailRef, passwordRef, passwordConf
                     <label>
                         <button className='signUpButton' type="submit">Sign Up</button>
                         <Link to='/signin' style={{ textDecoration: 'none' }}>
-                        <span>Already Registered User? Click here to login</span>
+                            <span>Already Registered User? Click here to login</span>
                         </Link>
                     </label>
                 </form>

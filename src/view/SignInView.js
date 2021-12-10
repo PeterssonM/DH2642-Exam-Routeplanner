@@ -21,7 +21,7 @@ function SignInView( {signup, emailRef, passwordRef} ) {
                 <label>
                     <button className='signUpButton' type="submit">Sign In</button>
                     <Link to='/signup' style={{ textDecoration: 'none' }}>
-                    <span>Not a member yet? Register now</span>
+                        <span>Not a member yet? Register now</span>
                     </Link>
                 </label>
             </form>
