@@ -43,7 +43,7 @@ export default class App extends Component {
                 <Route path='/' element={<Feed />}></Route>
                 <Route path='/home' element={<Feed />}></Route>
                 <Route path="/edit" element={<EditPage />}></Route>
-                <Route path="signup" element={<Signup />}></Route>
+                <Route path="/signup" element={<Signup />}></Route>
                 <Route path="/summary" element={<Summary />}></Route>
             </Routes>
           </AuthProvider>
