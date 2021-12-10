@@ -20,7 +20,8 @@
 
 .note-footer {
     padding-left: 50px;
-    padding-bottom: 30px;
+    padding-top: 30px;
+    opacity: 0.4;
 }
 
 .note-footer:hover{
@@ -28,6 +29,7 @@
     transform: scale(1.20);
     position:relative;
     z-index:5;
+    opacity: 1.0;
 }
 
 

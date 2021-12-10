@@ -10,34 +10,44 @@ export default function EditPageView() {
     const[noteText, setNoteText] = useState('');
 
     return (
-        <div>
-            <div className="editField">
-                <CKEditor className="ckEditor"
-                    editor={ ClassicEditor }
-                    onReady={ editor => {
-                        // You can store the "editor" and use when it is needed.
-                        console.log( 'Editor is ready to use!', editor );
-                    } }
-                    onChange={ ( event, editor,) => {
-                        const data = editor.getData();
-                        console.log( { event, editor, data } );
-                    } }
-                    onBlur={ ( event, editor ) => {
-                        console.log( 'Blur.', editor );
-                    } }
-                    onFocus={ ( event, editor ) => {
-                        console.log( 'Focus.', editor );
-                    } }
-                />
-            </div>
-            <div className="editField-Footer">
-                <div className="characterCount">
-                    <small>{characterLimit - noteText.length}</small>
+        <div className="editPage">
+            <div className="editTitleBorder">
+                <div className="titleBox">
+                    <textarea className="titleArea"
+                        rows={2}
+                        cols={40}
+                        placeholder='Enter a Title..'
+                    ></textarea>
+
                 </div>
             </div>
-            <div className="buttonPosition">
-                <button className="createButton">Create</button>
-            </div>
+                <div className="editField">
+                    <CKEditor className="ckEditor"
+                        editor={ ClassicEditor }
+                        onReady={ editor => {
+                            // You can store the "editor" and use when it is needed.
+                            console.log( 'Editor is ready to use!', editor );
+                        } }
+                        onChange={ ( event, editor,) => {
+                            const data = editor.getData();
+                            console.log( { event, editor, data } );
+                        } }
+                        onBlur={ ( event, editor ) => {
+                            console.log( 'Blur.', editor );
+                        } }
+                        onFocus={ ( event, editor ) => {
+                            console.log( 'Focus.', editor );
+                        } }
+                    />
+                </div>
+                <div className="editField-Footer">
+                    <div className="characterCount">
+                        <small>{characterLimit - noteText.length}</small>
+                    </div>
+                </div>
+                <div className="buttonPosition">
+                    <button className="createButton">Create</button>
+                </div>
         </div>
         
     )
