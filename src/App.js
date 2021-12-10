@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Feed from "./presenter/FeedPresenter"
 import Signup from "./presenter/SignupPresenter"
+import Signin from "./view/SignInView"
 import EditPage from "./presenter/EditPagePresenter"
 import Header from "./presenter/HeaderPresenter"
 import { AuthProvider } from './generatedFiles/contexts/AuthContext';
@@ -39,10 +40,11 @@ export default class App extends Component {
         <div className="app">
           <Header />
             <Routes>
-                <Route path='/' element={<Feed />}></Route>
+                <Route path='/' element={<Signin />}></Route>
                 <Route path='/home' element={<Feed />}></Route>
                 <Route path="/edit" element={<EditPage />}></Route>
                 <Route path="/signup" element={<Signup />}></Route>
+                <Route path="/signin" element={<Signin />}></Route>
                 <Route path="/summary" element={<Summary />}></Route>
             </Routes>
         </div>

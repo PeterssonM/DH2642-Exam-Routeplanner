@@ -1,5 +1,6 @@
 import React from 'react'
 import './SignUp.css'
+import {Link} from 'react-router-dom';
 
 export default function SignUpView( {signup, emailRef, passwordRef, passwordConfirmRef} ) {
     return (
@@ -23,6 +24,9 @@ export default function SignUpView( {signup, emailRef, passwordRef, passwordConf
                     </label>
                     <label>
                         <button className='signUpButton' type="submit">Signup</button>
+                        <Link to='/signin' style={{ textDecoration: 'none' }}>
+                        <span>Already Registered User? Click here to login</span>
+                        </Link>
                     </label>
                 </form>
             </div>
