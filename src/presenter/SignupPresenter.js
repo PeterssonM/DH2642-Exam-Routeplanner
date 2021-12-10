@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { useAuth } from '../generatedFiles/contexts/AuthContext'
-import Field from "../view/FieldView"
+import firebase from "../firebase"
 
 export default function Signup() {
 
@@ -8,35 +7,22 @@ export default function Signup() {
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
 
-    const { signup } = useAuth()
+    function signup() {
 
-    const [error, setError] = useState("")
-    const [loading, setLoading] = useState(false)
-
-    async function handleSubmit(e) {
-        e.preventDefault()
-
-        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError("Password does not match with confirm password")
-        }
-
-        try {
-            setLoading(true)
-            setError("")
-            await signup(emailRef.current.value, passwordRef.current.value)
-        } catch {
-            setError("Failed to create an account")
-        }
-
-        setLoading(false)
     }
 
     return (
         <div>
             <form className="signup">
-                <Field ref={emailRef} label={"Email: "} type={"text"} />
-                <Field ref={passwordRef} label={"Password: "} type="password" />
-                <Field ref={passwordConfirmRef} label={"Confirm password: "} type={"password"} />
+                <div>
+                    <input ref={emailRef} type={"text"}/>
+                </div>
+                <div>
+                    <input ref={passwordRef} type={"password"} />
+                </div>
+                <div>
+                    <input ref={passwordConfirmRef} type={"password"} />
+                </div>
                 <div>
                     <button type="submit">Signup</button>
                 </div>
