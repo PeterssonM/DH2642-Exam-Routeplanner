@@ -2,6 +2,7 @@ import Planner from "../service/routePlanner"
 import Body from "../view/BodyView"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 import React, {Component, useState} from 'react';
+
 import '../view/AddNoteView';
 
 export default function Feed(props) {
@@ -64,6 +65,7 @@ export default function Feed(props) {
         const  newNotes = notes.filter((note)=> note.id !== id);
         setNotes(newNotes);
     }
+
 
     return (
             <div className="feed">
