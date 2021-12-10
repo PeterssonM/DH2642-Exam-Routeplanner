@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react'
 import firebase from "../firebase"
-import SignUp from '../view/SignUpView'
+import SignupView from "../view/SignUpView"
+
+var user = firebase.auth().currentUser;
 
 export default function Signup() {
 
@@ -8,10 +10,22 @@ export default function Signup() {
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
 
+    const [submitted, setSubmitted] = useState(false)
+
     const auth = firebase.auth()
     const db = firebase.firestore()
 
-    async function signup() {
+    function clearRefs(refs) {
+        refs.forEach(r => {
+            r.current.value = ""
+        })
+    }
+
+    async function signup(e) {
+
+        setSubmitted(true)
+        e.preventDefault();
+
         try {
             const res = await auth.createUserWithEmailAndPassword(emailRef.current.value, passwordRef.current.value);
             const user = res.user;
@@ -21,14 +35,17 @@ export default function Signup() {
                 authProvider: "local"
             });
 
-            console.log("Signed up!");
+            clearRefs([emailRef, passwordRef, passwordConfirmRef]);
+            alert("Signed in!: ")
         } catch (error) {
-            console.log(error);
             alert(error.message)
         }
+
     }
 
+    
     return (
-        <SignUp/>
+        <SignupView signup={signup} emailRef={emailRef} passwordRef={passwordRef} passwordConfirmRef={passwordConfirmRef} submitted={submitted}/>
     )
+    
 }
