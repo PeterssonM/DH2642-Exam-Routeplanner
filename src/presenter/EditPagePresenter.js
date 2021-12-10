@@ -5,8 +5,8 @@ import SlPlanner from '../view/SlPlannerView'
 export default function EditPagePresenter() {
     return (
         <div className= "editPage">
-            <SlPlanner/>
             <EditPage/>
+            <SlPlanner/>
         </div>
     )
 }

@@ -46,13 +46,11 @@ export default function Feed() {
                 destination: "Kista",
             }]);
 
-
-        const addNote = (text, title) => {
+        const addNote = (title) => {
             const date = new Date();
             const newNote = {
                 id: nanoid(),
                 title: title,
-                //text: text,
                 date: date.toLocaleDateString()
             }
             const newNotes = [...notes, newNote];
