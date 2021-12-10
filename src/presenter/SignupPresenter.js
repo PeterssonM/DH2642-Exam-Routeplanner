@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import firebase from "../firebase"
+import SignUp from '../view/SignUpView'
 
 export default function Signup() {
 
@@ -28,21 +29,6 @@ export default function Signup() {
     }
 
     return (
-        <div>
-            <form className="signup" onSubmit={signup}>
-                <div>
-                    <input ref={emailRef} type={"text"}/>
-                </div>
-                <div>
-                    <input ref={passwordRef} type={"password"} />
-                </div>
-                <div>
-                    <input ref={passwordConfirmRef} type={"password"} />
-                </div>
-                <div>
-                    <button type="submit">Signup</button>
-                </div>
-            </form>
-        </div>
+        <SignUp/>
     )
 }
