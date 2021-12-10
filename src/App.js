@@ -42,10 +42,6 @@ export default class App extends Component {
                 <Route path='/' element={<Feed />}></Route>
                 <Route path='/home' element={<Feed />}></Route>
                 <Route path="/edit" element={<EditPage />}></Route>
-<<<<<<< HEAD
-                <Route path="/signup" element={<Signup />}></Route>
-=======
->>>>>>> f64922e94e58af409d566f2d1f378eda9ffb1fec
                 <Route path="/summary" element={<Summary />}></Route>
             </Routes>
         </div>
