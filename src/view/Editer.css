@@ -1,5 +1,4 @@
 
-
 .editTitle {
     align-self: center;
     justify-self: center;
@@ -7,9 +6,9 @@
 }
 
 .editField {
-    padding-left: 1px;
+    padding-left: 600px;
     padding-right: 600px;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .editField-Footer {
@@ -50,8 +49,7 @@
 }
 
 .buttonPosition{
-    padding-top: 400px;
-    padding-left: 1050px;
+    
 }
 
 .titleArea {
@@ -63,16 +61,98 @@
 .titleBox {  
     display: flex;
     align-items: center;
-    background-color: rgb(233, 233, 233); 
-    border-radius: 5px;
-    padding: 5px;
     padding-left: 860px;
+    padding-top: 30px;
 }
 
-.editTitleBorder {
+.totalBorder {
+    background:rgb(204, 230, 255);
+    border-radius: 5px;
+    margin: 20px;
+    border-radius: 25px;
+    display:flex;
+    flex-direction: column;  
+    resize: none;   
+    height: 1050px;
+}
+
+/***********SL - BOX *************/
+
+.slPlanner{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 850px;
+    display:flex;
+}
+
+.fromInput input {
+    border: none;
+    background-color: rgb(233, 233, 233);  
+}
+
+.fromInput {
     display: flex;
     align-items: center;
     background-color: rgb(233, 233, 233); 
     border-radius: 5px;
     padding: 5px;
-} 
+
+}
+
+.fromInput input:focus {
+    outline: none;
+}
+
+
+.toInput input {
+    border: none;
+    background-color: rgb(233, 233, 233);  
+}
+
+.toInput {
+    display: flex;
+    align-items: center;
+    background-color: rgb(233, 233, 233); 
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.toInput input:focus {
+    outline: none;
+}
+
+.border {
+    height: 150px;
+    background-color: rgb(233, 233, 233); 
+    border-radius: 10px;
+}
+
+.fromInputTextArea {
+    height: 30px;
+    width: 300px;
+    resize: none;
+    border-color: black;
+    border-width: 2px;
+}
+
+.toInputTextArea {
+    height: 30px;
+    width: 300px;
+    resize: none;
+    border-color: black;
+    border-width: 2px;
+}
+
+.layout {
+    padding-top: 22px;
+    align-items: center;
+    display: flex;
+}
+
+.Sltitle{
+    padding-left: 190px;
+    font-size: 25px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,.4);   
+}
+
+
