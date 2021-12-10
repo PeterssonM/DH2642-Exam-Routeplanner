@@ -12,51 +12,23 @@
     opacity: 0.6;
 }
 
-.addNote:hover {
-    box-shadow:10px 10px 7px rgba(0,0,0,.7);
-    transform: scale(1.05);
-    position:relative;
-    z-index:5;
-    opacity: 1.0;
-}
-
-.note-footer{
-    display:flex;
-    justify-content: space-between;
-}
-
-.save {
-    border: none;
-    border-radius: 15px;
-    padding: 5px 10px 5px 10px;
-}
-
-.save:hover{
-    transform: scale(1.20);
-    position:relative;
-    z-index:5;
-    opacity: 1.0;
-    cursor: pointer;
-}
-
-.editButton:hover{
-    cursor: pointer;
-    transform: scale(1.20);
-    position:relative;
-    z-index:5;
-}
-
-.characterLimit {
-    color: black;
-    font-size: 20px;
-}
-
 .titleArea {
-    resize: none;
+    resize: none; 
+    width: 230px;
+    height: 20px;
 }
 
-.textArea {
-    resize: none;
+.note-footer {
+    padding-left: 50px;
+    padding-bottom: 30px;
 }
+
+.note-footer:hover{
+    cursor: pointer;
+    transform: scale(1.20);
+    position:relative;
+    z-index:5;
+}
+
 
 

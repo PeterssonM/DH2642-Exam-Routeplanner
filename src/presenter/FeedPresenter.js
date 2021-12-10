@@ -52,7 +52,7 @@ export default function Feed() {
             const newNote = {
                 id: nanoid(),
                 title: title,
-                text: text,
+                //text: text,
                 date: date.toLocaleDateString()
             }
             const newNotes = [...notes, newNote];
