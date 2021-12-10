@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import firebase from "../firebase"
-import SignupView from "../view/SignUpView"
+import SigninView from "../view/SignInView"
 
 export default function Signin() {
 
@@ -20,6 +20,6 @@ export default function Signin() {
     }
 
     return (
-        <SignupView signup={signin} emailRef={emailRef} passwordRef={passwordRef} passwordConfirmRef={passwordConfirmRef}/>
+        <SigninView signin={signin} emailRef={emailRef} passwordRef={passwordRef} />
     )
 }
