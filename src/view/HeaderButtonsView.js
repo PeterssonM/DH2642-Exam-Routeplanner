@@ -9,7 +9,7 @@ export default function Header( {handleSearchNote, handleToggleDarkMode} ) {
                 <Link to='/home' style={{ textDecoration: 'none' }}>
                     <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
                 </Link>
-                <Link to='/signup' style={{ textDecoration: 'none' }}>
+                <Link to='/signin' style={{ textDecoration: 'none' }}>
                     <HeaderButtons icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out"/>
                 </Link>
 
