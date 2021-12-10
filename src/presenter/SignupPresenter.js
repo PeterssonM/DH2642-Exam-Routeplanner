@@ -19,8 +19,6 @@ export default function Signup() {
                 email: emailRef.current.value,
                 authProvider: "local"
             });
-
-            console.log("Signed up!");
         } catch (error) {
             console.log(error);
             alert(error.message)
