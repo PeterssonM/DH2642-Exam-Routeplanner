@@ -77,10 +77,15 @@
     border-radius: 5px;
     margin: 20px;
     border-radius: 25px;
-    display:flex;
-    flex-direction: column;  
     resize: none;   
-    height: 1050px;
+    height: 1050px;   
+}
+
+.siteBox {
+    padding-left: 500px;
+    padding-right: 500px;
+    display:flex;
+    flex-direction: column; 
 }
 
 /***********SL - BOX *************/
@@ -91,6 +96,7 @@
     padding-left: 850px;
     display:flex;
 }
+
 
 .fromInput input {
     border: none;
