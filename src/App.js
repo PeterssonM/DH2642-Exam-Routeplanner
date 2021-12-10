@@ -42,19 +42,11 @@ export default class App extends Component {
                 <Route path='/' element={<Feed />}></Route>
                 <Route path='/home' element={<Feed />}></Route>
                 <Route path="/edit" element={<EditPage />}></Route>
-<<<<<<< HEAD
                 <Route path="/signup" element={<Signup />}></Route>
-=======
-<<<<<<< HEAD
-                <Route path="/signup" element={<Signup />}></Route>
-=======
->>>>>>> f64922e94e58af409d566f2d1f378eda9ffb1fec
->>>>>>> 1f6c1e8fbae74452d80a6602b0aac1a72ec6549a
                 <Route path="/summary" element={<Summary />}></Route>
             </Routes>
         </div>
       </div>
-
     )
   }
 }
