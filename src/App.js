@@ -38,15 +38,12 @@ export default class App extends Component {
       <div>
         <div className="app">
           <Header />
-          <AuthProvider>
             <Routes>
                 <Route path='/' element={<Feed />}></Route>
                 <Route path='/home' element={<Feed />}></Route>
                 <Route path="/edit" element={<EditPage />}></Route>
-                <Route path="signup" element={<Signup />}></Route>
                 <Route path="/summary" element={<Summary />}></Route>
             </Routes>
-          </AuthProvider>
         </div>
       </div>
 
