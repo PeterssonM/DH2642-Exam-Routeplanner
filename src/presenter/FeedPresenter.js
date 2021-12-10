@@ -2,7 +2,6 @@ import Planner from "../service/routePlanner"
 import Body from "../view/BodyView"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 import React, {Component, useState} from 'react';
-import  { Redirect } from 'react-router-dom'
 
 import '../view/AddNoteView';
 
@@ -67,10 +66,6 @@ export default function Feed(props) {
         setNotes(newNotes);
     }
 
-
-    if (!props.user) {
-        return <Redirect to="/signin" />
-    }
 
     return (
             <div className="feed">
