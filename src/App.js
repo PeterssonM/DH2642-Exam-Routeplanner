@@ -3,7 +3,11 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Feed from "./presenter/FeedPresenter"
 import Signup from "./presenter/SignupPresenter"
+<<<<<<< HEAD
 import Signin from "./presenter/SigninPresenter"
+=======
+import Signin from "./view/SignInView"
+>>>>>>> 9770a76e078a9d684a9614ec8172c520fa67e89e
 import EditPage from "./presenter/EditPagePresenter"
 import Header from "./presenter/HeaderPresenter"
 import { AuthProvider } from './generatedFiles/contexts/AuthContext';
@@ -50,7 +54,7 @@ export default class App extends Component {
             <Header />
             
             <Routes>
-                <Route path='/' element={<Feed />}></Route>
+                <Route path='/' element={<Signin />}></Route>
                 <Route path='/home' element={<Feed />}></Route>
                 <Route path="/edit" element={<EditPage />}></Route>
               
