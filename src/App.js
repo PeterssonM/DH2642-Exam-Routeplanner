@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useHistory, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Feed from "./presenter/FeedPresenter"
@@ -21,7 +21,6 @@ const fetchdata = async() => {
     console.log(d.data());
   })
 }
-
 export default class App extends Component {
 
   constructor() {
@@ -46,29 +45,23 @@ export default class App extends Component {
 
   render() {
     
-  
-
     const {user} = this.state;
 
     return (
       <div>
         <div className="app">
-            <Header />
-            
+            <Header/>
             <Routes>
-                <Route path='/' element={<Signin />}></Route>
+                <Route path='/' element={<Signin />}></Route> //landingPage = signIn
+                <Route path='*' element={<Signin />}></Route> // all random routes are sent to signIn
                 <Route path='/home' element={<Feed user={user} />}></Route>
                 <Route path="/edit" element={<EditPage />}></Route>
-              
                 <Route path="/signup" element={<Signup />}></Route>
                 <Route path="/signin" element={<Signin />}></Route>
                 <Route path="/summary" element={<Summary />}></Route>
-            </Routes>
-            
+            </Routes> 
         </div>
       </div>
     )
   }
 }
-
-/**FUCKING HARRY */
