@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import {Link} from 'react-router-dom';
 
-export default function Header( {handleSearchNote, handleToggleDarkMode} ) {
+export default function Header( { handleSearchNote } ) {
 
     return (
         <div className="header">
@@ -27,31 +27,13 @@ export default function Header( {handleSearchNote, handleToggleDarkMode} ) {
                     <Link to='/signin' style={{ textDecoration: 'none' }}>
                         <HeaderButtons icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out"/>
                     </Link>
-                    <div className="darkModeSwitch">
-                        <label className="switch">
-                            <input 
-                                onClick={()=> 
-                                    handleToggleDarkMode(
-                                    (previousDarkMode)=>!previousDarkMode)
-                                } 
-                                type="checkbox"> 
-                            </input>
-                            <span className="slider round"></span>
-                        </label>
-                    </div>
             </div> 
         </div>
-
-
-        
-          
-             
-            
     );
 }
 
 //Template function for creating buttons
-function HeaderButtons({icon, title, style}) {
+function HeaderButtons( {icon, title} ) {
     return (
         <div className="headerButtons">
             <i className= {icon}/>

@@ -11,7 +11,6 @@ export default function Notes ({id, title, text, origin, destination, date, hand
             <div className= "paragraph">
                 <p className="textBox">{text}</p>
             </div>
-         
             <div className="routeCards"> {/*Klassen har ännu inte specificerats :)*/}
                 <p>Origin: {origin}</p>
                 <p>Destination: {destination}</p>

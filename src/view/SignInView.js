@@ -2,7 +2,7 @@ import React from 'react'
 import './SignUp.css'
 import {Link} from 'react-router-dom';
 
-function SignInView( {signup, emailRef, passwordRef} ) {
+export default function SignInView( {signup, emailRef, passwordRef} ) {
     return (
         <div className="signUpBox">
             <form className="signup" onSubmit={signup}>
@@ -29,4 +29,3 @@ function SignInView( {signup, emailRef, passwordRef} ) {
     )
 }
 
-export default SignInView

@@ -43,7 +43,6 @@ export default function Signup() {
 
     }
 
-    
     return (
         <SignupView signup={signup} emailRef={emailRef} passwordRef={passwordRef} passwordConfirmRef={passwordConfirmRef} submitted={submitted}/>
     )

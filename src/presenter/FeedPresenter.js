@@ -75,6 +75,5 @@ export default function Feed(props) {
                     handleDeleteNote={deleteNote}
                 />
             </div>
-
     );
 }
