@@ -1,4 +1,4 @@
-import React, { Component, useState, useHistory, useEffect } from 'react';
+import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Feed from "./presenter/FeedPresenter"
@@ -53,7 +53,7 @@ export default class App extends Component {
             <Header/>
             <Routes>
                 <Route path='/' element={<Signin />}></Route> //landingPage = signIn
-                <Route path='*' element={<Signin />}></Route> // all random routes are sent to signIn
+                <Route path='*' element={<Signin />}></Route> //all random routes are sent to signIn
                 <Route path='/home' element={<Feed user={user} />}></Route>
                 <Route path="/edit" element={<EditPage />}></Route>
                 <Route path="/signup" element={<Signup />}></Route>

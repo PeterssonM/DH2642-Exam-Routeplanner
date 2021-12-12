@@ -48,10 +48,11 @@
     margin:auto;
 }
 
-
 .searchIcon {
-    color: black;
+    color: black; 
+    cursor: pointer; 
 }
+
 
 .header_search input {
     border: none;
@@ -64,6 +65,7 @@
     background-color: rgb(233, 233, 233); 
     border-radius: 5px;
     padding: 15px;
+    
 
 }
 

@@ -8,7 +8,9 @@ export default function Header( { handleSearchNote } ) {
         <div className="header">
             <div className="left-header">
                 <div className="header_search">
-                    <i className= {"fas fa-search fa-1g"} title="Search"/>
+                    <div className="searchIcon">
+                        <i className= {"fas fa-search fa-1g"} title="Search"/>
+                    </div>
                     <input 
                         onChange={(event) => 
                             handleSearchNote(event.target.value)
