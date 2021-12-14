@@ -33,7 +33,7 @@ export default function EditPagePresenter() {
             created_at: new Date()
         })
 
-        alert("Created!");
+        navigate("/home")
     }
 
     return (

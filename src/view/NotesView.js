@@ -2,6 +2,8 @@ import React from 'react';
 import './Notes.css';
 
 export default function Notes ({id, title, text, origin, destination, date, handleDeleteNote}) {
+    console.log(id);
+    
     return (
         <div className="note">
             {/*<p>{id}</p> debugging*/}

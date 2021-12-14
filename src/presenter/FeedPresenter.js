@@ -34,8 +34,6 @@ export default function Feed() {
     
     useEffect(() => {
 
-
-
         auth().onAuthStateChanged(function(user) {
             if (!user) { return navigate("/signin"); }
 
@@ -44,19 +42,9 @@ export default function Feed() {
 
             //Grabs the cards for the user.
             getAllCards(user.uid)
-                .then( (snapshot) => {
-                    let n = []
-
-                    snapshot.forEach( (snap) => {
-                        n.push(snap.data());
-                    })
-
-                    setNotes(n);
-                })
             
-          });
+        });
 
-     
     }, [])
 
 
@@ -74,13 +62,25 @@ export default function Feed() {
     }
 
     const deleteNote = (id) => {
-        const  newNotes = notes.filter((note)=> note.id !== id);
-        setNotes(newNotes);
+        db.collection("cards").where("id", "==", id).get()
+        .then( (snapshot) => {
+            snapshot.docs[0].ref.delete()
+            getAllCards(user.uid)
+        })
     }
 
     const getAllCards = (user) => {
-        return db.collection("cards").where("uid", "==", user)
+        db.collection("cards").where("uid", "==", user)
         .get()
+        .then( (snapshot) => {
+            let n = []
+
+            snapshot.forEach( (snap) => {
+                n.push(snap.data());
+            })
+
+            setNotes(n);
+        })
     }
 
     const sortingByDate = (a, b) => {

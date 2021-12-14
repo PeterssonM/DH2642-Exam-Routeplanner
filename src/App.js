@@ -21,23 +21,15 @@ import StopFinder from './service/stopFinder.js';
 
 export default function App() {
 
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [userId, setUserId] = useState(null);
-
-  //Navigate user around the website
-  const navigate = useNavigate();
-
-
-
   return (
     <div>
       <div className="app">
           <Header/>
           <Routes>
-              <Route path='/home' element={<Feed user={userId}/>}></Route>
+              <Route path='/home' element={<Feed />}></Route>
               <Route path="/edit" element={<EditPage />}></Route>
               <Route path="/signup" element={<Signup />}></Route>
-              <Route path="/signin" element={<Signin loggedIn={loggedIn} />}></Route>
+              <Route path="/signin" element={<Signin />}></Route>
               <Route path="/summary" element={<Summary />}></Route>
               <Route path='*' element={<Signin />}></Route> //all random routes are sent to signIn
           </Routes>
