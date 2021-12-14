@@ -1,18 +1,34 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import {auth, signIn } from "../firebase"
+import firebase, {auth, signIn } from "../firebase"
 import SigninView from "../view/SignInView"
+
+//Redux
+import {
+    login, 
+    logout,
+    selectLoggedState,
+    selectUserId
+  } from "../generatedFiles/features/user/userSlice"
+import { useSelector, useDispatch } from 'react-redux';
+  
 
 export default function Signin() {
 
+    //Refs
     const emailRef = useRef()
     const passwordRef = useRef()
 
+    //Navigation
     const navigate = useNavigate()
 
-    useEffect(() => {
-        auth.signOut();
+    //Redux
+    const logged_in = useSelector(selectLoggedState);
+    const dispatch = useDispatch(); 
 
+    useEffect(() => {
+        console.log("logged in: " + logged_in);
+        if (logged_in) { return navigate("/home"); }
     }, [])
 
     function signin(e) {
@@ -21,7 +37,7 @@ export default function Signin() {
 
         signIn(emailRef.current.value, passwordRef.current.value)
             .then( () => {
-                alert("Logged in " );
+                dispatch(login(firebase.auth().currentUser.uid))
                 navigate("/home");
             })
             .catch( (error) => {

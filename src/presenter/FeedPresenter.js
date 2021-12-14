@@ -1,12 +1,28 @@
-import Planner from "../service/routePlanner"
-import Body from "../view/BodyView"
-import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
+//React
 import React, {Component, useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
+
+//Views
+import Body from "../view/BodyView"
+import '../view/AddNoteView';
+
+//Utils
+import Planner from "../service/routePlanner"
+import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
+
+//Firebase
 import firebase, {db} from "../firebase";
 
+//Redux
+//Redux
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  login, 
+  logout,
+  selectLoggedState,
+  selectUserId
+} from "../generatedFiles/features/user/userSlice"
 
-import '../view/AddNoteView';
 
 export default function Feed(props) {
 
@@ -17,10 +33,40 @@ export default function Feed(props) {
             })
     }*/
 
+    //Navigate the user around the website
     const navigate = useNavigate();
+
+    //Redux
+    const logged_in = useSelector(selectLoggedState)
+    
 
     const [notes, setNotes] = useState(null);
     const [user, setUser] = useState(null);
+    
+    useEffect(() => {
+
+        //Send user to signin pag
+
+        //Ends of code.
+        /* 
+        firebase.auth().onAuthStateChanged((user) => {
+
+            setUser(user.uid);
+        
+            getAllCards(user)
+                .then( (snapshot) => {
+                    let n = []
+
+                    snapshot.forEach( (snap) => {
+                        n.push(snap.data());
+                    })
+
+                    setNotes(n);
+                })
+        });
+        */
+    }, [])
+
 
 
     const addNote = (text, title) => {
@@ -48,27 +94,6 @@ export default function Feed(props) {
     const sortingByDate = (a, b) => {
         return new Date(b.create_at) - new Date(a.create_at);
     }
-
-    //Checks if user is logged in.
-    useEffect(() => {
-        firebase.auth().onAuthStateChanged((user) => {
-            if (!user) navigate("/signin");
-
-            setUser(user.uid);
-        
-            getAllCards(user)
-                .then( (snapshot) => {
-                    let n = []
-
-                    snapshot.forEach( (snap) => {
-                        n.push(snap.data());
-                    })
-
-                    setNotes(n);
-                })
-        });
-    }, [])
-
 
     return (
             <div className="feed">

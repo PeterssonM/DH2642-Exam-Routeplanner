@@ -18,7 +18,7 @@ export const auth = firebase.auth();
 export const db = firebase.firestore();
 
 export async function signIn(email, password) {
-    await firebase.auth().signInWithEmailAndPassword(email, password);
+    await firebase.auth().signInWithEmailAndPassword(email, password)
 }
 
 export default firebase;
