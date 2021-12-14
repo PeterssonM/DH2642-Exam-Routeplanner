@@ -8,7 +8,7 @@ export default function Body({notes, handleAddNote, handleDeleteNote}) {
     return (
         <div>
             <div className="notes">
-                {notes.map((note) => (
+                {notes && notes.map((note) => (
                     <Notes
                         id={note.id}
                         title={note.title}

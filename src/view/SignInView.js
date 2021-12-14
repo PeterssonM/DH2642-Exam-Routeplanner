@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 
 export default function SignInView( {signin, emailRef, passwordRef} ) {
 
-
     return (
         <div className="signUpBox">
             <form className="signup" onSubmit={signin}>

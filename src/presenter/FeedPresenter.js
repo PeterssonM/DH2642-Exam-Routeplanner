@@ -19,39 +19,8 @@ export default function Feed(props) {
 
     const navigate = useNavigate();
 
-    const [notes, setNotes] = useState([
-        {
-            id: nanoid(),
-            title: "Diskret Matte",
-            text: "Ta med: penna, sudd, linjal",
-            origin: "Medborgarplatsen",
-            destination: "Kista",
-            date: "15/12/2020"
-        },
-        {
-            id: nanoid(),
-            title: "Pogrammering 1",
-            text: "Ta med: Dator",
-            date: "11/12/2020",
-            origin: "Hötorget",
-            destination: "Tekniska Högskolan",
-        },
-        {
-            id: nanoid(),
-            title: "Datalagring",
-            text: "Ta med: penna och sudd           Ät ett äpple",
-            date: "12/12/2020",
-            origin: "Fittja",
-            destination: "Kista",
-        },
-        {
-            id: nanoid(),
-            title: "Algoritmer och Datastrukturer",
-            text: "Glöm inte datorladdare",
-            date: "9/12/2020",
-            origin: "Fittja",
-            destination: "Kista",
-        }]);
+    const [notes, setNotes] = useState(null);
+    const [user, setUser] = useState(null);
 
 
     const addNote = (text, title) => {
@@ -74,20 +43,28 @@ export default function Feed(props) {
     const getAllCards = (user) => {
         return db.collection("cards").where("uid", "==", user.uid)
         .get()
-        
+    }
+
+    const sortingByDate = (a, b) => {
+        return new Date(b.create_at) - new Date(a.create_at);
     }
 
     //Checks if user is logged in.
     useEffect(() => {
         firebase.auth().onAuthStateChanged((user) => {
             if (!user) navigate("/signin");
-            
+
+            setUser(user.uid);
+        
             getAllCards(user)
                 .then( (snapshot) => {
-                    snapshot.forEach( (snap) => {
-                        console.log(snap.data());
+                    let n = []
 
+                    snapshot.forEach( (snap) => {
+                        n.push(snap.data());
                     })
+
+                    setNotes(n);
                 })
         });
     }, [])
@@ -96,6 +73,7 @@ export default function Feed(props) {
     return (
             <div className="feed">
                 <Body
+                    sortAlgoritm={sortingByDate}
                     notes={notes}
                     handleAddNote={addNote}
                     handleDeleteNote={deleteNote}
