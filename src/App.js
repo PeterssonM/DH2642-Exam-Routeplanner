@@ -14,7 +14,7 @@ import Header from "./presenter/HeaderPresenter"
 import Summary from "./presenter/SummaryCardPresenter"
 
 //Firebase
-import firebase from "./firebase"
+import { auth } from "./firebase"
 
 //Sl Api
 import StopFinder from './service/stopFinder.js';
@@ -31,7 +31,7 @@ import {
 export default function App() {
 
   //Redux
-  const user = firebase.auth().currentUser;
+  const user = auth().currentUser;
   const logged_in = useSelector(selectLoggedState);
   const dispatch = useDispatch();
 

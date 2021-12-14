@@ -45,6 +45,8 @@ export default function Feed(props) {
     
     useEffect(() => {
 
+        console.log(logged_in);
+
         //Send user to signin pag
 
         //Ends of code.
