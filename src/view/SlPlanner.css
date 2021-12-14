@@ -1,0 +1,75 @@
+.slPlanner{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 850px;
+    display:flex;
+}
+
+.fromInput input {
+    border: none;
+    background-color: rgb(233, 233, 233);  
+}
+
+.fromInput {
+    display: flex;
+    align-items: center;
+    background-color: rgb(233, 233, 233); 
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.fromInput input:focus {
+    outline: none;
+}
+
+
+.toInput input {
+    border: none;
+    background-color: rgb(233, 233, 233);  
+}
+
+.toInput {
+    display: flex;
+    align-items: center;
+    background-color: rgb(233, 233, 233); 
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.toInput input:focus {
+    outline: none;
+}
+
+.border {
+    height: 150px;
+    background-color: rgb(233, 233, 233); 
+    border-radius: 10px;
+}
+
+.fromInputTextArea {
+    height: 30px;
+    width: 300px;
+    resize: none;
+    border-color: black;
+    border-width: 2px;
+}
+
+.toInputTextArea {
+    height: 30px;
+    width: 300px;
+    resize: none;
+    border-color: black;
+    border-width: 2px;
+}
+
+.layout {
+    padding-top: 22px;
+    align-items: center;
+    display: flex;
+}
+
+.Sltitle{
+    padding-left: 190px;
+    font-size: 25px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,.4);   
+}

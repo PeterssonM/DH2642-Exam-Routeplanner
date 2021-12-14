@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import {Link} from 'react-router-dom';
 
-export default function Header( { handleSearchNote } ) {
+export default function Header() {
 
     return (
         <div className="header">
@@ -11,12 +11,7 @@ export default function Header( { handleSearchNote } ) {
                     <div className="searchIcon">
                         <i className= {"fas fa-search fa-1g"} title="Search"/>
                     </div>
-                    <input 
-                        onChange={(event) => 
-                            handleSearchNote(event.target.value)
-                        }
-                        type="text" placeholder="Type to search...">
-                    </input>
+                    <input type="text" placeholder="Type to search..."></input>
                 </div>
             </div>
             <div className="middle-header">
