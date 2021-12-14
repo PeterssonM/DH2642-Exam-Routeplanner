@@ -22,7 +22,7 @@ import StopFinder from './service/stopFinder.js';
 //Redux
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  login, 
+  login,
   logout,
   selectLoggedState,
   selectUserId
@@ -33,7 +33,7 @@ export default function App() {
   //Redux
   const user = firebase.auth().currentUser;
   const logged_in = useSelector(selectLoggedState);
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
 
   //Navigate user around the website
   const navigate = useNavigate();
@@ -47,12 +47,12 @@ export default function App() {
     } else {
       dispatch(logout());
     }
-    
+
     //Checks if user is signed i
     if (!logged_in) { navigate("/signin"); }
-    
+
   }, [])
-  
+
 
   return (
     <div>
@@ -66,9 +66,9 @@ export default function App() {
               <Route path="/signup" element={<Signup />}></Route>
               <Route path="/signin" element={<Signin />}></Route>
               <Route path="/summary" element={<Summary />}></Route>
-          </Routes> 
+          </Routes>
       </div>
     </div>
   )
-  
+  //hej
 }
