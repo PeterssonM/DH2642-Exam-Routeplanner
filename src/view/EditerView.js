@@ -4,16 +4,17 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import "./Editer.css"
 import { useState } from 'react'
 
-export default function EditPageView() {
+export default function EditPageView({ create, titleRef }) {
 
     const characterLimit= 200;
     const[noteText, setNoteText] = useState('');
 
     return (
-        <form>
+        <form onSubmit={create}>
             <div className= "siteContainer">
                 <div className="titleContainer">
                     <textarea className="titleArea"
+                        ref={titleRef}
                         rows={2}
                         cols={40}
                         placeholder='Enter a Title..'

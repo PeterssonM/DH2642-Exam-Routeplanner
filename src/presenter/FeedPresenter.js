@@ -1,7 +1,10 @@
 import Planner from "../service/routePlanner"
 import Body from "../view/BodyView"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
-import React, {Component, useState} from 'react';
+import React, {Component, useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
+import firebase, {db} from "../firebase";
+
 
 import '../view/AddNoteView';
 
@@ -13,6 +16,8 @@ export default function Feed(props) {
                 console.log(data.Trip);
             })
     }*/
+
+    const navigate = useNavigate();
 
     const [notes, setNotes] = useState([
         {
@@ -65,6 +70,27 @@ export default function Feed(props) {
         const  newNotes = notes.filter((note)=> note.id !== id);
         setNotes(newNotes);
     }
+
+    const getAllCards = (user) => {
+        return db.collection("cards").where("uid", "==", user.uid)
+        .get()
+        
+    }
+
+    //Checks if user is logged in.
+    useEffect(() => {
+        firebase.auth().onAuthStateChanged((user) => {
+            if (!user) navigate("/signin");
+            
+            getAllCards(user)
+                .then( (snapshot) => {
+                    snapshot.forEach( (snap) => {
+                        console.log(snap.data());
+
+                    })
+                })
+        });
+    }, [])
 
 
     return (

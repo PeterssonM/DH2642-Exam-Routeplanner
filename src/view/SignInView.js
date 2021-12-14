@@ -2,10 +2,12 @@ import React from 'react'
 import './SignUp.css'
 import {Link} from 'react-router-dom';
 
-export default function SignInView( {signup, emailRef, passwordRef} ) {
+export default function SignInView( {signin, emailRef, passwordRef} ) {
+
+
     return (
         <div className="signUpBox">
-            <form className="signup" onSubmit={signup}>
+            <form className="signup" onSubmit={signin}>
                 <div className="signUpTitleLocation">
                     <span className="signUpTitle">Sign In</span>
                 </div>

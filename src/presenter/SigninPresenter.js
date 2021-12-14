@@ -1,22 +1,32 @@
-import React, { useRef, useState } from 'react'
-import firebase from "../firebase"
+import React, { useRef, useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
+import {auth, signIn } from "../firebase"
 import SigninView from "../view/SignInView"
 
 export default function Signin() {
 
     const emailRef = useRef()
     const passwordRef = useRef()
-    const passwordConfirmRef = useRef()
 
-    const auth = firebase.auth()
+    const navigate = useNavigate()
 
-    async function signin() {
-        try {
-            await auth.signInWithEmailAndPassword(emailRef.current.value, passwordRef.current.value);
-        } catch (error) {
-            console.log(error);
-            alert(error.message)
-        }
+    useEffect(() => {
+        auth.signOut();
+
+    }, [])
+
+    function signin(e) {
+
+        e.preventDefault();
+
+        signIn(emailRef.current.value, passwordRef.current.value)
+            .then( () => {
+                alert("Logged in " );
+                navigate("/home");
+            })
+            .catch( (error) => {
+                console.log(error);
+            })
     }
 
     return (

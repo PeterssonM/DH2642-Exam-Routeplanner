@@ -2,8 +2,6 @@ import React, { useRef, useState } from 'react'
 import firebase from "../firebase"
 import SignupView from "../view/SignUpView"
 
-var user = firebase.auth().currentUser;
-
 export default function Signup() {
 
     const emailRef = useRef()
@@ -43,6 +41,7 @@ export default function Signup() {
 
     }
 
+    
     return (
         <SignupView signup={signup} emailRef={emailRef} passwordRef={passwordRef} passwordConfirmRef={passwordConfirmRef} submitted={submitted}/>
     )
