@@ -47,8 +47,6 @@ export default function Feed() {
 
     }, [])
 
-
-
     const addNote = (text, title) => {
         const date = new Date();
         const newNote = {
@@ -65,6 +63,7 @@ export default function Feed() {
         db.collection("cards").where("id", "==", id).get()
         .then( (snapshot) => {
             snapshot.docs[0].ref.delete()
+        }).then( () => {
             getAllCards(user.uid)
         })
     }

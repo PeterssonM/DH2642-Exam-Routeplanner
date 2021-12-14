@@ -40,8 +40,7 @@ export default function EditPageView({ create, titleRef }) {
                     <CKEditor className="ckEditor"
                         editor={ ClassicEditor }
                         onReady={ editor => {
-                            // You can store the "editor" and use when it is needed.
-                            console.log( 'Editor is ready to use!', editor );
+
                         } }
                         onChange={ ( event, editor,) => {
                             const data = editor.getData();
