@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import {Link} from 'react-router-dom';
 
-export default function Header() {
+export default function Header({signout}) {
 
     return (
         <div className="header">
@@ -22,7 +22,7 @@ export default function Header() {
                         <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
                     </Link>
                     <Link to='/signin' style={{ textDecoration: 'none' }}>
-                        <HeaderButtons icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out"/>
+                        <HeaderButtons icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
                     </Link>
             </div> 
         </div>
@@ -30,9 +30,9 @@ export default function Header() {
 }
 
 //Template function for creating buttons
-function HeaderButtons( {icon, title} ) {
+function HeaderButtons( {icon, title, onClick} ) {
     return (
-        <div className="headerButtons">
+        <div onClick={onClick} className="headerButtons">
             <i className= {icon}/>
             <h3 className="headerButtonTitle">{title}</h3>
         </div>

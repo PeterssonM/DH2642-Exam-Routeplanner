@@ -11,7 +11,7 @@ import Planner from "../service/routePlanner"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 
 //Firebase
-import firebase, {db} from "../firebase";
+import firebase, {db, auth} from "../firebase";
 
 //Redux
 //Redux
@@ -24,38 +24,26 @@ import {
 } from "../generatedFiles/features/user/userSlice"
 
 
-export default function Feed(props) {
-
-    /*componentDidMount() {
-        Planner(740021730, 740012883)
-            .then( (data) => {
-                console.log(data.Trip);
-            })
-    }*/
+export default function Feed() {
 
     //Navigate the user around the website
     const navigate = useNavigate();
 
-    //Redux
-    const logged_in = useSelector(selectLoggedState)
-    
-
-    const [notes, setNotes] = useState(null);
     const [user, setUser] = useState(null);
+    const [notes, setNotes] = useState(null);
     
     useEffect(() => {
 
-        console.log(logged_in);
 
-        //Send user to signin pag
 
-        //Ends of code.
-        /* 
-        firebase.auth().onAuthStateChanged((user) => {
+        auth().onAuthStateChanged(function(user) {
+            if (!user) { return navigate("/signin"); }
 
-            setUser(user.uid);
-        
-            getAllCards(user)
+            //Saves the user to the state
+            setUser(user);
+
+            //Grabs the cards for the user.
+            getAllCards(user.uid)
                 .then( (snapshot) => {
                     let n = []
 
@@ -65,8 +53,10 @@ export default function Feed(props) {
 
                     setNotes(n);
                 })
-        });
-        */
+            
+          });
+
+     
     }, [])
 
 
@@ -89,7 +79,7 @@ export default function Feed(props) {
     }
 
     const getAllCards = (user) => {
-        return db.collection("cards").where("uid", "==", user.uid)
+        return db.collection("cards").where("uid", "==", user)
         .get()
     }
 

@@ -1,17 +1,13 @@
+//React
 import React, { useRef, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
+
+//Firebase
 import firebase, {auth, signIn } from "../firebase"
+
+//Views
 import SigninView from "../view/SignInView"
 
-//Redux
-import {
-    login, 
-    logout,
-    selectLoggedState,
-    selectUserId
-  } from "../generatedFiles/features/user/userSlice"
-import { useSelector, useDispatch } from 'react-redux';
-  
 
 export default function Signin() {
 
@@ -22,13 +18,13 @@ export default function Signin() {
     //Navigation
     const navigate = useNavigate()
 
-    //Redux
-    const logged_in = useSelector(selectLoggedState);
-    const dispatch = useDispatch(); 
-
     useEffect(() => {
-        console.log("logged in: " + logged_in);
-        if (logged_in) { return navigate("/home"); }
+        
+        auth().onAuthStateChanged((user) => {
+            //Is the user already logged in?
+            if (user) { navigate("/home"); }
+        })
+
     }, [])
 
     function signin(e) {
@@ -37,7 +33,7 @@ export default function Signin() {
 
         signIn(emailRef.current.value, passwordRef.current.value)
             .then( () => {
-                dispatch(login(firebase.auth().currentUser.uid))
+                //dispatch(login(firebase.auth().currentUser.uid))
                 navigate("/home");
             })
             .catch( (error) => {
