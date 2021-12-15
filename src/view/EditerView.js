@@ -18,25 +18,21 @@ export default function EditPageView({ create, titleRef, textRef }) {
                 <div className="slStationContainer">
                     <span className="slTitle">Where do you want to go?</span>
                     <div className="textBoxLayout">
-                        <textarea className='stationInputTextArea'
-                            rows="1" 
-                            cols="40"
+                        <textarea className='stationInputTextAreaTo'
+                            maxlength="30"
                             placeholder="From:"
                         ></textarea>
-                        <div className="arrowsIcon"><i className=  {"fas fa-exchange-alt fa-1g"} title="exChangeSymbol"/></div>
-                        <textarea className='stationInputTextArea'
-                            rows="1" 
-                            cols="40"
+                        <div className="arrowsIcon"><i className=  {"fas fa-exchange-alt fa-1g"} title="swap"/></div>
+                        <textarea className='stationInputTextAreaFrom'
+                            maxlength="30"
                             placeholder="To:"
                         ></textarea>
                     </div>
                 </div>                
                 <div className="ckEditorContainer">
                     <CKEditor className="ckEditor"
+                        ref={textRef}
                         editor={ ClassicEditor }
-                        onReady={ editor => {
-                            
-                        } }
                         onChange={ ( event, editor,) => {
                             const data = editor.getData();
                             console.log( { event, editor, data } );

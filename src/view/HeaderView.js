@@ -11,7 +11,7 @@ export default function Header({signout}) {
                     <div className="searchIcon">
                         <i className= {"fas fa-search fa-1g"} title="Search"/>
                     </div>
-                    <input type="text" placeholder="Type to search..."></input>
+                    <input className="inputBar" type="text" placeholder="Type to search..."></input>
                 </div>
             </div>
             <div className="middle-header">
