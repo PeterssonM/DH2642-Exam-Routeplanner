@@ -24,5 +24,3 @@ export default function Notes ({id, title, text, origin, destination, date, hand
         </div> 
     )
 }
-
-//

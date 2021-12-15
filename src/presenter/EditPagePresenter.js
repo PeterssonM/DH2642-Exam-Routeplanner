@@ -1,19 +1,37 @@
+//React
 import React, {useRef, useEffect, useState } from 'react'
-import EditPage from '../view/EditerView'
 import { useNavigate } from 'react-router-dom';
+
+//Views
+import EditPage from '../view/EditerView'
+
+//Presenters
 import Header from '../presenter/HeaderPresenter'
 
-
+//Firebase
 import firebase, { db } from "../firebase"
-import { nanoid } from '@reduxjs/toolkit';
 
-//PtsTOslqGhS9Wx0TFZnC0tm7Bf52
+//Utils
+import { nanoid } from '@reduxjs/toolkit';
+import { findByName } from '../service/resRobot';
+
 
 export default function EditPagePresenter() {
 
+    //Navigation
     const navigate = useNavigate();
+    
+    //Refs
     const titleRef = useRef();
+<<<<<<< HEAD
     const textRef = useRef();
+=======
+    const bodyRef = useRef();
+    const originRef = useRef();
+    const destinationRef = useRef(); 
+
+    //States
+>>>>>>> 25d8d87e9ee1f2a4f07027065382928b45a4ea64
     const [user, setUser] = useState(null);
 
     useEffect(() => {
@@ -28,6 +46,7 @@ export default function EditPagePresenter() {
 
         e.preventDefault();
 
+<<<<<<< HEAD
         db.collection("cards").add({
             id: nanoid(),
             title: titleRef.current.value,
@@ -35,18 +54,49 @@ export default function EditPagePresenter() {
             uid: user,
             created_at: new Date()
         })
+=======
+        //Check if origin and destination are valid.
+        findByName(originRef.current.value)
+            .then( (result) => {
+                if (!result) { return alert(originRef.current.value + " is not a valid station"); }
+                
+                findByName(destinationRef.current.value)
+                    .then( (result) => {
+                        if (!result) { return alert(destinationRef.current.value + " is not a valid station")}
+>>>>>>> 25d8d87e9ee1f2a4f07027065382928b45a4ea64
 
-        navigate("/home")
+                        db.collection("cards").add({
+                            id: nanoid(),
+                            title: titleRef.current.value,
+                            uid: user,
+                            //body: bodyRef.current.value,
+                            origin: originRef.current.value,
+                            destination: destinationRef.current.value,
+                            created_at: new Date()
+                        })
+                
+                        navigate("/home")
+                    })
+            })
+        
     }
 
     return (
         <div className= "editPage">
             <Header/>
+<<<<<<< HEAD
             <EditPage 
                 create={create} 
                 titleRef={titleRef} 
                 //textRef={textRef}
             />
+=======
+            <EditPage create={create} 
+                      titleRef={titleRef} 
+                      bodyRef={bodyRef}
+                      originRef={originRef}
+                      destinationRef={destinationRef} />
+>>>>>>> 25d8d87e9ee1f2a4f07027065382928b45a4ea64
         </div>
     )
 }
