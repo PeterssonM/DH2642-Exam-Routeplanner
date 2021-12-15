@@ -75,12 +75,6 @@
 }
 
 
-@media screen and (max-width: 1151px) {
-    .headerTitle {
-        font-size: 2.3em;
-    }
-}
-
 @media screen and (max-width: 800px) {
     .headerTitle {
         font-size: 2.0em;
@@ -108,7 +102,10 @@
     }
 }
 
-@media screen and (max-width: 690px) {
+
+
+/*TABLETS*/
+@media screen and (max-width: 600px) {
     .header {
         height: 4em;
     }
@@ -135,12 +132,14 @@
     }
 }
 
-@media screen and (max-width: 520px) {
+/*ANDROID*/
+@media screen and (max-width: 480px) {
     .header {
         height: 4em;
     }
     .headerTitle {
-        font-size: 1.5em;
+        font-size: 1.1em;
+        margin-left: 10px;
     }
     .header_search {
         border-radius: 5px;
@@ -149,9 +148,6 @@
     }
     .inputBar {
         width:100%
-    }
-    .left-header {
-        width:20%
     }
     .headerButtons {
         padding: 5px;
@@ -162,27 +158,19 @@
     }
 }
 
-@media screen and (max-width: 464px) {
+/*PHONE SIZE*/
+@media screen and (max-width: 340px) {
     .header {
         height: 4em;
     }
     .headerTitle {
-        font-size: 1.4em;
-    }
-    .header_search {
-        border-radius: 5px;
-        padding: 2px;
-        width:100%
-    }
-    .inputBar {
-        width:100%
+        font-size: 1em;
+
     }
     .headerButtons {
         padding: 5px;
         margin-bottom: 10px;
-    }
-    .headerButtonTitle {
-        font-size: 0;
+        margin-left: 10px;
     }
 }
 
