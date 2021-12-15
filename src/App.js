@@ -10,7 +10,6 @@ import Feed from "./presenter/FeedPresenter"
 import Signup from "./presenter/SignupPresenter"
 import Signin from "./presenter/SigninPresenter"
 import EditPage from "./presenter/EditPagePresenter"
-import Header from "./presenter/HeaderPresenter"
 import Summary from "./presenter/SummaryCardPresenter"
 
 //Firebase
@@ -24,7 +23,6 @@ export default function App() {
   return (
     <div>
       <div className="app">
-          <Header/>
           <Routes>
               <Route path='/home' element={<Feed />}></Route>
               <Route path="/edit" element={<EditPage />}></Route>

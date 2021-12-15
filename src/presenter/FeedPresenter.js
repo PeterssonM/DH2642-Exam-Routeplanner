@@ -9,6 +9,7 @@ import '../view/AddNoteView';
 //Utils
 import Planner from "../service/routePlanner"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
+import Header from '../presenter/HeaderPresenter';
 
 //Firebase
 import firebase, {db, auth} from "../firebase";
@@ -88,6 +89,7 @@ export default function Feed() {
 
     return (
             <div className="feed">
+                <Header/>
                 <Body
                     sortAlgoritm={sortingByDate}
                     notes={notes}
