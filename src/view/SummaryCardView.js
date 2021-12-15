@@ -1,7 +1,7 @@
 import React from 'react'
 import "./SummaryCard.css"
 
-export default function SummaryCardView({data, title}) {
+export default function SummaryCardView({data, title, body}) {
 
     console.log(data);
 
@@ -11,18 +11,22 @@ export default function SummaryCardView({data, title}) {
                 <span>{title}</span>
             </div>
 
+            <div className="textContainer" dangerouslySetInnerHTML={{__html: body}}>
+            </div>
+
             <div className="routePlannerContainer">
                 <table>
                     <thead>
-                        <span>Reseplaneraren!</span>
+                        <h3>Reseplaneraren!</h3>
                     </thead>
                     <tbody>
                         {data && data.stops.map(stop => {
+                            console.log(stop);
                             return(
                                 <div>
-                                    <tr key={stop.stops.id}><h3>Mot: {stop.direction}</h3></tr>
+                                    <tr key={stop.direction}><h3>Mot: {stop.direction}</h3></tr>
 
-                                    {stop.stops.stop && stop.stops.stop.map(station => {
+                                    {stop.stops.Stop && stop.stops.Stop.map(station => {
                                         return( <tr key={station.id}>{station.name}</tr> )
                                     })}
                                 </div>
@@ -33,9 +37,7 @@ export default function SummaryCardView({data, title}) {
 
             </div>
 
-            <div className="textContainer">
-
-            </div>
+          
         </div>
     )
 

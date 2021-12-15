@@ -40,7 +40,8 @@ export default function SummaryCardPresenter() {
                         station = snap.data();
                     })
 
-                    setTitle(station["title"])
+                    setTitle(station["title"]);
+                    setBody(station["body"]);
 
                     if (!station) { return navigate("/home"); }
 
@@ -80,7 +81,7 @@ export default function SummaryCardPresenter() {
     return (
         <div>
             <Header/>
-            <SummaryCard data={note} title={title}/>
+            <SummaryCard data={note} title={title} body={body}/>
         </div>
     )
 }
