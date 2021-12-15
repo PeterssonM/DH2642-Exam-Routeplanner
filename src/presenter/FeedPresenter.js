@@ -87,8 +87,9 @@ export default function Feed() {
         return new Date(b.create_at) - new Date(a.create_at);
     }
 
-
-
+    const redirect = (id) => {
+        return navigate("/summary/" + id);
+    }
 
     return (
             <div className="feed">
@@ -98,6 +99,7 @@ export default function Feed() {
                     notes={notes}
                     handleAddNote={addNote}
                     handleDeleteNote={deleteNote}
+                    redirect={redirect}
                 />
             </div>
     );

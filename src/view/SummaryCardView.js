@@ -1,17 +1,29 @@
 import React from 'react'
 import "./SummaryCard.css"
 
+export default function SummaryCardView({data, title}) {
 
-export default function SummaryCardView() {
+    console.log(data);
+
     return (
         <div className="cardContainer">
             <div className="titleContainer">
-                <span>Title</span>
+                <span>{title}</span>
             </div>
 
             <div className="textContainer">
-                <span>/*text*/</span>
+                { data && data.stops.map( (stop) => {
+                    return (
+                        <div>
+                            <h1>Mot: {stop.direction}</h1>
+                            {stop.stops.Stop && stop.stops.Stop.map( (s) => {
+                                return <span>{s.name}</span>
+                            })}
+                        </div>
+                    )
+                })}
             </div>
         </div>
     )
+
 }

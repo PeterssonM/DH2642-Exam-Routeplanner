@@ -1,9 +1,11 @@
 import React from 'react';
 import './Notes.css';
 
-export default function Notes ({id, title, text, origin, destination, date, handleDeleteNote}) {    
+export default function Notes ({id, title, text, origin, destination, date, handleDeleteNote, redirect}) {    
+    console.log(redirect)
+    
     return (
-        <div className="note">
+        <div className="note" onClick={() => redirect(id)}>
             {/*<p>{id}</p> debugging*/}
             <div className="title">
             <h3>{title}</h3>
