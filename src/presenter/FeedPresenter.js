@@ -1,5 +1,5 @@
 //React
-import React, {Component, useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 //Views
@@ -17,10 +17,10 @@ import firebase, {db, auth} from "../firebase";
 //Redux
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  login, 
-  logout,
-  selectLoggedState,
-  selectUserId
+    login, 
+    logout,
+    selectLoggedState,
+    selectUserId
 } from "../generatedFiles/features/user/userSlice"
 
 

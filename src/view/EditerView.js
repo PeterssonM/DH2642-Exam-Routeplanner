@@ -2,12 +2,8 @@ import React from 'react'
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import "./Editer.css"
-import { useState } from 'react'
 
 export default function EditPageView({ create, titleRef }) {
-
-    const characterLimit= 200;
-    const[noteText, setNoteText] = useState('');
 
     return (
         <form onSubmit={create}>

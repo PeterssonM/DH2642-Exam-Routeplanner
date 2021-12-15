@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const field = React.forwardRef(({label, type}, ref) => {
     return (
         <div className="field">

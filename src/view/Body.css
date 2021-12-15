@@ -1,4 +1,3 @@
-
 .notes {
     padding-top: 1rem;
     display: grid;
@@ -9,10 +8,6 @@
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;  
-}
-
-.dark-mode {
-    background-color: black;
 }
 
 
