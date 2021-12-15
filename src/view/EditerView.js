@@ -33,15 +33,10 @@ export default function EditPageView({ create, titleRef, originRef, destinationR
                 </div>                
                 <div className="ckEditorContainer">
                     <CKEditor className="ckEditor"
+                        placeholder="Type the content here!"
                         editor={ ClassicEditor }
                         onChange={ ( event, editor) => {
                             bodyRef.current = editor.getData();
-                        } }
-                        onBlur={ ( event, editor ) => {
-                        
-                        } }
-                        onFocus={ ( event, editor ) => {
-
                         } }
                     />
                 </div>
