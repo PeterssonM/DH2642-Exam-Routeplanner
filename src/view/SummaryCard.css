@@ -1,0 +1,32 @@
+.cardContainer{
+    background:#cce6ff;
+    border-style: solid;
+    border-color: #596d80;
+    height: 1050px;
+    width: 800px;
+    margin: auto;
+    margin-top: 50px;
+}
+.titleContainer{
+  padding-top: 0px;
+  border-style: solid;
+  border-top-color: #596d80;
+  border-bottom-color: #596d80;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+.routeContainer{
+
+}
+.originDestination{
+
+}
+.numberOfStations{
+
+}
+.travelDirection{
+
+}
+.textContainer{
+
+}
