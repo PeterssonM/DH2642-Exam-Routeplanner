@@ -1,0 +1,61 @@
+.note {
+    margin: 20px;
+    height:15em;
+    width:15em;
+    padding:2em;
+    border-radius: 25px;
+    font-family: 'Lato';
+    background:rgb(204, 222, 255);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer; 
+    white-space: pre-wrap;
+}
+
+.note:nth-child(n) { 
+    position:relative;
+    background:rgb(204, 230, 255); }
+
+.note:nth-child(3n) { 
+    position:relative;
+    background:rgb(181, 181, 247); }
+
+.note:nth-child(2n) { 
+    position:relative;
+    background:rgb(204, 255, 219); }
+
+.note:hover {
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    transform: scale(1.05);
+    position:relative;
+    z-index:5;
+}
+
+.note-foot {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paragraph {
+    overflow-y: scroll;
+    height: 200px;
+    padding-bottom: 20px;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    scrollbar-width: thin;
+}
+
+.title {
+    text-align: center; 
+}
+
+.note-buttons:hover {
+    transform: scale(1.20);
+    position:relative;
+    z-index:5;
+}
+
+

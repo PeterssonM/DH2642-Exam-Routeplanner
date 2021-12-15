@@ -1,49 +1,39 @@
-import React, { Component, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+//React
+import React, { useEffect, useState} from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+
+//Css
 import './App.css';
-import Feed from "./components/presenter/FeedPresenter"
-import Signup from "./components/presenter/SignupPresenter"
-import EditPage from "./components/presenter/EditPagePresenter"
-import Header from "./components/presenter/HeaderPresenter"
-import { AuthProvider } from './contexts/AuthContext';
-import firebase from "./firebase"
+
+//Presenters
+import Feed from "./presenter/FeedPresenter"
+import Signup from "./presenter/SignupPresenter"
+import Signin from "./presenter/SigninPresenter"
+import EditPage from "./presenter/EditPagePresenter"
+import Header from "./presenter/HeaderPresenter"
+import Summary from "./presenter/SummaryCardPresenter"
+
+//Firebase
+import { auth } from "./firebase"
+
+//Sl Api
 import StopFinder from './service/stopFinder.js';
 
-const app  = firebase.firestore();
-const fetchdata = async() => {
-  const res = app.collection("cards").where("/name=test");
-  const data = await res.get();
+export default function App() {
 
-  data.docs.forEach(d => {
-    console.log(d.data());
-  })
-}
-
-export default class App extends Component {
-
-  constructor(props) {
-    super(props)
-
-    //fetchdata()
-  }
-
-  render() {
-    return (
-      <div /*className={`${darkMode && 'dark-mode'}`}*/>
-        <div className="app">
+  return (
+    <div>
+      <div className="app">
           <Header/>
-          <AuthProvider>
-            <Routes>
-                <Route path='/' element={<Feed />}></Route>
-                <Route path='/home' element={<Feed />}></Route>
-                <Route path="/edit" element={<EditPage />}></Route>
-                <Route path="/signup" element={<Signup />}></Route>
-            </Routes>
-          </AuthProvider>
-        </div>
+          <Routes>
+              <Route path='/home' element={<Feed />}></Route>
+              <Route path="/edit" element={<EditPage />}></Route>
+              <Route path="/signup" element={<Signup />}></Route>
+              <Route path="/signin" element={<Signin />}></Route>
+              <Route path="/summary" element={<Summary />}></Route>
+              <Route path='*' element={<Signin />}></Route> //all random routes are sent to signIn
+          </Routes>
       </div>
-
-    )
-  }
+    </div>
+  )
 }
-

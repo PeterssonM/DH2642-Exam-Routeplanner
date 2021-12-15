@@ -1,5 +1,8 @@
-const BASE_URL_STOP_LOOKUP="https://api.resrobot.se/v2/location.name?";
-const API_KEY="8914fa48-04a5-4511-94c8-61d49831bd6a";
+const BASE_URL_STOP_FINDER="https://api.resrobot.se/v2/location.name?";
+const FORMAT = "format=json";
+const PASSLIST = "&passlist=true";
+const SHOWPASSINGPOINTS = "&showPassingPoints=true";
+const API_KEY = "&key=8914fa48-04a5-4511-94c8-61d49831bd6a";
 
 /*
   params format:
@@ -17,7 +20,7 @@ export default function StopFinder(params){
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
       },
-      body: JSON.stringify({url: BASE_URL_STOP_LOOKUP + new URLSearchParams(params)})
+      body: JSON.stringify({url: BASE_URL_STOP_FINDER + new URLSearchParams(params)})
     }).then( (data) => { resolve(data.json())})
   })
 }
