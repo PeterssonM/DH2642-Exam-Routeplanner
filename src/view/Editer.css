@@ -44,7 +44,18 @@
     margin: auto;
 }
 
-.stationInputTextArea {
+.stationInputTextAreaTo {
+    height: 30px;
+    width: 300px;
+    resize: none;
+    border-color: black;
+    border-width: 2px;
+    margin: 20px;
+    margin-bottom: 33px;
+    display: inline;
+}
+
+.stationInputTextAreaFrom {
     height: 30px;
     width: 300px;
     resize: none;
@@ -98,3 +109,52 @@
     z-index:5;
     opacity: 1.0;  
 }
+
+@media screen and (max-width: 800px) {
+    .titleArea {
+        width: auto;
+        display: flex;
+    }
+    .titleContainer {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+    .siteContainer {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 718px) {
+    .siteContainer {
+        width: auto;
+    }
+    .titleArea {
+        width: auto;
+    }
+    .stationInputTextAreaFrom {
+        display: flex;
+    }
+    .stationInputTextAreaTo {
+        display: flex;
+    }
+    .arrowsIcon {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .textBoxLayout {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;  
+    }
+}
+
+@media screen and (max-height: 1140px) {
+    .ckEditorContainer{
+        height: 200px;
+    }
+}
+
+
+
+

@@ -11,24 +11,21 @@ export default function EditPageView({ create, titleRef, originRef, destinationR
                 <div className="titleContainer">
                     <textarea className="titleArea"
                         ref={titleRef}
-                        rows={2}
-                        cols={40}
+                        maxlength="30"
                         placeholder='Enter a Title..'
                     ></textarea>
                 </div>
                 <div className="slStationContainer">
                     <span className="slTitle">Where do you want to go?</span>
                     <div className="textBoxLayout">
-                        <textarea className='stationInputTextArea'
-                            rows="1" 
-                            cols="40"
+                        <textarea className='stationInputTextAreaTo'
+                            maxlength="30"
                             placeholder="From:"
                             ref={originRef}
                         ></textarea>
-                        <div className="arrowsIcon"><i className=  {"fas fa-exchange-alt fa-1g"} title="exChangeSymbol"/></div>
-                        <textarea className='stationInputTextArea'
-                            rows="1" 
-                            cols="40"
+                        <div className="arrowsIcon"><i className=  {"fas fa-exchange-alt fa-1g"} title="swap"/></div>
+                        <textarea className='stationInputTextAreaFrom'
+                            maxlength="30"
                             placeholder="To:"
                             ref={destinationRef}
                         ></textarea>
@@ -37,9 +34,6 @@ export default function EditPageView({ create, titleRef, originRef, destinationR
                 <div className="ckEditorContainer">
                     <CKEditor className="ckEditor"
                         editor={ ClassicEditor }
-                        onReady={ editor => {
-
-                        } }
                         onChange={ ( event, editor,) => {
                             const data = editor.getData();
                             console.log( { event, editor, data } );

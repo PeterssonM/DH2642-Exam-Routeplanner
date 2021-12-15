@@ -3,13 +3,11 @@
     top: 0;
     display: flex;
     justify-content: space-evenly;
-    border-bottom: 0.2px solid lightgray;
-    background-color: lightblue;
-    width: 100%;
     z-index: 999;
     align-items: center;
     flex-direction: row;
-    
+    border-bottom: 0.2px solid lightgray;
+    background-color: lightblue;
 }
 
 .right-header {
@@ -31,6 +29,7 @@
     color: black;
 }
 
+
 .headerTitle {
     color: #3b478a;
     text-transform: uppercase;
@@ -41,7 +40,6 @@
     display: flex;
     font-weight: bold;
     transition: .5s ease-in-out;
-    
 }
 
 .middle-header{
@@ -65,8 +63,6 @@
     background-color: rgb(233, 233, 233); 
     border-radius: 5px;
     padding: 15px;
-    
-
 }
 
 .header_search input:focus {
@@ -77,5 +73,121 @@
     display: flex;
     margin:auto;
 }
+
+
+@media screen and (max-width: 1151px) {
+    .headerTitle {
+        font-size: 2.3em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .headerTitle {
+        font-size: 2.0em;
+    }
+    .header {
+        height: 4em;
+    }
+    .headerButtons {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .headerButtonTitle {
+        font-size: 0;
+    }
+    .header_search {
+        border-radius: 5px;
+        padding: 2px;
+        width:100%
+    }
+    .inputBar {
+        width:100%
+    }
+    .left-header {
+        width:15%
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .header {
+        height: 4em;
+    }
+    .headerTitle {
+        font-size: 1.5em;
+    }
+    .header_search {
+        border-radius: 5px;
+        padding: 2px;
+        width:100%
+    }
+    .inputBar {
+        width:100%
+    }
+    .left-header {
+        width:20%
+    }
+    .headerButtons {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .headerButtonTitle {
+        font-size: 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .header {
+        height: 4em;
+    }
+    .headerTitle {
+        font-size: 1.5em;
+    }
+    .header_search {
+        border-radius: 5px;
+        padding: 2px;
+        width:100%
+    }
+    .inputBar {
+        width:100%
+    }
+    .left-header {
+        width:20%
+    }
+    .headerButtons {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .headerButtonTitle {
+        font-size: 0;
+    }
+}
+
+@media screen and (max-width: 464px) {
+    .header {
+        height: 4em;
+    }
+    .headerTitle {
+        font-size: 1.4em;
+    }
+    .header_search {
+        border-radius: 5px;
+        padding: 2px;
+        width:100%
+    }
+    .inputBar {
+        width:100%
+    }
+    .headerButtons {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .headerButtonTitle {
+        font-size: 0;
+    }
+}
+
+
+
+
 
 
