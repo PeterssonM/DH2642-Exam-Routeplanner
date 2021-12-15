@@ -3,7 +3,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import "./Editer.css"
 
-export default function EditPageView({ create, titleRef }) {
+export default function EditPageView({ create, titleRef, originRef, destinationRef }) {
 
     return (
         <form onSubmit={create}>
@@ -23,12 +23,14 @@ export default function EditPageView({ create, titleRef }) {
                             rows="1" 
                             cols="40"
                             placeholder="From:"
+                            ref={originRef}
                         ></textarea>
                         <div className="arrowsIcon"><i className=  {"fas fa-exchange-alt fa-1g"} title="exChangeSymbol"/></div>
                         <textarea className='stationInputTextArea'
                             rows="1" 
                             cols="40"
                             placeholder="To:"
+                            ref={destinationRef}
                         ></textarea>
                     </div>
                 </div>                

@@ -8,7 +8,7 @@ import Body from "../view/BodyView"
 import '../view/AddNoteView';
 
 //Utils
-import Planner from "../service/routePlanner"
+import { findByName } from "../service/resRobot"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 
 //Firebase
@@ -86,6 +86,9 @@ export default function Feed() {
     const sortingByDate = (a, b) => {
         return new Date(b.create_at) - new Date(a.create_at);
     }
+
+
+
 
     return (
             <div className="feed">
