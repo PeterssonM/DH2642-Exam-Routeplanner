@@ -10,8 +10,10 @@ import { RES_ROBOT_API_KEY} from "./Config"
  */ 
 export function findByName(input) {
     return new Promise( (resolve, reject) => {
-        let url = "https://api.resrobot.se/v2/location.name?" + "key=" + RES_ROBOT_API_KEY + "&input=" + utf8.encode(input) + "&format=json"    
-        
+        let url = "https://api.resrobot.se/v2/location.name?" + "key=" + RES_ROBOT_API_KEY + "&input=" + input + "&format=json"    
+        console.log(input);
+        console.log(url);
+
         fetch(url)
             .then( (response) => response.json())
             .then( (data) => {
@@ -23,7 +25,7 @@ export function findByName(input) {
                     }
                 })
     
-                return resolve(result)
+                return resolve(data.StopLocation[0])
             })
     })
 }
@@ -31,8 +33,10 @@ export function findByName(input) {
 
 
 export function getIdFromName(input) {
-    let url = "https://api.resrobot.se/v2/location.name?" + "key=" + RES_ROBOT_API_KEY + "&input=" + utf8.encode(input) + "&format=json"    
+    let url = "https://api.resrobot.se/v2/location.name?" + "key=" + RES_ROBOT_API_KEY + "&input=" + input + "&format=json"    
         
+    console.log(input);
+    console.log(url);
     return new Promise( (resolve, reject) => {
         fetch(url)
         .then( (response) => response.json())
@@ -44,8 +48,8 @@ export function getIdFromName(input) {
                     result = loc
                 }
             })
-
-            return resolve(result.id)
+            
+            return resolve(data.StopLocation[0]["id"])
         })
     })
     
@@ -62,12 +66,12 @@ export function getIdFromName(input) {
 export function getPlan(origin, destination) {
     let url = "https://api.resrobot.se/v2/trip?format=json" + "&originId=" + origin + "&destId=" + destination + "&key=" + RES_ROBOT_API_KEY + "&passlist=true&showPassingPoints=true"
 
+    console.log(url);
+
     return new Promise( (resolve, reject) => {
         fetch(url)
         .then( (response) => response.json())
         .then( (data) => {
-
-            console.log(data);
 
             let result = {
                 stops: []

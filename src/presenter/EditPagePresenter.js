@@ -42,22 +42,28 @@ export default function EditPagePresenter() {
 
         e.preventDefault();
 
+        let o = "";
+        let d = "";
+
         //Check if origin and destination are valid.
         findByName(originRef.current.value)
             .then( (result) => {
                 if (!result) { return alert(originRef.current.value + " is not a valid station"); }
                 
+                o = result["name"];
+
                 findByName(destinationRef.current.value)
                     .then( (result) => {
                         if (!result) { return alert(destinationRef.current.value + " is not a valid station")}
+                        d = result["name"];
 
                         db.collection("cards").add({
                             id: nanoid(),
                             title: titleRef.current.value,
                             uid: user,
-                            //body: bodyRef.current.value,
-                            origin: originRef.current.value,
-                            destination: destinationRef.current.value,
+                            body: bodyRef.current,
+                            origin: o,
+                            destination: d,
                             created_at: new Date()
                         })
                 
