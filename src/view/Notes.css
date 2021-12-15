@@ -38,16 +38,6 @@
     justify-content: space-between;
 }
 
-.paragraph {
-    overflow-y: scroll;
-    height: 200px;
-    padding-bottom: 20px;
-    border: none;
-    border-radius: 15px;
-    padding: 5px 10px 5px 10px;
-    scrollbar-width: thin;
-}
-
 .title {
     text-align: center; 
 }

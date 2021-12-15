@@ -114,6 +114,7 @@
     .titleArea {
         width: auto;
         display: flex;
+        font-size: xx-large;
     }
     .titleContainer {
         display: flex; 
@@ -135,7 +136,6 @@
         width: auto;
         display: flex;
     }
-    
     .stationInputTextAreaFrom {
         display: flex;
     }

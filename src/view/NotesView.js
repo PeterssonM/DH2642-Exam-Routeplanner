@@ -1,7 +1,7 @@
 import React from 'react';
 import './Notes.css';
 
-export default function Notes ({id, title, text, origin, destination, date, handleDeleteNote, redirect}) {    
+export default function Notes ({id, title, origin, destination, date, handleDeleteNote, redirect}) {    
     console.log(redirect)
     
     return (
@@ -9,9 +9,6 @@ export default function Notes ({id, title, text, origin, destination, date, hand
             {/*<p>{id}</p> debugging*/}
             <div className="title">
             <h3>{title}</h3>
-            </div>
-            <div className= "paragraph">
-                <p className="textBox">{text}</p>
             </div>
             <div className="routeCards"> {/*Klassen har ännu inte specificerats :)*/}
                 <p>Origin: {origin}</p>
