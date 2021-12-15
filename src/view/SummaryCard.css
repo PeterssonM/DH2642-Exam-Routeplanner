@@ -1,11 +1,11 @@
 .cardContainer{
-    background:#cce6ff;
-    border-style: solid;
-    border-color: #596d80;
-    height: 1050px;
-    width: 800px;
-    margin: auto;
-    margin-top: 50px;
+  background:#cce6ff;
+  border-style: solid;
+  border-color: #596d80;
+  height: 1050px;
+  width: 800px;
+  margin: auto;
+  margin-top: 50px;
 }
 .titleContainer{
   padding-top: 0px;
