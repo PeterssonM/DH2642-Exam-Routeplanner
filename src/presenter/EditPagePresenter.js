@@ -13,6 +13,7 @@ export default function EditPagePresenter() {
 
     const navigate = useNavigate();
     const titleRef = useRef();
+    const textRef = useRef();
     const [user, setUser] = useState(null);
 
     useEffect(() => {
@@ -30,6 +31,7 @@ export default function EditPagePresenter() {
         db.collection("cards").add({
             id: nanoid(),
             title: titleRef.current.value,
+            //text: textRef.current.value,
             uid: user,
             created_at: new Date()
         })
@@ -40,7 +42,11 @@ export default function EditPagePresenter() {
     return (
         <div className= "editPage">
             <Header/>
-            <EditPage create={create} titleRef={titleRef}/>
+            <EditPage 
+                create={create} 
+                titleRef={titleRef} 
+                //textRef={textRef}
+            />
         </div>
     )
 }

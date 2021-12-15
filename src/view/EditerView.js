@@ -3,7 +3,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import "./Editer.css"
 
-export default function EditPageView({ create, titleRef }) {
+export default function EditPageView({ create, titleRef, textRef }) {
 
     return (
         <form onSubmit={create}>
@@ -11,8 +11,7 @@ export default function EditPageView({ create, titleRef }) {
                 <div className="titleContainer">
                     <textarea className="titleArea"
                         ref={titleRef}
-                        rows={2}
-                        cols={40}
+                        maxlength="30"
                         placeholder='Enter a Title..'
                     ></textarea>
                 </div>
@@ -36,7 +35,7 @@ export default function EditPageView({ create, titleRef }) {
                     <CKEditor className="ckEditor"
                         editor={ ClassicEditor }
                         onReady={ editor => {
-
+                            
                         } }
                         onChange={ ( event, editor,) => {
                             const data = editor.getData();
