@@ -4,7 +4,7 @@ import Notes from './NotesView';
 import  AddNote from './AddNoteView';
 import '../presenter/HeaderPresenter'
 
-export default function Body({notes, handleAddNote, handleDeleteNote}) {
+export default function Body({notes, handleAddNote, handleDeleteNote, redirect}) {
     return (
         <div>
             <div className="notes">
@@ -17,6 +17,7 @@ export default function Body({notes, handleAddNote, handleDeleteNote}) {
                         destination={note.destination}
                         date={note.date}
                         handleDeleteNote={handleDeleteNote}
+                        redirect={redirect}
                     />
                 ))}
                 <AddNote handleAddNote={handleAddNote}/>

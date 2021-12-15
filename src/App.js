@@ -29,7 +29,7 @@ export default function App() {
               <Route path="/edit" element={<EditPage />}></Route>
               <Route path="/signup" element={<Signup />}></Route>
               <Route path="/signin" element={<Signin />}></Route>
-              <Route path="/summary" element={<Summary />}></Route>
+              <Route path="/summary/:id" element={<Summary />}></Route>
               <Route path='*' element={<Signin />}></Route> //all random routes are sent to signIn
           </Routes>
       </div>
