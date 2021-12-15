@@ -3,10 +3,13 @@ import "./SummaryCard.css"
 
 export default function SummaryCardView() {
     return (
-        <div className="card">
-
+        <div className="cardContainer">
+            <div className="Title">
+                <span>/*TITLE*/</span>
+            </div>
+            <div>
+                <span></span>
+            </div>
         </div>
-    )   
+    )
 }
-
-
