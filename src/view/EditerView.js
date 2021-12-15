@@ -3,7 +3,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import "./Editer.css"
 
-export default function EditPageView({ create, titleRef, originRef, destinationRef }) {
+export default function EditPageView({ create, titleRef, originRef, destinationRef, bodyRef }) {
 
     return (
         <form onSubmit={create}>
@@ -34,15 +34,14 @@ export default function EditPageView({ create, titleRef, originRef, destinationR
                 <div className="ckEditorContainer">
                     <CKEditor className="ckEditor"
                         editor={ ClassicEditor }
-                        onChange={ ( event, editor,) => {
-                            const data = editor.getData();
-                            console.log( { event, editor, data } );
+                        onChange={ ( event, editor) => {
+                            bodyRef.current = editor.getData();
                         } }
                         onBlur={ ( event, editor ) => {
-                            console.log( 'Blur.', editor );
+                        
                         } }
                         onFocus={ ( event, editor ) => {
-                            console.log( 'Focus.', editor );
+
                         } }
                     />
                 </div>
