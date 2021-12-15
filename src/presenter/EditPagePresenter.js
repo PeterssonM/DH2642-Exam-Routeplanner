@@ -77,10 +77,10 @@ export default function EditPagePresenter() {
         <div className= "editPage">
             <Header/>
             <EditPage create={create} 
-                      titleRef={titleRef} 
-                      bodyRef={bodyRef}
-                      originRef={originRef}
-                      destinationRef={destinationRef} />
+                    titleRef={titleRef} 
+                    bodyRef={bodyRef}
+                    originRef={originRef}
+                    destinationRef={destinationRef} />
         </div>
     )
 }

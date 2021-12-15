@@ -1,5 +1,5 @@
 //React
-import React, { useEffect, useState} from 'react';
+import React from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
 //Css
@@ -10,7 +10,6 @@ import Feed from "./presenter/FeedPresenter"
 import Signup from "./presenter/SignupPresenter"
 import Signin from "./presenter/SigninPresenter"
 import EditPage from "./presenter/EditPagePresenter"
-import Header from "./presenter/HeaderPresenter"
 import Summary from "./presenter/SummaryCardPresenter"
 
 //Firebase

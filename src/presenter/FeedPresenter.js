@@ -14,16 +14,6 @@ import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 //Firebase
 import firebase, {db, auth} from "../firebase";
 
-//Redux
-//Redux
-import { useSelector, useDispatch } from 'react-redux';
-import {
-    login, 
-    logout,
-    selectLoggedState,
-    selectUserId
-} from "../generatedFiles/features/user/userSlice"
-
 
 export default function Feed() {
 
