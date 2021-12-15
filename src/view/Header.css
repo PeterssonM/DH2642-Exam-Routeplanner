@@ -29,6 +29,7 @@
     color: black;
 }
 
+
 .headerTitle {
     color: #3b478a;
     text-transform: uppercase;
@@ -73,7 +74,8 @@
     margin:auto;
 }
 
-@media screen and (max-width: 910px) {
+
+@media screen and (max-width: 1151px) {
     .headerTitle {
         font-size: 2.3em;
     }
@@ -81,13 +83,28 @@
 
 @media screen and (max-width: 800px) {
     .headerTitle {
-        font-size: 2.3em;
-    }
-}
-
-@media screen and (max-width: 737px) {
-    .headerTitle {
         font-size: 2.0em;
+    }
+    .header {
+        height: 4em;
+    }
+    .headerButtons {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .headerButtonTitle {
+        font-size: 0;
+    }
+    .header_search {
+        border-radius: 5px;
+        padding: 2px;
+        width:100%
+    }
+    .inputBar {
+        width:100%
+    }
+    .left-header {
+        width:15%
     }
 }
 

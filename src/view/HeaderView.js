@@ -22,7 +22,7 @@ export default function Header({signout}) {
                         <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
                     </Link>
                     <Link to='/signin' style={{ textDecoration: 'none' }}>
-                        <HeaderButtons icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
+                        <HeaderButtons className="homeButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
                     </Link>
             </div> 
         </div>
