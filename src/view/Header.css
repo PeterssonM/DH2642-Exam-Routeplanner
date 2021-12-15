@@ -29,6 +29,10 @@
     color: black;
 }
 
+.accountSymbol:hover {
+    color: rgb(223, 25, 25);
+}
+
 
 .headerTitle {
     color: #3b478a;
@@ -76,6 +80,10 @@
 .left-header {
     display: flex;
     margin:auto;
+}
+
+.accountButton {
+    float: left;
 }
 
 

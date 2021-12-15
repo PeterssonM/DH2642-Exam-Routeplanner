@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import {Link} from 'react-router-dom';
 
-export default function Header({signout}) {
+export default function Header({signout, emailRef}) {
 
     return (
         <div className="header">
@@ -21,6 +21,7 @@ export default function Header({signout}) {
                     <Link to='/home' style={{ textDecoration: 'none' }}>
                         <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
                     </Link>
+                        <HeaderButtons className="accountSymbol" icon={"fas fa-user fa-1g"} title="harry@kth.se"/>
                     <Link to='/signin' style={{ textDecoration: 'none' }}>
                         <HeaderButtons className="homeButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
                     </Link>
