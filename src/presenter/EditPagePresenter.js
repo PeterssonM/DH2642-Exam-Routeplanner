@@ -45,6 +45,10 @@ export default function EditPagePresenter() {
         let o = "";
         let d = "";
 
+        if (originRef.current == null || destinationRef.current == null || bodyRef.current == null || titleRef.current == null) {
+            return alert("You missed some parts in the form.");
+        }
+
         //Check if origin and destination are valid.
         findByName(originRef.current.value)
             .then( (result) => {
