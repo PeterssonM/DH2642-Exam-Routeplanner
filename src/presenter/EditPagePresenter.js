@@ -1,6 +1,7 @@
 import React, {useRef, useEffect, useState } from 'react'
 import EditPage from '../view/EditerView'
 import { useNavigate } from 'react-router-dom';
+import Header from '../presenter/HeaderPresenter'
 
 
 import firebase, { db } from "../firebase"
@@ -38,6 +39,7 @@ export default function EditPagePresenter() {
 
     return (
         <div className= "editPage">
+            <Header/>
             <EditPage create={create} titleRef={titleRef}/>
         </div>
     )

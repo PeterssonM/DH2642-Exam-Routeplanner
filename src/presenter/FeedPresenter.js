@@ -1,6 +1,7 @@
 //React
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../presenter/HeaderPresenter'
 
 //Views
 import Body from "../view/BodyView"
@@ -88,6 +89,7 @@ export default function Feed() {
 
     return (
             <div className="feed">
+                <Header/>
                 <Body
                     sortAlgoritm={sortingByDate}
                     notes={notes}
