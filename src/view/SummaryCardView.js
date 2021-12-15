@@ -1,6 +1,6 @@
 import React from 'react'
 import "./SummaryCard.css"
-import "/stationsView"
+
 
 export default function SummaryCardView() {
     return (

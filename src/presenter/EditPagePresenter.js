@@ -23,15 +23,11 @@ export default function EditPagePresenter() {
     
     //Refs
     const titleRef = useRef();
-<<<<<<< HEAD
-    const textRef = useRef();
-=======
     const bodyRef = useRef();
     const originRef = useRef();
     const destinationRef = useRef(); 
 
     //States
->>>>>>> 25d8d87e9ee1f2a4f07027065382928b45a4ea64
     const [user, setUser] = useState(null);
 
     useEffect(() => {
@@ -46,15 +42,6 @@ export default function EditPagePresenter() {
 
         e.preventDefault();
 
-<<<<<<< HEAD
-        db.collection("cards").add({
-            id: nanoid(),
-            title: titleRef.current.value,
-            //text: textRef.current.value,
-            uid: user,
-            created_at: new Date()
-        })
-=======
         //Check if origin and destination are valid.
         findByName(originRef.current.value)
             .then( (result) => {
@@ -63,7 +50,6 @@ export default function EditPagePresenter() {
                 findByName(destinationRef.current.value)
                     .then( (result) => {
                         if (!result) { return alert(destinationRef.current.value + " is not a valid station")}
->>>>>>> 25d8d87e9ee1f2a4f07027065382928b45a4ea64
 
                         db.collection("cards").add({
                             id: nanoid(),
@@ -84,19 +70,11 @@ export default function EditPagePresenter() {
     return (
         <div className= "editPage">
             <Header/>
-<<<<<<< HEAD
-            <EditPage 
-                create={create} 
-                titleRef={titleRef} 
-                //textRef={textRef}
-            />
-=======
             <EditPage create={create} 
                       titleRef={titleRef} 
                       bodyRef={bodyRef}
                       originRef={originRef}
                       destinationRef={destinationRef} />
->>>>>>> 25d8d87e9ee1f2a4f07027065382928b45a4ea64
         </div>
     )
 }

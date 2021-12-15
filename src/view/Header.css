@@ -118,7 +118,6 @@
     }
 }
 
-
 @media screen and (max-width: 520px) {
     .header {
         height: 4em;
@@ -151,7 +150,7 @@
         height: 4em;
     }
     .headerTitle {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
     .header_search {
         border-radius: 5px;

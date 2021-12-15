@@ -111,11 +111,14 @@
 }
 
 @media screen and (max-width: 800px) {
-    .siteContainer {
-        width: auto;
-    }
     .titleArea {
         width: auto;
+        display: flex;
+    }
+    .titleContainer {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -155,9 +158,16 @@
         align-self: center;
     }
     .stationInputTextAreaFrom {
-        margin-right: 40px;
+        margin-right: 20px;
     }
 }
+
+@media screen and (max-height: 1140px) {
+    .ckEditorContainer{
+        height: 200px;
+    }
+}
+
 
 
 

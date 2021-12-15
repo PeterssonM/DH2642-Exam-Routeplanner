@@ -3,11 +3,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import "./Editer.css"
 
-<<<<<<< HEAD
-export default function EditPageView({ create, titleRef, textRef }) {
-=======
 export default function EditPageView({ create, titleRef, originRef, destinationRef }) {
->>>>>>> 25d8d87e9ee1f2a4f07027065382928b45a4ea64
 
     return (
         <form onSubmit={create}>
@@ -37,7 +33,6 @@ export default function EditPageView({ create, titleRef, originRef, destinationR
                 </div>                
                 <div className="ckEditorContainer">
                     <CKEditor className="ckEditor"
-                        ref={textRef}
                         editor={ ClassicEditor }
                         onChange={ ( event, editor,) => {
                             const data = editor.getData();
