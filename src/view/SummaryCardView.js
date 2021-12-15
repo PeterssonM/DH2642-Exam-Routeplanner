@@ -11,17 +11,30 @@ export default function SummaryCardView({data, title}) {
                 <span>{title}</span>
             </div>
 
+            <div className="routePlannerContainer">
+                <table>
+                    <thead>
+                        <span>Reseplaneraren!</span>
+                    </thead>
+                    <tbody>
+                        {data && data.stops.map(stop => {
+                            return(
+                                <div>
+                                    <tr key={stop.stops.id}><h3>Mot: {stop.direction}</h3></tr>
+
+                                    {stop.stops.stop && stop.stops.stop.map(station => {
+                                        return( <tr key={station.id}>{station.name}</tr> )
+                                    })}
+                                </div>
+                            )
+                        })}
+                    </tbody>
+                </table>
+
+            </div>
+
             <div className="textContainer">
-                { data && data.stops.map( (stop) => {
-                    return (
-                        <div>
-                            <h1>Mot: {stop.direction}</h1>
-                            {stop.stops.Stop && stop.stops.Stop.map( (s) => {
-                                return <span>{s.name}</span>
-                            })}
-                        </div>
-                    )
-                })}
+
             </div>
         </div>
     )
