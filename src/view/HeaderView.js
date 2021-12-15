@@ -21,7 +21,7 @@ export default function Header({signout, emailRef}) {
                     <Link to='/home' style={{ textDecoration: 'none' }}>
                         <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
                     </Link>
-                        <HeaderButtons className="accountSymbol" icon={"fas fa-user fa-1g"} title="harry@kth.se"/>
+                        <AccountButton className="accountSymbol" icon={"fas fa-user fa-1g"} title="harry@kth.se"/>
                     <Link to='/signin' style={{ textDecoration: 'none' }}>
                         <HeaderButtons className="homeButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
                     </Link>
@@ -36,6 +36,15 @@ function HeaderButtons( {icon, title, onClick} ) {
         <div onClick={onClick} className="headerButtons">
             <i className= {icon}/>
             <h3 className="headerButtonTitle">{title}</h3>
+        </div>
+    )
+}
+
+function AccountButton( {icon, title} ) {
+    return (
+        <div className="accountButton">
+            <i className= {icon}/>
+            <h3 className="accountButtonTitle">{title}</h3>
         </div>
     )
 }
