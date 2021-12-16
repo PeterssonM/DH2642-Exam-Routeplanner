@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { auth, signIn } from "../firebase"
 import SigninView from "../view/SignInView"
 
+
 export default function Signin() {
 
     //Refs
@@ -13,6 +14,7 @@ export default function Signin() {
     const navigate = useNavigate()
 
     useEffect(() => {
+        
     
         auth().onAuthStateChanged((user) => {
             //Is the user already logged in?
@@ -31,16 +33,16 @@ export default function Signin() {
                 navigate("/home");
             })
             .catch( (error) => {
-                alert(error);
+                setMessage({
+                type: "red",
+                msg: "Failed to log in"
+                });
             })
     }
 
     return (
         <div>
-
-    
-
-            <SigninView signin={signin} emailRef={emailRef} passwordRef={passwordRef} />
+            <SigninView signin={signin} message={message} emailRef={emailRef} passwordRef={passwordRef} />
         </div>
     )
 }

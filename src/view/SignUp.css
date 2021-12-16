@@ -112,3 +112,7 @@ label {
 .confirmPassword input:focus {
     outline: none;
 }
+.errorFeedback{
+    display: flex;
+    align-items: center;    
+}

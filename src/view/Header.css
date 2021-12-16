@@ -1,21 +1,3 @@
-.header {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-evenly;
-    z-index: 999;
-    align-items: center;
-    flex-direction: row;
-    border-bottom: 0.2px solid lightgray;
-    background-color: lightblue;
-}
-
-.right-header {
-    display: flex;
-    margin: auto;
-    width: 33%;
-}
-
 .headerButtons {
     display: flex;
     flex-direction: column;
@@ -24,85 +6,96 @@
     cursor: pointer;
     margin: 10px;
 }
-
-.accountButton {
+.headerButtons:hover { color: black; }
+.iconTitle{} /*Only used on smaller screens*/
+.accountIcon {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: grey;
-    margin: 10px;
+    margin-top: 10px;
 }
+.accountIcon:hover { color: none; }
 
-.headerButtons:hover {
-    color: black;
-}
-
-.accountSymbol:hover {
-    color: rgb(223, 25, 25);
-}
-
-
-.headerTitle {
-    color: #3b478a;
-    text-transform: uppercase;
-    font-size: 5rem;
-    text-shadow: 0px 2px 4px rgba(0,0,0,.4);
-    font-size: 3.3em;
-    justify-content: center;
+/*MAIN HEADER*/
+.headerContainer {
     display: flex;
-    font-weight: bold;
-    transition: .5s ease-in-out;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    border-bottom: 0.2px solid lightgray;
+    background-color: lightblue;
 }
 
-.middle-header{
+/*LEFT HEADER CONTAINER*/
+.left-headerContainer {
     margin:auto;
+    width:33%;
 }
-
-.searchIcon {
-    color: black;
-    cursor: pointer;
-}
-
-
-.header_search input {
-    border: none;
-    background-color: rgb(233, 233, 233);
-}
-
-.inputBar {
-    font-size: x-large;
-}
-
 .header_search {
     display: flex;
     align-items: center;
     background-color: rgb(233, 233, 233);
     border-radius: 5px;
     padding: 15px;
+    width: 80%;
 }
-
+.header_search input {
+    border: none;
+    background-color: rgb(233, 233, 233);
+}
 .header_search input:focus {
     outline: none;
 }
-
-.left-header {
-    display: flex;
-    margin:auto;
-    width: 33%;
+.searchIcon {
+    color: black;
+    cursor: pointer;
+}
+.inputBar {
+    font-size: x-large;
+    width: 80%;
 }
 
-@media screen and (max-width: 1300px){
+/*MIDDLE HEADER CONTAINER*/
+.middle-headerContainer{
+    margin:auto;
+    width:33%;
+    text-align: center;
+}
+.headerTitle {
+    white-space: nowrap;
+    color: #3b478a;
+    text-transform: uppercase;
+    font-size: 5rem;
+    text-shadow: 0px 2px 4px rgba(0,0,0,.4);
+    font-size: 3.3em;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+}
+
+/*RIGHT HEADER CONTAINER*/
+.right-headerContainer {
+    display: flex;
+    justify-content: flex-end;
+    width:33%;
+}
+
+@media screen and (max-width: 1600px){
     .headerTitle {
         font-size: 2.5em;
     }
     .header_search {
         border-radius: 5px;
         padding: 2px;
-        width:100%;
+        width:80%;
+    }
+    .inputBar {
+        width:80%;
+        font-size:medium;
     }
 }
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1260px) {
     .headerTitle {
         font-size: 2.0em;
     }
@@ -113,20 +106,22 @@
         padding: 5px;
         margin-bottom: 10px;
     }
-    .headerButtonTitle {
+    .iconTitle {
         font-size: 0;
     }
+    .header_search {
+        border-radius: 5px;
+        padding: 2px;
+        width:60%;
+    }
     .inputBar {
-        width:100%;
+        width:60%;
         font-size:medium;
     }
     .left-header {
         width:15%
     }
     .headerButtonTitle {
-        font-size: 0;
-    }
-    .accountButtonTitle {
         font-size: 0;
     }
 }

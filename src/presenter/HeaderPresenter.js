@@ -17,7 +17,9 @@ export default function HeaderPresenter( {showSearchBar=true, filterNotes} ) {
 
     useEffect( () => {
         auth().onAuthStateChanged( (user) => {
-            setEmail(user.email);
+            if(user) {
+                setEmail(user.email);
+            }
         })
     }, [])
 

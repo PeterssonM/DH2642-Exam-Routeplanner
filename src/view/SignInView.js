@@ -2,10 +2,15 @@ import React from 'react'
 import './SignUp.css'
 import {Link} from 'react-router-dom';
 
-export default function SignInView( {signin, emailRef, passwordRef} ) {
+export default function SignInView( {signin, emailRef, passwordRef,message} ) {
 
     return (
         <div className="signUpBox">
+            {message && 
+                <div className="errorFeedback">
+                    <h3   style={{color: message.type}}>{message.msg}</h3>
+                </div>
+            }
             <form className="signup" onSubmit={signin}>
                 <div className="signUpTitleLocation">
                     <span className="signUpTitle">Sign In</span>

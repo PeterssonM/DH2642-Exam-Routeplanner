@@ -3,10 +3,15 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import "./Editor.css"
 
-export default function EditPageView({ create, titleRef, originRef, destinationRef, bodyRef }) {
+export default function EditPageView({ create, titleRef, originRef, destinationRef, bodyRef,message }) {
 
     return (
         <form onSubmit={create}>
+            <div className="errorfeedback">{message && 
+                <div >
+                    <h3   style={{color: message.type}}>{message.msg}</h3>
+                </div>
+            }</div>
             <div className= "siteContainer">
                 <div className="editTitleContainer">
                     <textarea className="titleArea"

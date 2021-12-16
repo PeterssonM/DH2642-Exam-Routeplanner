@@ -7,19 +7,21 @@
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
-    padding-right: 15px;  
+    padding-right: 15px;
 }
 
-@media screen and (max-width: 801px) {
+@media screen and (max-width: 920px) {
     .notes {
         grid-gap: 0rem;
     }
 }
-
+@media screen and (max-width: 530px){
+  .notes {
+      grid-template-columns: 230px 60px;
+  }
+}
 @media screen and (max-width: 481px) {
-    .notes {
-        grid-template-columns: 230px 60px;
-    }
+
 }
 
 @media screen and (max-width: 341px) {
@@ -28,9 +30,3 @@
         padding-left: 60px;
     }
 }
-
-
-
-
-
-

@@ -6,6 +6,7 @@ import firebase, { db } from "../firebase"
 import { nanoid } from '@reduxjs/toolkit';
 import { findByName } from '../service/resRobot';
 
+
 export default function EditPagePresenter() {
 
     //Navigation
@@ -19,6 +20,7 @@ export default function EditPagePresenter() {
 
     //States
     const [user, setUser] = useState(null);
+    const [message, setMessage] = useState(null);
 
     useEffect(() => {
         firebase.auth().onAuthStateChanged((user) => {
@@ -46,9 +48,11 @@ export default function EditPagePresenter() {
 
         let o = "";
         let d = "";
-
-        if (originRef.current == null || destinationRef.current == null || bodyRef.current == null || titleRef.current == null) {
-            return alert("You missed some parts in the form.");
+        if (originRef.current == null || destinationRef.current == null || bodyRef.current == null || titleRef.current.value == "") {
+            return setMessage({
+                type: "red", 
+                msg: "You missed some parts"
+            });
         }
 
         //Check if origin and destination are valid.
@@ -62,7 +66,6 @@ export default function EditPagePresenter() {
                     .then( (result) => {
                         if (!result) { return alert(destinationRef.current.value + " is not a valid station")}
                         d = result["name"];
-                       
                         db.collection("cards").add({
                             id: nanoid(),
                             title: titleRef.current.value,
@@ -81,7 +84,9 @@ export default function EditPagePresenter() {
     return (
         <div className= "editPage">
             <Header showSearchBar={false}/>
+            
             <EditPage 
+                    message={message}
                     create={create} 
                     titleRef={titleRef} 
                     bodyRef={bodyRef}

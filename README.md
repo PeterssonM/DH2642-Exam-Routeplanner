@@ -4,6 +4,8 @@ A "todo/task" app especially made for planning out/scheduling school stuff like 
 
 We're using MVP, which clearly can be seen via the view and presenter folder.
 
+If you create a note then the journey diplayed in the summary view of the note will always be the upcoming "next journey" aka the data updates all the time.
+
 The website is built and justified so it also should be able to function at the different @media widths of 340px, 480px, 600px and 800px
 
 Setup:
@@ -22,12 +24,6 @@ for instance the path to school. Then you can make some notes in the editor down
 Here on the summary page all data will be displayed, both the information you wrote, as well as how you should travel from your source to your destination(the route is displayed).
 
 5. Extras:
-<<<<<<< HEAD
-            -You can always click on the home button on the header to be routed to your home page.
-            -You can always sign out by clicked on the sign out button on the header.
-            -As mentioned before you can search for the notes you have created via the searchbar when you are on the home page.
-=======
             -You can always click on the home button on the header to be routed to your home page
             -You can always sign out by clicked on the sign out button on the header
             -As mentioned before you can search for the notes you have created via the searchbar when you are on the home page.
->>>>>>> 674383bca8b414e4f6394d68fd8b438ea5fc43d2
