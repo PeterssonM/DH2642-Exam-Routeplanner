@@ -1,13 +1,7 @@
-//React
 import React, { useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-
-//Firebase
 import firebase, {auth, signIn } from "../firebase"
-
-//Views
 import SigninView from "../view/SignInView"
-
 
 export default function Signin() {
 

@@ -18,3 +18,11 @@
 .routePlannerContainer{
 
 }
+
+/*This is in the presenter*/
+.loadingAnimation {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-top: 400px;
+  }

@@ -1,20 +1,10 @@
-//React
 import React, {useRef, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-
-//Views
 import EditPage from '../view/EditerView'
-
-//Presenters
 import Header from '../presenter/HeaderPresenter'
-
-//Firebase
 import firebase, { db } from "../firebase"
-
-//Utils
 import { nanoid } from '@reduxjs/toolkit';
 import { findByName } from '../service/resRobot';
-
 
 export default function EditPagePresenter() {
 
@@ -76,7 +66,6 @@ export default function EditPagePresenter() {
             })
         
     }
-
     return (
         <div className= "editPage">
             <Header/>
