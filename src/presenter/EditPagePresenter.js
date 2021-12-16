@@ -85,7 +85,7 @@ export default function EditPagePresenter() {
         <div className= "editPage">
             <Header showSearchBar={false}/>
             {message && 
-                <div>
+                <div className="testLoL">
                     <h3 style={{color: message.type}}>{message.msg}</h3>
                 </div>
             }
