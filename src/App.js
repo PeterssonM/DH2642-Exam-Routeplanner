@@ -1,5 +1,5 @@
 //React
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 //Css
@@ -15,22 +15,9 @@ import Summary from "./presenter/SummaryCardPresenter"
 
 export default function App() {
   
-
-  const [message, setMessage] = useState(null);
-  
-  function settingMessage(msg) {
-    setMessage(msg);
-  }
-
   return (
     <div>
       <div className="app">
-    
-          {message && 
-              <div>
-                  <h3 style={{color: message.type}}>{message.msg}</h3>
-              </div>
-            }
         
           <Routes>
               <Route path='/home' element={<Feed />}></Route>

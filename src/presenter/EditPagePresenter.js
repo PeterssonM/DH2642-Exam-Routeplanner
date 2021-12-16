@@ -48,13 +48,12 @@ export default function EditPagePresenter() {
 
         let o = "";
         let d = "";
-        if (originRef.current == null || destinationRef.current == null || bodyRef.current == null || titleRef.current.value == "") {
+        if (originRef.current === null || destinationRef.current === null || bodyRef.current === null || titleRef.current.value === "") {
             return setMessage({
                 type: "red", 
                 msg: "You missed some parts"
             });
         }
-
         //Check if origin and destination are valid.
         findByName(originRef.current.value)
             .then( (result) => {

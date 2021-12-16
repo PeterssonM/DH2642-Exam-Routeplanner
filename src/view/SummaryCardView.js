@@ -27,7 +27,7 @@ export default function SummaryCardView({data, title, body}) {
                                                     return(
                                                         <tr key={station.id} className='rows'>
                                                             <td>{station.name}</td>
-                                                            <tr><i className= {"fas fa-arrow-down fa-1g"}></i></tr>
+                                                            <td className= {"fas fa-arrow-down fa-1g"}></td>
                                                         </tr>
                                                     )   
                                                 })}
