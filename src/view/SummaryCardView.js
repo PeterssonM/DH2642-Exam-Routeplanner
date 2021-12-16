@@ -3,7 +3,6 @@ import "./SummaryCard.css"
 
 export default function SummaryCardView({data, title, body}) {
 
-
     return (
         <div className="cardContainer" key={title}>
             <div className="summaryTitleContainer">
@@ -18,7 +17,7 @@ export default function SummaryCardView({data, title, body}) {
                         <div>
                             {data && data.stops.map((stop, i) => {
                                 return(
-                                    <div key={i}>
+                                    <div key={i} className='tableBoarder'>
                                         <table className='tableWidthFix'>
                                             <tbody >
                                                 <tr key={stop.direction}>
@@ -28,7 +27,8 @@ export default function SummaryCardView({data, title, body}) {
                                                     return(
                                                         <tr key={station.id} className='rows'>
                                                             <td>{station.name}</td>
-                                                        </tr>)   
+                                                        </tr>
+                                                    )   
                                                 })}
                                             </tbody>
                                         </table>
