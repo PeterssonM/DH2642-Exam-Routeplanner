@@ -19,6 +19,7 @@ export default function EditPagePresenter() {
 
     //States
     const [user, setUser] = useState(null);
+    const [message, setMessage] = useState(null);
 
     useEffect(() => {
         firebase.auth().onAuthStateChanged((user) => {
@@ -26,7 +27,7 @@ export default function EditPagePresenter() {
         
             setUser(user.uid);
         });
-    }, [])
+    }, [navigate])
 
     function getTime() {
         function pad2(n) {
@@ -48,7 +49,10 @@ export default function EditPagePresenter() {
         let d = "";
 
         if (originRef.current == null || destinationRef.current == null || bodyRef.current == null || titleRef.current == null) {
-            return alert("You missed some parts in the form.");
+            return setMessage({
+                type: "red", 
+                msg: "You missed some parts"
+            });
         }
 
         //Check if origin and destination are valid.
@@ -62,7 +66,6 @@ export default function EditPagePresenter() {
                     .then( (result) => {
                         if (!result) { return alert(destinationRef.current.value + " is not a valid station")}
                         d = result["name"];
-                        console.log(new Date());
                         db.collection("cards").add({
                             id: nanoid(),
                             title: titleRef.current.value,
@@ -81,6 +84,11 @@ export default function EditPagePresenter() {
     return (
         <div className= "editPage">
             <Header showSearchBar={false}/>
+            {message && 
+                <div>
+                    <h3 style={{color: message.type}}>{message.msg}</h3>
+                </div>
+            }
             <EditPage 
                     create={create} 
                     titleRef={titleRef} 

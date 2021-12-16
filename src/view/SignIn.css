@@ -4,6 +4,11 @@
     align-items: center;
     padding-top: 160px;
 }
+
+.error {
+    color: red;
+}
+
 .signup {
     padding-top: 100px;
     height: 400px;

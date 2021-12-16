@@ -10,7 +10,7 @@ export default function HeaderPresenter( {showSearchBar=true, filterNotes} ) {
 
     function signout(e) {
         e.preventDefault();
-        console.log("hit!");
+        
         auth().signOut();
         navigate("/signin")
     }
