@@ -1,4 +1,13 @@
 .cardContainer{
+<<<<<<< HEAD
+    background:#cce6ff;
+    border-style: solid;
+    border-color: #596d80;
+    height: 1050px;
+    width: 800px;
+    margin: auto;
+    margin-top: 0px;
+=======
   background:#cce6ff;
   border-style: solid;
   border-color: #596d80;
@@ -6,18 +15,32 @@
   width: 800px;
   margin: auto;
   margin-top: 50px;
+>>>>>>> 87c6ac7ca9c947695172a3e82a1dda1f61aeec62
 }
 .titleContainer{
-  padding-top: 0px;
+  padding-top: 10px;
+  padding-bottom: 0px;
   border-style: solid;
   border-top-color: #596d80;
-  border-bottom-color: #596d80;
+  border-bottom-color: #01070c;
   border-left-width: 0px;
   border-right-width: 0px;
+  font-weight:bold;
+  display: flex;
+  justify-content: center;
+  
 }
+.textContainer{
+
+}
+
 .routePlannerContainer{
 
 }
+<<<<<<< HEAD
+tr:nth-child(n) {background: #596d80 )}
+tr:nth-child(2n) {background: #bed9f5}
+=======
 
 /*This is in the presenter*/
 .loadingAnimation {
@@ -26,3 +49,4 @@
   align-items: center;
   margin-top: 400px;
   }
+>>>>>>> 87c6ac7ca9c947695172a3e82a1dda1f61aeec62

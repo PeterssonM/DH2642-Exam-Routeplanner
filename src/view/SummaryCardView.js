@@ -8,7 +8,7 @@ export default function SummaryCardView({data, title, body}) {
     return (
         <div className="cardContainer">
             <div className="titleContainer">
-                <span>{title}</span>
+                <h2>{title}</h2>
             </div>
 
             <div className="textContainer" dangerouslySetInnerHTML={{__html: body}}>
@@ -17,7 +17,7 @@ export default function SummaryCardView({data, title, body}) {
             <div className="routePlannerContainer">
                 <table>
                     <thead>
-                        <h3>Reseplaneraren!</h3>
+                        <h3>DIN RESA!</h3>
                     </thead>
                     <tbody>
                         {data && data.stops.map(stop => {
@@ -27,7 +27,7 @@ export default function SummaryCardView({data, title, body}) {
                                     <tr key={stop.direction}><h3>Mot: {stop.direction}</h3></tr>
 
                                     {stop.stops.Stop && stop.stops.Stop.map(station => {
-                                        return( <tr key={station.id}>{station.name}</tr> )
+                                        return( <tr key={station.id}> {station.name}</tr> )
                                     })}
                                 </div>
                             )
