@@ -1,6 +1,6 @@
 # DH2642-Exam-Routeplanner
 
-A "todo/task" app especially made for planning out/scheduling school stuff like tests etc. SL Api is used so you can search for journeys you need to make, For instance if you need to get to school etc.
+A "todo/task" app especially made for planning out/scheduling school stuff like tests etc. SL Api is used so you can search for journeys you need to make, for instance if you need to get to school etc.
 
 We're using MVP, which clearly can be seen via the view and presenter folder.
 
@@ -9,9 +9,9 @@ The website is built and justified so it also should be able to function at the 
 Setup:
 
 1. You will be meeted by a sign in page. If you have an account(which you wont have the first time you try it). Click on the 
-"Not a member yet? Register now" link and you will be routed to the sign up page. Enter your information and press sign up
+"Not a member yet? Register now" link and you will be routed to the sign up page. Enter your information and press sign up.
 
-2. You will then be redirected to the main "home" page, When you are new to the site you will only see a square with a plus-sign. This is
+2. You will then be redirected to the main "home" page, when you are new to the site you will only see a square with a plus-sign. This is
 the button that is used to create notes/todos. Click on the button and you will be redirected to the page where you can create a new note.
 
 3. Here you will required to enter something in each field. At the top you can enter a title, which will be seen together with the journey you pick on the home page. It's good to pick a title you can remember because if you create a lot of notes you will be able to search for the
