@@ -10,6 +10,9 @@ export default function Signin() {
     const emailRef = useRef()
     const passwordRef = useRef()
 
+    //States
+    const [message, setMessage] = useState(null);
+
     //Navigation
     const navigate = useNavigate()
 
