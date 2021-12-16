@@ -8,7 +8,7 @@ export default function EditPageView({ create, titleRef, originRef, destinationR
     return (
         <form onSubmit={create}>
             <div className= "siteContainer">
-                <div className="titleContainer">
+                <div className="editTitleContainer">
                     <textarea className="titleArea"
                         ref={titleRef}
                         maxLength="30"

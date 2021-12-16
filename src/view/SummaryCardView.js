@@ -7,7 +7,7 @@ export default function SummaryCardView({data, title, body}) {
 
     return (
         <div className="cardContainer">
-            <div className="titleContainer">
+            <div className="summaryTitleContainer">
                 <h2>{title}</h2>
             </div>
             <div className="textContainer" dangerouslySetInnerHTML={{__html: body}}>

@@ -7,11 +7,10 @@
     background:#cce6ff;
     margin-top: 50px;
     border-radius: 25px;
-    font-family: 'Lato';
-    
-      
+    font-family: 'Lato';   
   }
-  .titleContainer{
+
+  .summaryTitleContainer{
     padding-top: 10px;
     padding-bottom: 0px;
     border-top-color: #596d80;
@@ -40,7 +39,6 @@
     display: flex;
     justify-content: center;
   }
-  
   
   HEAD
   tr:nth-child(n) {background: #6c7b8a}
