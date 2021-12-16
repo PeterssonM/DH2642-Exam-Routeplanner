@@ -8,19 +8,19 @@
     background:rgb(204, 222, 255);
     display:flex;
     flex-direction: column;
-    cursor: pointer; 
+    cursor: pointer;
     white-space: pre-wrap;
 }
 
-.note:nth-child(n) { 
+.note:nth-child(n) {
     position:relative;
     background:rgb(204, 230, 255); }
 
-.note:nth-child(3n) { 
+.note:nth-child(3n) {
     position:relative;
     background:rgb(181, 181, 247); }
 
-.note:nth-child(2n) { 
+.note:nth-child(2n) {
     position:relative;
     background:rgb(204, 255, 219); }
 
@@ -42,7 +42,7 @@
 }
 
 .title {
-    text-align: center; 
+    text-align: center;
     font-size: 20px;
 }
 
@@ -56,7 +56,7 @@
     z-index:5;
 }
 
-@media screen and (max-width: 801px) { 
+@media screen and (max-width: 920px) { 
     .note {
         height:10em;
         width:10em;
@@ -69,7 +69,7 @@
     }
 }
 
-@media screen and (max-width: 481px) { 
+@media screen and (max-width: 481px) {
     .note {
         margin: 12px;
         height:8em;
@@ -82,4 +82,3 @@
         font-size: x-small;
     }
 }
-

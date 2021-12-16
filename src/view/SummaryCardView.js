@@ -3,7 +3,6 @@ import "./SummaryCard.css"
 
 export default function SummaryCardView({data, title, body}) {
 
-
     return (
         <div className="cardContainer" key={title}>
             <div className="summaryTitleContainer">
@@ -11,31 +10,36 @@ export default function SummaryCardView({data, title, body}) {
             </div>
             <div className="textContainer" dangerouslySetInnerHTML={{__html: body}}>
             </div>
+            <div className="travelTitle">Here's the travel path</div>
             <div className="routePlannerContainer">
-                <div className="travelTitle">
-                        <h3>DIN RESA!</h3>
-                    </div>
-                <table className="routeTableContainer">
-            
+                <div className="routeTableContainer">
                     <div className="travelData">
-                        <tbody>
+                        <div>
                             {data && data.stops.map((stop, i) => {
                                 return(
-                                    <div key={i}>
-                                        <tr key={stop.direction}><h3>Mot: {stop.direction}</h3></tr>
-
-                                        {stop.stops.Stop && stop.stops.Stop.map(station => {
-                                            return( <tr key={station.id}> {station.name}</tr> )
-                                        })}
+                                    <div key={i} className='tableBoarder'>
+                                        <table className='tableWidthFix'>
+                                            <tbody >
+                                                <tr key={stop.direction}>
+                                                    <td className="travelTowardsTitle">Mot: {stop.direction}</td>
+                                                </tr>
+                                                {stop.stops.Stop && stop.stops.Stop.map(station => {
+                                                    return(
+                                                        <tr key={station.id} className='rows'>
+                                                            <td>{station.name}</td>
+                                                            <tr><i className= {"fas fa-arrow-down fa-1g"}></i></tr>
+                                                        </tr>
+                                                    )   
+                                                })}
+                                            </tbody>
+                                        </table>
                                     </div>
                                 )
                             })}
-                        </tbody>
+                        </div>
                     </div>
-                </table>
-
+                </div>
             </div>
         </div>
     )
-
 }

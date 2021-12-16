@@ -17,6 +17,7 @@
     border-top-color: #596d80;
     border-bottom-color: #01070c;
     font-weight:bold;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     border-left-width: 1px;
@@ -35,12 +36,34 @@
     text-align: center;
     border-style: solid;
     border-color: #596d80;
-    border-radius: 25px;
+    border-radius: 0px;
   }
 
   .travelData {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
+  }
+
+  .travelTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bolder;
+  }
+
+  .travelTowardsTitle{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .tableWidthFix {
+    width: 100%;
+  }
+
+  .tableBoarder {
+    border: #01070c;
+    border-style: solid;
   }
 
   HEAD
@@ -54,5 +77,26 @@
     flex-direction: column;
     align-items: center;
     margin-top: 400px;
-    }
+  }
 
+
+  /*TABLETS*/
+  @media screen and (max-width: 820px) {
+    .cardContainer{ 
+      width: 500px;
+    }
+  }
+      
+  /*ANDROIDS*/
+  @media screen and (max-width: 480px) {
+    .cardContainer{ 
+      width: 400px;
+    }
+  }
+
+    /*ANDROIDS*/
+  @media screen and (max-width: 340px) {
+    .cardContainer{ 
+      width: 280px;
+    }
+  }
