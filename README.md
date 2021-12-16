@@ -2,7 +2,9 @@
 
 A "todo/task" app especially made for planning out/scheduling school stuff like tests etc. SL Api is used so you can search for journeys you need to make, For instance if you need to get to school etc.
 
- We're using MVP, which clearly can be seen via the view and presenter folder.
+We're using MVP, which clearly can be seen via the view and presenter folder.
+
+The website is built and justified so it also should be able to function at the different @media widths of 340px, 480px, 600px and 800px
 
 Setup:
 
