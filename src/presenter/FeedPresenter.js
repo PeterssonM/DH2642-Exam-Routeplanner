@@ -6,6 +6,7 @@ import '../view/AddNoteView';
 import { findByName } from "../service/resRobot"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
 import firebase, {db, auth} from "../firebase";
+import FuzzySearch from 'fuzzy-search';
 
 export default function Feed() {
 
@@ -14,6 +15,9 @@ export default function Feed() {
 
     const [user, setUser] = useState(null);
     const [notes, setNotes] = useState(null);
+    const [fNotes, setFNotes] = useState(null);
+
+    const searcher = new FuzzySearch(notes, ["title"]);
     
     useEffect(() => {
 
@@ -64,6 +68,14 @@ export default function Feed() {
         })
     }
 
+    function filterNotes(filter) {
+        if (notes) {
+            
+            let result = searcher.search(filter);
+            setFNotes(result);
+        }
+    }
+
     const sortingByDate = (a, b) => {
         return new Date(b.create_at) - new Date(a.create_at);
     }
@@ -74,10 +86,10 @@ export default function Feed() {
 
     return (
             <div className="feed">
-                <Header/>
+                <Header filterNotes={filterNotes}/>
                 <Body
                     sortAlgoritm={sortingByDate}
-                    notes={notes}
+                    notes={fNotes || notes}
                     handleAddNote={addNote}
                     handleDeleteNote={deleteNote}
                     redirect={redirect}
