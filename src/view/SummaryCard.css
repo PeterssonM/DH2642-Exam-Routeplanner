@@ -22,6 +22,7 @@
   border-left-width: 1px;
   border-right-width: 1px;
   border-radius: 25px;
+<<<<<<< HEAD
 }
 
 .routeTableContainer {
@@ -41,6 +42,27 @@
   justify-content: center;
 }
 
+=======
+}
+
+.routeTableContainer {
+  border: #01070c;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-style: solid;
+  border-color: #596d80;
+  border-radius: 25px;
+}
+
+.travelData {
+  display: flex;
+  justify-content: center;
+}
+
+>>>>>>> e1db1f52026e6148a451c633dda6cf9154acae2f
 
 HEAD
 tr:nth-child(n) {background: #6c7b8a}
@@ -54,4 +76,3 @@ tr:nth-child(2n) {background: #b1c9e2}
   align-items: center;
   margin-top: 400px;
   }
-
