@@ -9,19 +9,11 @@ export default function Signin() {
     const emailRef = useRef()
     const passwordRef = useRef()
 
-    //States
-    const [message, setMessage] = useState(null);
-
     //Navigation
     const navigate = useNavigate()
 
     useEffect(() => {
-        
-        setMessage({
-            type: "red",
-            msg: "Could not find user"
-        })
-
+    
         auth().onAuthStateChanged((user) => {
             //Is the user already logged in?
             if (user) { navigate("/home"); }
@@ -39,18 +31,14 @@ export default function Signin() {
                 navigate("/home");
             })
             .catch( (error) => {
-               setMessage(error);
+                alert(error);
             })
     }
 
     return (
         <div>
 
-            {message && 
-                <div>
-                    <h3 style={{color: message.type}}>{message.msg}</h3>
-                </div>
-            }
+    
 
             <SigninView signin={signin} emailRef={emailRef} passwordRef={passwordRef} />
         </div>
