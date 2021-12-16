@@ -9,6 +9,7 @@ export default function Signup() {
     const passwordConfirmRef = useRef()
 
     const [submitted, setSubmitted] = useState(false)
+    const [message, setMessage] = useState(null);
 
     const auth = firebase.auth()
     const db = firebase.firestore()
@@ -36,13 +37,16 @@ export default function Signup() {
             clearRefs([emailRef, passwordRef, passwordConfirmRef]);
             alert("Signed in!: ")
         } catch (error) {
-            alert(error.message)
+            setMessage({
+            type: "red",
+            msg: "Problems signing up"
+            })
         }
 
     }
 
     return (
-        <SignupView signup={signup} emailRef={emailRef} passwordRef={passwordRef} passwordConfirmRef={passwordConfirmRef} submitted={submitted}/>
+        <SignupView signup={signup} message={message} emailRef={emailRef} passwordRef={passwordRef} passwordConfirmRef={passwordConfirmRef} submitted={submitted}/>
     )
     
 }
