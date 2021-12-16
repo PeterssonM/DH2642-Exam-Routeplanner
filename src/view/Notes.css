@@ -48,4 +48,30 @@
     z-index:5;
 }
 
+@media screen and (max-width: 801px) { 
+    .note {
+        height:10em;
+        width:10em;
+    }
+    .title {
+        font-size: small;
+    }
+    .routeCards {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 481px) { 
+    .note {
+        margin: 12px;
+        height:8em;
+        width:8em;
+    }
+    .title {
+        font-size: x-small;
+    }
+    .routeCards {
+        font-size: x-small;
+    }
+}
 

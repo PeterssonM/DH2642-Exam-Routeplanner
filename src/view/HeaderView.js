@@ -21,10 +21,10 @@ export default function Header({signout, emailRef}) {
                     <Link to='/home' style={{ textDecoration: 'none' }}>
                         <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
                     </Link>
-                        <AccountButton className="accountSymbol" icon={"fas fa-user fa-1g"} title="harry@kth.se"/>
                     <Link to='/signin' style={{ textDecoration: 'none' }}>
                         <HeaderButtons className="homeButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
                     </Link>
+                    <AccountButton className="accountSymbol" icon={"fas fa-user fa-1g"} title="harry@kth.se"/>
             </div> 
         </div>
     );

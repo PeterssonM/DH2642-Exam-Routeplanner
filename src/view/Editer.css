@@ -154,12 +154,6 @@
         align-items: center;  
     }
 }
-@media screen and (max-height: 900px) {
-    .ckEditorContainer{
-        height: 200px;
-    }
-}
-
 
 /*ANDROIDS*/
 @media screen and (max-width: 480px) {
@@ -187,11 +181,7 @@
         align-items: center;  
     }
 }
-@media screen and (max-height: 900px) {
-    .ckEditorContainer{
-        height: 100px;
-    }
-}
+
 
 /*IPHONES*/
 @media screen and (max-width: 340px) {
@@ -223,11 +213,7 @@
         align-items: center;
     }
 }
-@media screen and (max-height: 900px) {
-    .ckEditorContainer{
-        height: 100px;
-    }
-}
+
 
 
 

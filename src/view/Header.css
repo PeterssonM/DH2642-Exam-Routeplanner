@@ -122,6 +122,12 @@
     .left-header {
         width:15%
     }
+    .headerButtonTitle {
+        font-size: 0;
+    }
+    .accountButtonTitle {
+        font-size: 0;
+    }
 }
 
 
@@ -148,9 +154,6 @@
     .headerButtons {
         padding: 5px;
         margin-bottom: 10px;
-    }
-    .headerButtonTitle {
-        font-size: 0;
     }
 }
 
@@ -187,7 +190,6 @@
     }
     .headerTitle {
         font-size: 1em;
-
     }
     .headerButtons {
         padding: 5px;

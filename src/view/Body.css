@@ -10,6 +10,26 @@
     padding-right: 15px;  
 }
 
+@media screen and (max-width: 801px) {
+    .notes {
+        grid-gap: 0rem;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .notes {
+        grid-gap: 0rem;
+        grid-template-columns: 230px 60px;
+    }
+}
+
+@media screen and (max-width: 341px) {
+    .notes {
+        grid-gap: 0rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
 
 
 
