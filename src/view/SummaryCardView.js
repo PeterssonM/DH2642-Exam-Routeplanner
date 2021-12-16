@@ -1,4 +1,3 @@
-import { nanoid } from '@reduxjs/toolkit'
 import React from 'react'
 import "./SummaryCard.css"
 
@@ -20,9 +19,9 @@ export default function SummaryCardView({data, title, body}) {
             
                     <div className="travelData">
                         <tbody>
-                            {data && data.stops.map(stop => {
+                            {data && data.stops.map((stop, i) => {
                                 return(
-                                    <div key={nanoid}>
+                                    <div key={i}>
                                         <tr key={stop.direction}><h3>Mot: {stop.direction}</h3></tr>
 
                                         {stop.stops.Stop && stop.stops.Stop.map(station => {
