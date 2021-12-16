@@ -1,5 +1,4 @@
 .cardContainer{
-<<<<<<< HEAD
     background:#cce6ff;
     border-style: solid;
     border-color: #596d80;
@@ -7,15 +6,6 @@
     width: 800px;
     margin: auto;
     margin-top: 0px;
-=======
-  background:#cce6ff;
-  border-style: solid;
-  border-color: #596d80;
-  height: 1050px;
-  width: 800px;
-  margin: auto;
-  margin-top: 50px;
->>>>>>> 87c6ac7ca9c947695172a3e82a1dda1f61aeec62
 }
 .titleContainer{
   padding-top: 10px;
@@ -37,10 +27,10 @@
 .routePlannerContainer{
 
 }
-<<<<<<< HEAD
+ HEAD
 tr:nth-child(n) {background: #596d80 )}
 tr:nth-child(2n) {background: #bed9f5}
-=======
+
 
 /*This is in the presenter*/
 .loadingAnimation {
@@ -49,4 +39,4 @@ tr:nth-child(2n) {background: #bed9f5}
   align-items: center;
   margin-top: 400px;
   }
->>>>>>> 87c6ac7ca9c947695172a3e82a1dda1f61aeec62
+
