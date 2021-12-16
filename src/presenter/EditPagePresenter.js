@@ -1,6 +1,6 @@
 import React, {useRef, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import EditPage from '../view/EditerView'
+import EditPage from '../view/EditorView'
 import Header from '../presenter/HeaderPresenter'
 import firebase, { db } from "../firebase"
 import { nanoid } from '@reduxjs/toolkit';
