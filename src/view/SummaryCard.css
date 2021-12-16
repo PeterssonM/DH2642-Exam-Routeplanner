@@ -1,33 +1,55 @@
 .cardContainer{
-    background:#cce6ff;
-    border-style: solid;
-    border-color: #596d80;
-    height: auto;
-    width: 800px;
-    margin: auto;
-    margin-top: 20px;
+  border-style: solid;
+  border-color: #596d80;
+  height: auto;
+  width: 800px;
+  margin: auto;
+  background:#cce6ff;
+  margin-top: 50px;
+  border-radius: 25px;
+  font-family: 'Lato';
+  
+    
 }
 .titleContainer{
   padding-top: 10px;
   padding-bottom: 0px;
-  border-style: solid;
   border-top-color: #596d80;
   border-bottom-color: #01070c;
-  border-left-width: 0px;
-  border-right-width: 0px;
   font-weight:bold;
+  display: flex;
+  justify-content: center; 
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-radius: 25px;
+}
+
+.routeTableContainer {
+  border: #01070c;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-style: solid;
+  border-color: #596d80;
+  border-radius: 25px;
+}
+
+.travelData {
   display: flex;
   justify-content: center;
 }
 
+
 HEAD
-tr:nth-child(n) {background: #596d80}
-tr:nth-child(2n) {background: #bed9f5}
+tr:nth-child(n) {background: #6c7b8a}
+tr:nth-child(2n) {background: #b1c9e2}
 
 
 /*This is in the presenter*/
 .loadingAnimation {
-  display: flex;
+  display: flex; 
   flex-direction: column;
   align-items: center;
   margin-top: 400px;
