@@ -80,7 +80,7 @@ export default function EditPagePresenter() {
     }
     return (
         <div className= "editPage">
-            <Header/>
+            <Header showSearchBar={false}/>
             <EditPage 
                     create={create} 
                     titleRef={titleRef} 
