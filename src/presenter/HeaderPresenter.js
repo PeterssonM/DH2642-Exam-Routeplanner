@@ -1,8 +1,6 @@
 import React from 'react'
 import Header from "../view/HeaderView"
-
 import { useNavigate } from 'react-router-dom';
-
 import { auth } from '../firebase'
 
 export default function HeaderPresenter() {

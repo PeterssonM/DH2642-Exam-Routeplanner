@@ -25,8 +25,21 @@
     margin-left: 20px;
 }
 
+.accountButton {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    color: grey;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
 .headerButtons:hover {
     color: black;
+}
+
+.accountSymbol:hover {
+    color: rgb(223, 25, 25);
 }
 
 
@@ -78,6 +91,10 @@
     margin:auto;
 }
 
+.accountButton {
+    float: left;
+}
+
 
 @media screen and (max-width: 801px) {
     .headerTitle {
@@ -105,43 +122,27 @@
     .left-header {
         width:15%
     }
+    .headerButtonTitle {
+        font-size: 0;
+    }
+    .accountButtonTitle {
+        font-size: 0;
+    }
 }
 
 
 /*TABLETS*/
 @media screen and (max-width: 601px) {
-    .header {
-        height: 4em;
-    }
     .headerTitle {
         font-size: 1.5em;
     }
-    .header_search {
-        border-radius: 5px;
-        padding: 2px;
-        width:100%
-    }
-    .inputBar {
-        width:100%;
-        font-size:medium;
-    }
     .left-header {
         width:20%
-    }
-    .headerButtons {
-        padding: 5px;
-        margin-bottom: 10px;
-    }
-    .headerButtonTitle {
-        font-size: 0;
     }
 }
 
 /*ANDROID*/
 @media screen and (max-width: 481px) {
-    .header {
-        height: 4em;
-    }
     .headerTitle {
         font-size: 1.1em;
         margin-left: 10px;
@@ -151,13 +152,6 @@
         padding: 2px;
         width:100%
     }
-    .inputBar {
-        width:100%
-    }
-    .headerButtons {
-        padding: 5px;
-        margin-bottom: 10px;
-    }
     .headerButtonTitle {
         font-size: 0;
     }
@@ -165,12 +159,8 @@
 
 /*IPHONE SIZE*/
 @media screen and (max-width: 341px) {
-    .header {
-        height: 4em;
-    }
     .headerTitle {
         font-size: 1em;
-
     }
     .headerButtons {
         padding: 5px;
@@ -178,7 +168,6 @@
         margin-left: 10px;
     }
     .inputBar {
-        width:100%;
         font-size:small;
     }
 }

@@ -5,28 +5,32 @@
     height: 1050px;
     width: 800px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 .titleContainer{
-  padding-top: 0px;
+  padding-top: 10px;
+  padding-bottom: 0px;
   border-style: solid;
   border-top-color: #596d80;
-  border-bottom-color: #596d80;
+  border-bottom-color: #01070c;
   border-left-width: 0px;
   border-right-width: 0px;
+  font-weight:bold;
+  display: flex;
+  justify-content: center;
+  
 }
-.routeContainer{
 
-}
-.originDestination{
+ HEAD
+tr:nth-child(n) {background: #596d80 )}
+tr:nth-child(2n) {background: #bed9f5}
 
-}
-.numberOfStations{
 
-}
-.travelDirection{
+/*This is in the presenter*/
+.loadingAnimation {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  margin-top: 400px;
+  }
 
-}
-.textContainer{
-
-}

@@ -1,19 +1,11 @@
-//React
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../presenter/HeaderPresenter'
-
-//Views
 import Body from "../view/BodyView"
 import '../view/AddNoteView';
-
-//Utils
 import { findByName } from "../service/resRobot"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
-
-//Firebase
 import firebase, {db, auth} from "../firebase";
-
 
 export default function Feed() {
 
@@ -38,12 +30,11 @@ export default function Feed() {
 
     }, [])
 
-    const addNote = (text, title) => {
+    const addNote = (title) => {
         const date = new Date();
         const newNote = {
             id: nanoid(),
             title: title,
-            //text: text,
             date: date.toLocaleDateString()
         }
         const newNotes = [...notes, newNote];
