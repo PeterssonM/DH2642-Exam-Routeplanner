@@ -28,6 +28,18 @@ export default function EditPagePresenter() {
         });
     }, [])
 
+    function getTime() {
+        function pad2(n) {
+            return (n < 10 ? '0' : '') + n;
+        }
+    
+        var date = new Date();
+        var month = pad2(date.getMonth()+1);//months (0-11)
+        var day = pad2(date.getDate());//day (1-31)
+        var year= date.getFullYear();
+
+        return year+"-"+month+"-"+day
+    }
     function create(e) {
 
         e.preventDefault();
@@ -50,7 +62,7 @@ export default function EditPagePresenter() {
                     .then( (result) => {
                         if (!result) { return alert(destinationRef.current.value + " is not a valid station")}
                         d = result["name"];
-
+                        console.log(new Date());
                         db.collection("cards").add({
                             id: nanoid(),
                             title: titleRef.current.value,
@@ -58,7 +70,7 @@ export default function EditPagePresenter() {
                             body: bodyRef.current,
                             origin: o,
                             destination: d,
-                            created_at: new Date()
+                            created_at: getTime()
                         })
                 
                         navigate("/home")
@@ -69,11 +81,13 @@ export default function EditPagePresenter() {
     return (
         <div className= "editPage">
             <Header/>
-            <EditPage create={create} 
+            <EditPage 
+                    create={create} 
                     titleRef={titleRef} 
                     bodyRef={bodyRef}
                     originRef={originRef}
-                    destinationRef={destinationRef} />
+                    destinationRef={destinationRef} 
+            />
         </div>
     )
 }

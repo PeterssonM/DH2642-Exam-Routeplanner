@@ -15,7 +15,7 @@ export default function Body({notes, handleAddNote, handleDeleteNote, redirect})
                         text={note.text}
                         origin={note.origin}
                         destination={note.destination}
-                        date={note.date}
+                        date={note.created_at}
                         handleDeleteNote={handleDeleteNote}
                         redirect={redirect}
                     />

@@ -17,12 +17,11 @@
   border-right-width: 0px;
   font-weight:bold;
   display: flex;
-  justify-content: center;
-  
+  justify-content: center; 
 }
 
- HEAD
-tr:nth-child(n) {background: #596d80 )}
+HEAD
+tr:nth-child(n) {background: #596d80}
 tr:nth-child(2n) {background: #bed9f5}
 
 

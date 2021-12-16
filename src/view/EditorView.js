@@ -11,7 +11,7 @@ export default function EditPageView({ create, titleRef, originRef, destinationR
                 <div className="titleContainer">
                     <textarea className="titleArea"
                         ref={titleRef}
-                        maxlength="30"
+                        maxLength="30"
                         placeholder='Enter a Title..'
                     ></textarea>
                 </div>
@@ -19,13 +19,13 @@ export default function EditPageView({ create, titleRef, originRef, destinationR
                     <span className="slTitle">Where do you want to go?</span>
                     <div className="textBoxLayout">
                         <textarea className='stationInputTextAreaTo'
-                            maxlength="30"
+                            maxLength="30"
                             placeholder="From:"
                             ref={originRef}
                         ></textarea>
                         <div className="arrowsIcon"><i className=  {"fas fa-exchange-alt fa-1g"} title="swap"/></div>
                         <textarea className='stationInputTextAreaFrom'
-                            maxlength="30"
+                            maxLength="30"
                             placeholder="To:"
                             ref={destinationRef}
                         ></textarea>

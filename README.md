@@ -22,6 +22,6 @@ for instance the path to school. Then you can make some notes in the editor down
 Here on the summary page all data will be displayed, both the information you wrote, as well as how you should travel from your source to your destination(the route is displayed).
 
 5. Extras:
-            -You can always click on the home button on the header to be routed to your home page
-            -You can always sign out by clicked on the sign out button on the header
+            -You can always click on the home button on the header to be routed to your home page.
+            -You can always sign out by clicked on the sign out button on the header.
             -As mentioned before you can search for the notes you have created via the searchbar when you are on the home page.
