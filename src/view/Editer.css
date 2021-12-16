@@ -128,16 +128,8 @@
     }
 }
 
-
 /*TABLETS*/
 @media screen and (max-width: 800px) {
-    .siteContainer {
-        width: auto;
-    }
-    .titleArea {
-        width: auto;
-        display: flex;
-    }
     .stationInputTextAreaFrom {
         display: flex;
     }
@@ -157,60 +149,12 @@
 
 /*ANDROIDS*/
 @media screen and (max-width: 480px) {
-    .siteContainer {
-        width: auto;
-    }
     .titleArea {
-        width: auto;
-        font-size: xx-large;
         height: 40px;
-    }
-    .stationInputTextAreaFrom {
-        display: flex;
-    }
-    .stationInputTextAreaTo {
-        display: flex;
     }
     .arrowsIcon {
         display: flex;
         margin-bottom: 10px;
-    }
-    .textBoxLayout {
-        display: flex; 
-        flex-direction: column;
-        align-items: center;  
-    }
-}
-
-
-/*IPHONES*/
-@media screen and (max-width: 340px) {
-    .siteContainer {
-        width: auto;
-    }
-    .titleArea {
-        width: auto;
-        font-size: xx-large;
-        height: 40px;
-    }
-    .stationInputTextAreaFrom {
-        display: flex;
-    }
-    .stationInputTextAreaTo {
-        display: flex;
-    }
-    .arrowsIcon {
-        display: flex;
-        margin-bottom: 10px;
-    }
-    .textBoxLayout {
-        display: flex; 
-        flex-direction: column;
-        align-items: center;  
-    }
-    .titleContainer {
-        display: flex; 
-        align-items: center;
     }
 }
 
