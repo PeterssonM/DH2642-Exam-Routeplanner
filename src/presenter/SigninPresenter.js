@@ -36,16 +36,16 @@ export default function Signin() {
                 navigate("/home");
             })
             .catch( (error) => {
-               setMessage({
-                   type: "red",
-                   msg: "Failed to log in"
-               });
+                setMessage({
+                type: "red",
+                msg: "Failed to log in"
+                });
             })
     }
 
     return (
         <div>
-           <SigninView signin={signin} message={message} emailRef={emailRef} passwordRef={passwordRef} />
+            <SigninView signin={signin} message={message} emailRef={emailRef} passwordRef={passwordRef} />
         </div>
     )
 }
