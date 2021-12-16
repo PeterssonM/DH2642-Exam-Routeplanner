@@ -2,13 +2,13 @@
     background:#cce6ff;
     border-style: solid;
     border-color: #596d80;
-    height: 1050px;   
+    height: 1050px;
     width: 800px;
     margin: auto;
     margin-top: 50px;
 }
 
-.titleContainer {  
+.titleContainer {
     padding-top: 0px;
     border-style: solid;
     border-top-color: #596d80;
@@ -19,7 +19,7 @@
 
 .titleArea {
     height: 50px;
-    width: 794px;  
+    width: 794px;
     font-size: xxx-large;
     text-align: center;
 }
@@ -37,7 +37,7 @@
 .slTitle{
     text-align: center;
     font-size: 25px;
-    text-shadow: 0px 2px 4px rgba(0,0,0,.4);   
+    text-shadow: 0px 2px 4px rgba(0,0,0,.4);
 }
 
 .textBoxLayout {
@@ -109,17 +109,17 @@
     color: #268197;
     position:relative;
     z-index:5;
-    opacity: 1.0;  
+    opacity: 1.0;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1010px) {
     .titleArea {
-        width: auto;
+        width: 99%;
         display: flex;
         font-size: xx-large;
     }
     .titleContainer {
-        display: flex; 
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -141,9 +141,9 @@
         margin-bottom: 10px;
     }
     .textBoxLayout {
-        display: flex; 
+        display: flex;
         flex-direction: column;
-        align-items: center;  
+        align-items: center;
     }
 }
 
@@ -157,8 +157,3 @@
         margin-bottom: 10px;
     }
 }
-
-
-
-
-
