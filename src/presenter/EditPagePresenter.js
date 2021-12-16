@@ -26,7 +26,7 @@ export default function EditPagePresenter() {
         
             setUser(user.uid);
         });
-    }, [])
+    }, [navigate])
 
     function getTime() {
         function pad2(n) {

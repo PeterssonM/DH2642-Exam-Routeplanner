@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import firebase, {auth, signIn } from "../firebase"
+import { auth, signIn } from "../firebase"
 import SigninView from "../view/SignInView"
 
 export default function Signin() {
@@ -19,7 +19,7 @@ export default function Signin() {
             if (user) { navigate("/home"); }
         })
 
-    }, [])
+    }, [navigate])
 
     function signin(e) {
 

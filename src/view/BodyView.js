@@ -10,6 +10,7 @@ export default function Body({notes, handleAddNote, handleDeleteNote, redirect})
             <div className="notes">
                 {notes && notes.map((note) => (
                     <Notes
+                        key={note.id}
                         id={note.id}
                         title={note.title}
                         text={note.text}

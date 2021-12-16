@@ -3,9 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../presenter/HeaderPresenter'
 import Body from "../view/BodyView"
 import '../view/AddNoteView';
-import { findByName } from "../service/resRobot"
 import { nanoid } from '@reduxjs/toolkit'; //keep track of different notes
-import firebase, {db, auth} from "../firebase";
+import {db, auth} from "../firebase";
 import FuzzySearch from 'fuzzy-search';
 
 export default function Feed() {
@@ -32,7 +31,7 @@ export default function Feed() {
             
         });
 
-    }, [])
+    }, [navigate])
 
     const addNote = (title) => {
         const date = new Date();

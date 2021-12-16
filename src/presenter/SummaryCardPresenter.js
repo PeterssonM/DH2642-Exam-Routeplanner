@@ -37,7 +37,7 @@ export default function SummaryCardPresenter() {
                     if (!station) { return navigate("/home"); }
 
                     //Checks if the id and the user id is equal
-                    if (station["uid"] != user.uid) { return navigate("/home"); }
+                    if (station["uid"] !== user.uid) { return navigate("/home"); }
 
                     //Get travel plan
                     let originId = null; 
@@ -59,14 +59,14 @@ export default function SummaryCardPresenter() {
                         })
                 })
         })
-    }, [])
+    }, [navigate, params.id])
 
     if (loading) { 
         return (
             <div>
                 <Header />
                 <div className= "loadingAnimation">
-                    <img src="http://www.csc.kth.se/~cristi/loading.gif" />
+                    <img src="http://www.csc.kth.se/~cristi/loading.gif" alt='http://www.csc.kth.se/~cristi/loading.gif'/>
                 </div>
             </div>
         ) 

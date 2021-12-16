@@ -1,4 +1,3 @@
-import utf8 from "utf8"
 import { RES_ROBOT_API_KEY} from "./Config"
 
 /**
@@ -10,22 +9,11 @@ import { RES_ROBOT_API_KEY} from "./Config"
  */ 
 export function findByName(input) {
     return new Promise( (resolve, reject) => {
-        let url = "https://api.resrobot.se/v2/location.name?" + "key=" + RES_ROBOT_API_KEY + "&input=" + input + "&format=json"    
-        console.log(input);
-        console.log(url);
+        let url = "https://api.resrobot.se/v2/location.name?" + "key=" + RES_ROBOT_API_KEY + "&input=" + input + "&format=json";   
 
         fetch(url)
             .then( (response) => response.json())
             .then( (data) => {
-                console.log(data);
-                let result = null
-                data.StopLocation.forEach( (loc) => {
-                    let s = loc.name.split(" ");
-                    if (s[0].toLowerCase() == input.toLowerCase() && s[1] == "T-bana") {
-                        result = loc
-                    }
-                })
-    
                 return resolve(data.StopLocation[0])
             })
     })
@@ -42,14 +30,6 @@ export function getIdFromName(input) {
         fetch(url)
         .then( (response) => response.json())
         .then( (data) => {
-            let result = null
-            data.StopLocation.forEach( (loc) => {
-                let s = loc.name.split(" ");
-                if (s[0].toLowerCase() == input.toLowerCase() && s[1] == "T-bana") {
-                    result = loc
-                }
-            })
-            
             return resolve(data.StopLocation[0]["id"])
         })
     })
@@ -74,15 +54,13 @@ export function getPlan(origin, destination) {
         .then( (response) => response.json())
         .then( (data) => {
 
-            console.log(data);
-
             let result = {
                 stops: []
             }
             
             data.Trip[0].LegList.Leg.forEach( (leg) => {
 
-                if (leg.type == "JNY") {  
+                if (leg.type === "JNY") {  
                     let _result = {
                         direction: leg.direction,
                         stops: leg.Stops
