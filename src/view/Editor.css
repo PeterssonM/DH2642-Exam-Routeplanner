@@ -157,3 +157,8 @@
         margin-bottom: 10px;
     }
 }
+
+.errorfeedback{
+    display: flex;
+    justify-content:center;    
+}

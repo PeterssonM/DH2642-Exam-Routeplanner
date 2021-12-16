@@ -1,8 +1,8 @@
-import { red } from '@mui/material/colors';
 import React, { useRef, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { auth, signIn } from "../firebase"
 import SigninView from "../view/SignInView"
+
 
 export default function Signin() {
 
@@ -45,14 +45,7 @@ export default function Signin() {
 
     return (
         <div>
-
-            {message && 
-                <div>
-                    <h3 style={{color: message.type}}>{message.msg}</h3>
-                </div>
-            }
-
-            <SigninView signin={signin} emailRef={emailRef} passwordRef={passwordRef} />
+           <SigninView signin={signin} message={message} emailRef={emailRef} passwordRef={passwordRef} />
         </div>
     )
 }

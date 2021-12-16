@@ -6,6 +6,7 @@ import firebase, { db } from "../firebase"
 import { nanoid } from '@reduxjs/toolkit';
 import { findByName } from '../service/resRobot';
 
+
 export default function EditPagePresenter() {
 
     //Navigation
@@ -47,8 +48,7 @@ export default function EditPagePresenter() {
 
         let o = "";
         let d = "";
-
-        if (originRef.current == null || destinationRef.current == null || bodyRef.current == null || titleRef.current == null) {
+        if (originRef.current == null || destinationRef.current == null || bodyRef.current == null || titleRef.current.value == "") {
             return setMessage({
                 type: "red", 
                 msg: "You missed some parts"
@@ -84,12 +84,9 @@ export default function EditPagePresenter() {
     return (
         <div className= "editPage">
             <Header showSearchBar={false}/>
-            {message && 
-                <div>
-                    <h3 style={{color: message.type}}>{message.msg}</h3>
-                </div>
-            }
+            
             <EditPage 
+                    message={message}
                     create={create} 
                     titleRef={titleRef} 
                     bodyRef={bodyRef}
