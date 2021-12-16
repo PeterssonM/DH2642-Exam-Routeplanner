@@ -17,6 +17,7 @@ export function findByName(input) {
         fetch(url)
             .then( (response) => response.json())
             .then( (data) => {
+                console.log(data);
                 let result = null
                 data.StopLocation.forEach( (loc) => {
                     let s = loc.name.split(" ");
@@ -73,17 +74,22 @@ export function getPlan(origin, destination) {
         .then( (response) => response.json())
         .then( (data) => {
 
+            console.log(data);
+
             let result = {
                 stops: []
             }
             
             data.Trip[0].LegList.Leg.forEach( (leg) => {
-                let _result = {
-                    direction: leg.direction,
-                    stops: leg.Stops
-                }
 
-                result.stops.push(_result);
+                if (leg.type == "JNY") {  
+                    let _result = {
+                        direction: leg.direction,
+                        stops: leg.Stops
+                    }
+
+                    result.stops.push(_result);
+                }
             })
 
             return resolve(result);

@@ -1,6 +1,6 @@
 # DH2642-Exam-Routeplanner
 
-A "todo/task" app especially made for planning out/scheduling school stuff like tests etc. SL Api is used so you can search for journeys you need to make, For instance if you need to get to school etc.
+A "todo/task" app especially made for planning out/scheduling school stuff like tests etc. SL Api is used so you can search for journeys you need to make, for instance if you need to get to school etc.
 
 We're using MVP, which clearly can be seen via the view and presenter folder.
 
@@ -9,9 +9,9 @@ The website is built and justified so it also should be able to function at the 
 Setup:
 
 1. You will be meeted by a sign in page. If you have an account(which you wont have the first time you try it). Click on the 
-"Not a member yet? Register now" link and you will be routed to the sign up page. Enter your information and press sign up
+"Not a member yet? Register now" link and you will be routed to the sign up page. Enter your information and press sign up.
 
-2. You will then be redirected to the main "home" page, When you are new to the site you will only see a square with a plus-sign. This is
+2. You will then be redirected to the main "home" page, when you are new to the site you will only see a square with a plus-sign. This is
 the button that is used to create notes/todos. Click on the button and you will be redirected to the page where you can create a new note.
 
 3. Here you will required to enter something in each field. At the top you can enter a title, which will be seen together with the journey you pick on the home page. It's good to pick a title you can remember because if you create a lot of notes you will be able to search for the
@@ -22,6 +22,12 @@ for instance the path to school. Then you can make some notes in the editor down
 Here on the summary page all data will be displayed, both the information you wrote, as well as how you should travel from your source to your destination(the route is displayed).
 
 5. Extras:
+<<<<<<< HEAD
             -You can always click on the home button on the header to be routed to your home page.
             -You can always sign out by clicked on the sign out button on the header.
             -As mentioned before you can search for the notes you have created via the searchbar when you are on the home page.
+=======
+            -You can always click on the home button on the header to be routed to your home page
+            -You can always sign out by clicked on the sign out button on the header
+            -As mentioned before you can search for the notes you have created via the searchbar when you are on the home page.
+>>>>>>> 674383bca8b414e4f6394d68fd8b438ea5fc43d2
