@@ -8,7 +8,7 @@ export default function Header({signout, showSearchBar, filterNotes, email}) {
     function HeaderButtons( {icon, title, onClick} ) {
         return (
             <div onClick={onClick}
-                 className="headerButtons">
+                className="headerButtons">
                 <i className={icon}/>
                 <h3 className="iconTitle">{title}</h3>
             </div>
