@@ -74,8 +74,7 @@ export default function SummaryCardPresenter() {
 
     return (
         <div>
-            { x}
-            <Header/>
+            <Header showSearchBar={false}/>
             <SummaryCard 
                 data={note} 
                 title={title} 

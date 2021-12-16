@@ -3,7 +3,7 @@ import Header from "../view/HeaderView"
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../firebase'
 
-export default function HeaderPresenter() {
+export default function HeaderPresenter( {showSearchBar=true} ) {
 
     const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ export default function HeaderPresenter() {
 
     return (
         <div>
-            <Header signout={signout}/>
+            <Header signout={signout} showSearchBar={showSearchBar}/>
         </div>   
     )
 }

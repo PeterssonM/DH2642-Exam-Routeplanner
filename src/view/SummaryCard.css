@@ -2,10 +2,9 @@
     background:#cce6ff;
     border-style: solid;
     border-color: #596d80;
-    height: 1050px;
+    height: auto;
     width: 800px;
     margin: auto;
-    margin-top: 0px;
 }
 .titleContainer{
   padding-top: 10px;
@@ -17,12 +16,11 @@
   border-right-width: 0px;
   font-weight:bold;
   display: flex;
-  justify-content: center;
-  
+  justify-content: center; 
 }
 
- HEAD
-tr:nth-child(n) {background: #596d80 )}
+HEAD
+tr:nth-child(n) {background: #596d80}
 tr:nth-child(2n) {background: #bed9f5}
 
 

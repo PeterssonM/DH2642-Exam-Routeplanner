@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import {Link} from 'react-router-dom';
 
-export default function Header({signout, emailRef}) {
+export default function Header({signout, showSearchBar}) {
 
     /*Template function for creating header buttons */
     function HeaderButtons( {icon, title, onClick} ) {
@@ -26,12 +26,14 @@ export default function Header({signout, emailRef}) {
     return (
         <div className="header">
             <div className="left-header">
-                <div className="header_search">
-                    <div className="searchIcon">
-                        <i className= {"fas fa-search fa-1g"} title="Search"/>
+                {showSearchBar && 
+                    <div className="header_search">
+                        <div className="searchIcon">
+                            <i className= {"fas fa-search fa-1g"} title="Search"/>
+                        </div>
+                        <input className="inputBar" type="text" placeholder="Type to search..."></input>
                     </div>
-                    <input className="inputBar" type="text" placeholder="Type to search..."></input>
-                </div>
+                }
             </div>
             <div className="middle-header">
                 <span className="headerTitle">Tenta Schedueler</span>
