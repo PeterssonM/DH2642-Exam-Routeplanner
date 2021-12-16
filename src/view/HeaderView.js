@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import {Link} from 'react-router-dom';
 
-export default function Header({signout, showSearchBar}) {
+export default function Header({signout, showSearchBar, filterNotes}) {
 
     /*Template function for creating header buttons */
     function HeaderButtons( {icon, title, onClick} ) {
@@ -31,7 +31,7 @@ export default function Header({signout, showSearchBar}) {
                         <div className="searchIcon">
                             <i className= {"fas fa-search fa-1g"} title="Search"/>
                         </div>
-                        <input className="inputBar" type="text" placeholder="Type to search..."></input>
+                        <input className="inputBar" onChange={(e) => filterNotes(e.currentTarget.value)} type="text" placeholder="Type to search..."></input>
                     </div>
                 }
             </div>
