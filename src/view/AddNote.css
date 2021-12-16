@@ -43,12 +43,8 @@
 
 @media screen and (max-width: 481px) { 
     .addNote {
-        margin: 12px;
         height:8em;
         width:8em;
-    }
-    .notePlusSign {
-        opacity: 0.4;
     }
 }
 

@@ -4,6 +4,25 @@ import {Link} from 'react-router-dom';
 
 export default function Header({signout, emailRef}) {
 
+    /*Template function for creating header buttons */
+    function HeaderButtons( {icon, title, onClick} ) {
+        return (
+            <div onClick={onClick} className="headerButtons">
+                <i className= {icon}/>
+                <h3 className="headerButtonTitle">{title}</h3>
+            </div>
+        )
+    }
+    
+    function AccountSymbol( {icon, title} ) {
+        return (
+            <div className="accountButton">
+                <i className= {icon}/>
+                <h3 className="accountButtonTitle">{title}</h3>
+            </div>
+        )
+    }
+
     return (
         <div className="header">
             <div className="left-header">
@@ -21,30 +40,12 @@ export default function Header({signout, emailRef}) {
                     <Link to='/home' style={{ textDecoration: 'none' }}>
                         <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
                     </Link>
+                    <AccountSymbol className="accountSymbol" icon={"fas fa-user fa-1g"} title="harry@kth.se"/>
                     <Link to='/signin' style={{ textDecoration: 'none' }}>
                         <HeaderButtons className="homeButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
                     </Link>
-                    <AccountButton className="accountSymbol" icon={"fas fa-user fa-1g"} title="harry@kth.se"/>
             </div> 
         </div>
     );
 }
 
-//Template function for creating buttons
-function HeaderButtons( {icon, title, onClick} ) {
-    return (
-        <div onClick={onClick} className="headerButtons">
-            <i className= {icon}/>
-            <h3 className="headerButtonTitle">{title}</h3>
-        </div>
-    )
-}
-
-function AccountButton( {icon, title} ) {
-    return (
-        <div className="accountButton">
-            <i className= {icon}/>
-            <h3 className="accountButtonTitle">{title}</h3>
-        </div>
-    )
-}

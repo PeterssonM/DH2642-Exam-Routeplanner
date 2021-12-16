@@ -1,7 +1,7 @@
 import React from 'react'
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import "./Editer.css"
+import "./Editor.css"
 
 export default function EditPageView({ create, titleRef, originRef, destinationRef, bodyRef }) {
 
