@@ -6,8 +6,9 @@
     margin: auto;
     background:#cce6ff;
     margin-top: 50px;
+    margin-bottom: 50px;
     border-radius: 25px;
-    font-family: 'Lato';   
+    font-family: 'Lato';
   }
 
   .summaryTitleContainer{
@@ -17,16 +18,18 @@
     border-bottom-color: #01070c;
     font-weight:bold;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     border-left-width: 1px;
     border-right-width: 1px;
     border-radius: 25px;
   }
-  
+
   .routeTableContainer {
     border: #01070c;
-    border-left-width: 1px;
-    border-right-width: 1px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -34,20 +37,20 @@
     border-color: #596d80;
     border-radius: 25px;
   }
-  
+
   .travelData {
     display: flex;
     justify-content: center;
   }
-  
+
   HEAD
   tr:nth-child(n) {background: #6c7b8a}
   tr:nth-child(2n) {background: #b1c9e2}
-  
-  
+
+
   /*This is in the presenter*/
   .loadingAnimation {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 400px;
