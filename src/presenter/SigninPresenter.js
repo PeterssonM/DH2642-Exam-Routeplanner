@@ -31,7 +31,7 @@ export default function Signin() {
                 navigate("/home");
             })
             .catch( (error) => {
-                console.log(error);
+               alert(error);
             })
     }
 

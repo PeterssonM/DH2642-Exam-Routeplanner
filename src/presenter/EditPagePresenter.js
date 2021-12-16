@@ -62,7 +62,7 @@ export default function EditPagePresenter() {
                     .then( (result) => {
                         if (!result) { return alert(destinationRef.current.value + " is not a valid station")}
                         d = result["name"];
-                        console.log(new Date());
+                       
                         db.collection("cards").add({
                             id: nanoid(),
                             title: titleRef.current.value,

@@ -3,7 +3,6 @@ import "./SummaryCard.css"
 
 export default function SummaryCardView({data, title, body}) {
 
-    console.log(data);
 
     return (
         <div className="cardContainer">
@@ -20,7 +19,6 @@ export default function SummaryCardView({data, title, body}) {
                     <div className="travelData">
                         <tbody>
                             {data && data.stops.map(stop => {
-                                console.log(stop);
                                 return(
                                     <div>
                                         <tr key={stop.direction}><h3>Mot: {stop.direction}</h3></tr>
