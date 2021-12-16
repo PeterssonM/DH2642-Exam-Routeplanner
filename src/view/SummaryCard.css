@@ -17,7 +17,7 @@
   border-right-width: 0px;
   font-weight:bold;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
 HEAD
@@ -27,9 +27,8 @@ tr:nth-child(2n) {background: #bed9f5}
 
 /*This is in the presenter*/
 .loadingAnimation {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 400px;
   }
-
