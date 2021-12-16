@@ -10,6 +10,7 @@
     flex-direction: column;
     justify-content: space-between;  
     opacity: 0.6;
+    justify-content: center;
 }
 
 .titleArea {
@@ -18,18 +19,37 @@
     height: 20px;
 }
 
-.note-footer {
-    padding-left: 50px;
-    padding-top: 30px;
+.notePlusSign {
+    display:flex;
+    justify-content: center;
+    margin-top: 15px;
     opacity: 0.4;
 }
 
-.note-footer:hover{
+.notePlusSign:hover{
     cursor: pointer;
     transform: scale(1.20);
     position:relative;
     z-index:5;
     opacity: 1.0;
+}
+
+@media screen and (max-width: 801px) { 
+    .addNote {
+        height:10em;
+        width:10em;
+    }
+}
+
+@media screen and (max-width: 481px) { 
+    .addNote {
+        margin: 12px;
+        height:8em;
+        width:8em;
+    }
+    .notePlusSign {
+        opacity: 0.4;
+    }
 }
 
 

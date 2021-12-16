@@ -1,17 +1,8 @@
-//React
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate} from 'react-router-dom'
-
-//Views
 import SummaryCard from '../view/SummaryCardView'
-
-//Presenters
 import Header from '../presenter/HeaderPresenter'
-
-//Firebase
 import {db, auth} from "../firebase";
-
-//Utils
 import { getIdFromName, getPlan } from '../service/resRobot';
 
 export default function SummaryCardPresenter() {
@@ -73,7 +64,9 @@ export default function SummaryCardPresenter() {
         return (
             <div>
                 <Header />
-                <p>Loading...</p>
+                <div className= "loadingAnimation">
+                    <img src="http://www.csc.kth.se/~cristi/loading.gif" />
+                </div>
             </div>
         ) 
     }
@@ -81,7 +74,11 @@ export default function SummaryCardPresenter() {
     return (
         <div>
             <Header/>
-            <SummaryCard data={note} title={title} body={body}/>
+            <SummaryCard 
+                data={note} 
+                title={title} 
+                body={body}
+            />
         </div>
     )
 }
