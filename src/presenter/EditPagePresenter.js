@@ -48,23 +48,44 @@ export default function EditPagePresenter() {
 
         let o = "";
         let d = "";
-        if (originRef.current === null || destinationRef.current === null || bodyRef.current === null || titleRef.current.value === "") {
+
+        if (originRef.current === undefined || destinationRef.current === undefined || bodyRef.current === undefined || titleRef.current.value === "") {
             return setMessage({
                 type: "red", 
                 msg: "You missed some parts"
             });
         }
+
         //Check if origin and destination are valid.
         findByName(originRef.current.value)
             .then( (result) => {
-                if (!result) { return alert(originRef.current.value + " is not a valid station"); }
+                if (!result) { 
+                    return setMessage({
+                        type: "red",
+                        msg: originRef.current.value + " is not a valid station"
+                    })
+                }
                 
                 o = result["name"];
 
                 findByName(destinationRef.current.value)
                     .then( (result) => {
-                        if (!result) { return alert(destinationRef.current.value + " is not a valid station")}
+                        if (!result) { 
+                            return setMessage({
+                                type: "red",
+                                msg: destinationRef.current.value + " is not a valid station"
+                            })
+                        }
                         d = result["name"];
+
+
+                        if (o === d) {
+                            return setMessage({
+                                type: "red",
+                                msg: "Origin and destination cannot be the same"
+                            })
+                        }
+
                         db.collection("cards").add({
                             id: nanoid(),
                             title: titleRef.current.value,
