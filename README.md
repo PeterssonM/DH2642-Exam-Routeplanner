@@ -6,7 +6,7 @@ We're using MVP, which clearly can be seen via the view and presenter folder.
 
 If you create a note then the journey diplayed in the summary view of the note will always be the upcoming "next journey" aka the data updates all the time.
 
-The website is built and justified so it also should be able to function at the different @media widths of 340px, 480px, 600px and 800px
+The website is built and justified so it also should be able to function at the different @media widths of 480px, 600px and 800px and 1250px
 
 Setup:
 
