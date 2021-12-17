@@ -48,9 +48,9 @@ export default function Header({signout, showSearchBar, filterNotes, email, home
                         <HeaderButtons className="signoutButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
                     </Link>
                 </div>
-                <div class="dropdown">
-                    <button class="dropbtn"><i class="fa fa-ellipsis-v"></i></button>
-                    <div class="dropdown-content">
+                <div className="dropdown">
+                    <button className="dropbtn"><i className="fa fa-ellipsis-v"></i></button>
+                    <div className="dropdown-content">
                         <HeaderButtons icon={"fas fa-home fa-1g"} title="Home" onClick={home}/>
                         <HeaderButtons className="homeButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
                     </div>
