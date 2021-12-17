@@ -10,9 +10,13 @@ export default function HeaderPresenter( {showSearchBar=true, filterNotes} ) {
 
     function signout(e) {
         e.preventDefault();
-        
         auth().signOut();
         navigate("/signin")
+    }
+
+    function home(e) {
+        e.preventDefault();
+        navigate("/home")
     }
 
     useEffect( () => {
@@ -25,7 +29,7 @@ export default function HeaderPresenter( {showSearchBar=true, filterNotes} ) {
 
     return (
         <div>
-            <Header signout={signout} showSearchBar={showSearchBar} email={email} filterNotes={filterNotes}/>
+            <Header signout={signout} showSearchBar={showSearchBar} email={email} filterNotes={filterNotes} home={home}/>
         </div>   
     )
 }

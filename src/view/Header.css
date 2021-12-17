@@ -197,9 +197,33 @@
       visibility: visible;
     }
 }
+<<<<<<< HEAD
 @media screen and (max-width: 500px){
     .headerTitle{
       font-size: 1.6em;
+=======
+
+/*ANDROID*/
+@media screen and (max-width: 510px) {
+    .headerTitle {
+        font-size: 1.1em;
+        margin-left: 10px;
+    }
+    .header_search {
+        border-radius: 5px;
+        padding: 2px;
+        width:100%
+    }
+    .headerButtonTitle {
+        font-size: 0;
+>>>>>>> 6bacd7dd70a8415c1663347b30c97dca3e4f45bc
+    }
+    /* The dropdown container */
+    .dropdown {
+        display: contents;
+    }
+    .HeaderButtonShow {
+        display: none;
     }
 }
 @media screen and (max-width: 380px){

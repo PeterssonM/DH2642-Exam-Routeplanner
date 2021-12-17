@@ -44,10 +44,11 @@ export default function EditPageView({ create, titleRef, originRef, destinationR
                             bodyRef.current = editor.getData();
                         } }
                     />
-                </div>
-                <div className="buttonPosition">
+                    <div className="buttonPosition">
                     <button className="createButton">Create</button>
                 </div>
+                </div>
+                
             </div>
         </form>
     )
