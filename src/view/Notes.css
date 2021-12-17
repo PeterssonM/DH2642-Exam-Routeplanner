@@ -1,5 +1,4 @@
 .note {
-    margin: 20px;
     height:15em;
     width:15em;
     padding:2em;
@@ -9,11 +8,11 @@
     display:flex;
     flex-direction: column;
     cursor: pointer;
-    white-space: pre-wrap;
+    margin: auto;
 }
 
 .note:nth-child(n) {
-    position:relative;
+    position: relative;
     background:rgb(204, 230, 255); }
 
 .note:nth-child(3n) {
@@ -56,7 +55,7 @@
     z-index:5;
 }
 
-@media screen and (max-width: 920px) { 
+@media screen and (max-width: 920px) {
     .note {
         height:10em;
         width:10em;
@@ -71,7 +70,6 @@
 
 @media screen and (max-width: 481px) {
     .note {
-        margin: 12px;
         height:8em;
         width:8em;
     }
