@@ -72,8 +72,6 @@ export function getPlan(origin, destination) {
         })
         .catch( (error) => { alert(error); })
     })
-
- 
 }
 
 

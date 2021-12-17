@@ -7,7 +7,9 @@
     margin: 10px;
 }
 .headerButtons:hover { color: black; }
+
 .iconTitle{} /*Only used on smaller screens*/
+
 .accountIcon {
     display: flex;
     flex-direction: column;

@@ -18,7 +18,6 @@ export default function App() {
   return (
     <div>
       <div className="app">
-        
           <Routes>
               <Route path='/home' element={<Feed />}></Route>
               <Route path="/edit" element={<EditPage />}></Route>
