@@ -29,7 +29,7 @@ export default function Header({signout, showSearchBar, filterNotes, email, home
                 <div className="headerContainer">
                     <div className="left-headerContainer">
                         {showSearchBar &&
-                            <div className="header_search">
+                            <div className="header-search">
                                 <div className="searchIcon">
                                     <i className= {"fas fa-search fa-1g"} title="Search"/>
                                 </div>
@@ -44,14 +44,13 @@ export default function Header({signout, showSearchBar, filterNotes, email, home
                         <Link to='/home' style={{ textDecoration: 'none' }}>
                             <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
                         </Link>
-                        <AccountIcon className="accountSymbol" icon={"fas fa-user fa-1g"} title={email}/>
+                        <AccountIcon className="accountIcon" icon={"fas fa-user fa-1g"} title={email}/>
                         <Link to='/signin' style={{ textDecoration: 'none' }}>
                             <HeaderButtons className="homeButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
                         </Link>
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
 
             <div className="small">
                 <div className="headerSmallContianer">
@@ -60,13 +59,14 @@ export default function Header({signout, showSearchBar, filterNotes, email, home
                             <span className="headerTitle">Tenta Schedueler</span>
                         </div>
                         <div className="right_headerContainer">
-                            <Link to='/home' style={{ textDecoration: 'none' }}>
-                                <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
-                            </Link>
-                            <AccountIcon className="accountSymbol" icon={"fas fa-user fa-1g"} title={email}/>
-                            <Link to='/signin' style={{ textDecoration: 'none' }}>
-                                <HeaderButtons className="homeButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
-                            </Link>
+                            <AccountIcon className="accountIcon" icon={"fas fa-user fa-1g"} title={email}/>
+                            <div className="dropdown">
+                                <button className="dropbtn"><i className="fa fa-ellipsis-v"></i></button>
+                                <div className="dropdown-content">
+                                    <HeaderButtons icon={"fas fa-home fa-1g"} title="Home" onClick={home}/>
+                                    <HeaderButtons className="homeButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="headerLowerContainer">
@@ -78,23 +78,6 @@ export default function Header({signout, showSearchBar, filterNotes, email, home
                                 <input className="inputSmallBar" onChange={(e) => filterNotes(e.currentTarget.value)} type="text" placeholder="Type to search..."></input>
                             </div>
                         }
-=======
-            <div className="right-headerContainer">
-                <div className="HeaderButtonShow">
-                    <Link to='/home' style={{ textDecoration: 'none' }}>
-                        <HeaderButtons className="homeButton" icon={"fas fa-home fa-1g"} title="Home"/>
-                    </Link>
-                    <AccountIcon className="accountSymbol" icon={"fas fa-user fa-1g"} title={email}/>
-                    <Link to='/signin' style={{ textDecoration: 'none' }}>
-                        <HeaderButtons className="signoutButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
-                    </Link>
-                </div>
-                <div className="dropdown">
-                    <button className="dropbtn"><i className="fa fa-ellipsis-v"></i></button>
-                    <div className="dropdown-content">
-                        <HeaderButtons icon={"fas fa-home fa-1g"} title="Home" onClick={home}/>
-                        <HeaderButtons className="homeButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
->>>>>>> 6bacd7dd70a8415c1663347b30c97dca3e4f45bc
                     </div>
                 </div>
             </div>

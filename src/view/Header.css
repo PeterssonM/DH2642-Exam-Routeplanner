@@ -7,13 +7,17 @@
     margin: 10px;
 }
 .headerButtons:hover { color: black; }
-.iconTitle{} /*Only used on smaller screens*/
+.iconTitle{
+
+}
 .accountIcon {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: grey;
-    margin-top: 10px;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .accountIcon:hover { color: none; }
 
@@ -21,7 +25,7 @@
 .big{
   visibility: visible;
 }
-/*Main header*/
+/*MAIN HEADER*/
 .headerContainer {
     display: flex;
     flex-flow: nowrap;
@@ -36,7 +40,7 @@
     margin:auto;
     width:33%;
 }
-.header_search {
+.header-search {
     display: flex;
     align-items: center;
     background-color: rgb(233, 233, 233);
@@ -44,11 +48,11 @@
     padding: 15px;
     width: 80%;
 }
-.header_search input {
+.header-search input {
     border: none;
     background-color: rgb(233, 233, 233);
 }
-.header_search input:focus {
+.header-search input:focus {
     outline: none;
 }
 .searchIcon {
@@ -74,7 +78,8 @@
     text-shadow: 0px 2px 4px rgba(0,0,0,.4);
     font-size: 3.3em;
     font-weight: bold;
-    transition: .5s ease-in-out;
+    /*transition: .5s ease-in-out;*/
+    text-align: center;
 }
 
 /*RIGHT HEADER CONTAINER*/
@@ -82,6 +87,46 @@
     display: flex;
     justify-content: flex-end;
     width:33%;
+}
+
+/*THE DROPDOWN CONTAINER*/
+.dropdown {}
+.dropbtn {}
+.dropbtn:hover{ color: black; }
+/* Dropdown button */
+.dropdown .dropbtn {
+    color: grey;
+    font-size: 40px;
+    border: none;
+    padding: 0px 20px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0%;
+    text-align: center;
+    background-color: #f9f9f9;
+    min-width: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    width: 100px;
 }
 
 /*SMALL SCREENS*/
@@ -120,13 +165,11 @@
     padding: 15px;
     width: auto;
 }
-.header_search input {
+.header_small_searchÖ input {
     border: none;
     background-color: rgb(233, 233, 233);
 }
-.header_search input:focus {
-    outline: none;
-}
+
 .searchSmallIcon{
     color: black;
     cursor: pointer;
@@ -142,71 +185,58 @@
 }
 
 
-@media screen and (max-width: 1600px){
-    .headerTitle {
-        font-size: 2.5em;
-    }
-    .header_search {
-        border-radius: 5px;
-        padding: 2px;
-        width:80%;
-    }
-    .inputBar {
-        width:80%;
-        font-size:medium;
-    }
-}
-
-@media screen and (max-width: 1260px) {
-    .headerTitle {
-        font-size: 2.0em;
-    }
-    .header {
-        height: 4em;
-    }
-    .headerButtons {
-        padding: 5px;
-        margin-bottom: 10px;
-    }
-    .iconTitle {
-        font-size: 0;
-    }
-    .header_search {
-        border-radius: 5px;
-        padding: 2px;
-        width:60%;
-    }
-    .inputBar {
-        width:60%;
-        font-size:medium;
-    }
-    .left-header {
-        width:15%
-    }
-    .headerButtonTitle {
-        font-size: 0;
-    }
+@media screen and (max-width: 1450px){
+  .iconTitle{
+      text-overflow:ellipsis;
+      width: 100px;
+      overflow: hidden;
+      text-align: center;
+  }
+  .accountIcon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: grey;
+  }
 }
 
 /*New website layout*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1280px) {
     .big{
       visibility: hidden;
     }
     .small{
       visibility: visible;
     }
+    .iconTitle{
+        text-overflow:ellipsis;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        margin: 0px;
+    }
+    .accountIcon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: grey;
+        font-size: 20px;
+        margin: auto;
+        margin-top: 10px;
+    }
 }
-<<<<<<< HEAD
-@media screen and (max-width: 500px){
-    .headerTitle{
-      font-size: 1.6em;
-=======
 
-/*ANDROID*/
+@media screen and (max-width: 1000px){
+  .iconTitle{
+    width: 100px;
+  }
+  .headerTitle{
+    font-size: 2em;
+  }
+}
 @media screen and (max-width: 510px) {
     .headerTitle {
-        font-size: 1.1em;
+        font-size: 1.6em;
         margin-left: 10px;
     }
     .header_search {
@@ -216,19 +246,17 @@
     }
     .headerButtonTitle {
         font-size: 0;
->>>>>>> 6bacd7dd70a8415c1663347b30c97dca3e4f45bc
-    }
-    /* The dropdown container */
-    .dropdown {
-        display: contents;
-    }
-    .HeaderButtonShow {
-        display: none;
     }
 }
-@media screen and (max-width: 380px){
+@media screen and (max-width: 450px){
     .headerTitle{
       font-size: 1.2em;
+    }
+    .iconTitle{
+        width: 50px;
+    }
+    .accountIcon{
+
     }
 }
 @media screen and (max-width: 300px){

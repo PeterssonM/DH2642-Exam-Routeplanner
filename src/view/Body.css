@@ -9,9 +9,9 @@
 }
 
 /*New website layout*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1280px) {
     .notes {
-        padding-top: 100px;
+        padding-top: 120px;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-gap: 1rem;
     }
