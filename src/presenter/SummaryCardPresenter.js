@@ -51,7 +51,6 @@ export default function SummaryCardPresenter() {
                                 .then( () => {
                                     getPlan(originId, destinationId)
                                         .then( (result) => {
-                                           
                                             setNote(result);
                                             setLoading(false);
                                         })
