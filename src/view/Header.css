@@ -224,6 +224,9 @@
         margin: auto;
         margin-top: 10px;
     }
+    .headerTitle{
+        margin-left: 10px;
+    }
 }
 
 @media screen and (max-width: 1000px){
@@ -237,7 +240,6 @@
 @media screen and (max-width: 510px) {
     .headerTitle {
         font-size: 1.6em;
-        margin-left: 10px;
     }
     .header_search {
         border-radius: 5px;
