@@ -4,6 +4,7 @@ import SummaryCard from '../view/SummaryCardView'
 import Header from '../presenter/HeaderPresenter'
 import {db, auth} from "../firebase";
 import { getIdFromName, getPlan } from '../service/resRobot';
+import { getWeather } from '../service/openWeather';
 
 export default function SummaryCardPresenter() {
 
@@ -40,14 +41,14 @@ export default function SummaryCardPresenter() {
                     if (station["uid"] !== user.uid) { return navigate("/home"); }
 
                     //Get travel plan
-                    let originId = null; 
+                    let originId = null;
                     let destinationId = null;
 
                     getIdFromName(station["origin"])
-                        .then( (id) => { originId = id; })
+                        .then( (id) => { originId = id.StopLocation[0]["id"]; })
                         .then( () => {
                             getIdFromName(station["destination"])
-                                .then( (destId) => {destinationId = destId; })
+                                .then( (destId) => {destinationId = destId.StopLocation[0]["id"]; })
                                 .then( () => {
                                     getPlan(originId, destinationId)
                                         .then( (result) => {
@@ -56,11 +57,14 @@ export default function SummaryCardPresenter() {
                                         })
                                 })
                         })
+                    getWeather("Kista")
+                      .then( (data) => console.log(data))
+                      .catch( (error) => console.log(error))
                 })
         })
     }, [navigate, params.id])
 
-    if (loading) { 
+    if (loading) {
         return (
             <div>
                 <Header />
@@ -68,20 +72,18 @@ export default function SummaryCardPresenter() {
                     <img src="http://www.csc.kth.se/~cristi/loading.gif" alt='http://www.csc.kth.se/~cristi/loading.gif'/>
                 </div>
             </div>
-        ) 
+        )
     }
 
     return (
         <div>
             <Header showSearchBar={false}/>
-            <SummaryCard 
+            <SummaryCard
                 key={title}
-                data={note} 
-                title={title} 
+                data={note}
+                title={title}
                 body={body}
             />
         </div>
     )
 }
-
-
