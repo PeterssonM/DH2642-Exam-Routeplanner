@@ -4,7 +4,7 @@ import SummaryCard from '../view/SummaryCardView'
 import Header from '../presenter/HeaderPresenter'
 import {db, auth} from "../firebase";
 import { getIdFromName, getPlan } from '../service/resRobot';
-import { getWeather } from '../service/openWeather';
+import { getWeather, getWeatherCoordinates } from '../service/openWeather';
 
 export default function SummaryCardPresenter() {
 
@@ -12,6 +12,8 @@ export default function SummaryCardPresenter() {
     const navigate = useNavigate();
 
     const [note, setNote] = useState(null);
+    const [oriWeatherInfo, setOriWeatherInfo] = useState(null);
+    const [desWeatherInfo, setDesWeatherInfo] = useState(null);
     const [body, setBody] = useState(null);
     const [title, setTitle] = useState(null);
 
@@ -42,13 +44,33 @@ export default function SummaryCardPresenter() {
 
                     //Get travel plan
                     let originId = null;
+                    let originPosition={
+                      lon: null,
+                      lat: null
+                    }
+                    function setOriginPosition(lon, lat){
+                      originPosition["lon"]=lon
+                      originPosition["lat"]=lat
+                    }
                     let destinationId = null;
+                    let destinationPosition={
+                      lon: null,
+                      lat: null
+                    }
+                    function setDestinationPosition(lon, lat){
+                      destinationPosition["lon"]=lon
+                      destinationPosition["lat"]=lat
+                    }
 
                     getIdFromName(station["origin"])
-                        .then( (id) => { originId = id.StopLocation[0]["id"]; })
+                        .then( (orinId) => { originId = orinId.StopLocation[0]["id"];
+                                             setOriginPosition(orinId.StopLocation[0]["lon"], orinId.StopLocation[0]["lat"])
+                        })
                         .then( () => {
                             getIdFromName(station["destination"])
-                                .then( (destId) => {destinationId = destId.StopLocation[0]["id"]; })
+                                .then( (destId) => { destinationId = destId.StopLocation[0]["id"];
+                                                     setDestinationPosition(destId.StopLocation[0]["lon"], destId.StopLocation[0]["lat"])
+                                })
                                 .then( () => {
                                     getPlan(originId, destinationId)
                                         .then( (result) => {
@@ -56,10 +78,17 @@ export default function SummaryCardPresenter() {
                                             setLoading(false);
                                         })
                                 })
+                                .then( () =>{
+                                  getWeatherCoordinates(originPosition["lon"], originPosition["lat"])
+                                    .then( (data) => {
+                                      setOriWeatherInfo(data)
+                                    })
+                                  getWeatherCoordinates(destinationPosition["lon"], destinationPosition["lat"])
+                                    .then( (data) => {
+                                      setDesWeatherInfo(data)
+                                    })
+                                })
                         })
-                    getWeather("Kista")
-                      .then( (data) => console.log(data))
-                      .catch( (error) => console.log(error))
                 })
         })
     }, [navigate, params.id])
@@ -81,6 +110,8 @@ export default function SummaryCardPresenter() {
             <SummaryCard
                 key={title}
                 data={note}
+                oriWeatherData={oriWeatherInfo}
+                desWeatherData={desWeatherInfo}
                 title={title}
                 body={body}
             />

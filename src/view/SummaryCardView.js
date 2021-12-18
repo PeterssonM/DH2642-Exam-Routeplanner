@@ -1,7 +1,7 @@
 import React from 'react'
 import "./SummaryCard.css"
 
-export default function SummaryCardView({data, title, body}) {
+export default function SummaryCardView({data, oriWeatherData, desWeatherData, title, body}) {
 
     return (
         <div className="cardContainer" key={title}>
@@ -29,7 +29,7 @@ export default function SummaryCardView({data, title, body}) {
                                                             <td>{station.name}</td>
                                                             <td className= {"fas fa-arrow-down fa-1g"}></td>
                                                         </tr>
-                                                    )   
+                                                    )
                                                 })}
                                             </tbody>
                                         </table>
@@ -38,6 +38,14 @@ export default function SummaryCardView({data, title, body}) {
                             })}
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="weatherInfo">
+                <div className="oriWeather">
+                    <span>{oriWeatherData.main["temp"]}</span>
+                </div>
+                <div className="desWeather">
+                    <span>{desWeatherData.main["temp"]}</span>
                 </div>
             </div>
         </div>

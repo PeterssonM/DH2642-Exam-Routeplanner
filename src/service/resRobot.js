@@ -21,7 +21,9 @@ export function findByName(input) {
 }
 
 
-
+/**
+ * Returns all data related to a station.
+*/
 export function getIdFromName(input) {
     let url = "https://api.resrobot.se/v2/location.name?" + "key=" + RES_ROBOT_API_KEY + "&input=" + input + "&format=json"
 
