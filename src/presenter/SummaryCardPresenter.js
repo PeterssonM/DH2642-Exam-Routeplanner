@@ -52,6 +52,7 @@ export default function SummaryCardPresenter() {
                       originPosition["lon"]=lon
                       originPosition["lat"]=lat
                     }
+                    
                     let destinationId = null;
                     let destinationPosition={
                       lon: null,
