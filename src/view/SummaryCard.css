@@ -9,11 +9,11 @@
     margin-bottom: 50px;
     border-radius: 25px;
     font-family: 'Lato';
-  }
+}
 
-  .summaryTitleContainer{
+.summaryTitleContainer{
     padding-top: 10px;
-    padding-bottom: 0px;
+    margin-bottom: 0px;
     border-top-color: #596d80;
     border-bottom-color: #01070c;
     font-weight:bold;
@@ -23,80 +23,95 @@
     border-left-width: 1px;
     border-right-width: 1px;
     border-radius: 25px;
-  }
+}
 
-  .routeTableContainer {
-    border: #01070c;
-    border-left-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 0px;
-    padding-bottom: 50px;
+.routeTableContainer {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    border-style: solid;
-    border-color: #596d80;
-    border-radius: 0px;
-  }
+}
 
-  .travelData {
+.travelData {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-  }
+}
 
-  .travelTitle {
+.cardSubTitle {
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     font-size: 25px;
     font-weight: bolder;
-  }
+    border-bottom-style: solid;
+    border-color: #596d80;
+}
 
-  .travelTowardsTitle{
+.travelTowardsTitle{
     font-size: 20px;
     font-weight: bold;
-  }
+}
 
-  .tableWidthFix {
+.tableWidthFix {
     width: 100%;
-  }
-
-  .tableBoarder {
-    border: #01070c;
-    border-style: solid;
-  }
-
-  HEAD
-  tr:nth-child(n) {background: #6c7b8a}
-  tr:nth-child(2n) {background: #b1c9e2}
+}
+.tableBoarder {
+    width: 800px;
+}
 
 
-  /*This is in the presenter*/
-  .loadingAnimation {
+.tableWidthFix tr:nth-child(n) {background: none}
+.tableWidthFix tr:nth-child(2n) {background: #b1c9e2}
+
+/*WEATHER FORECAST*/
+.weatherInfo{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: none;
+}
+.stationWeather{}
+.temperature{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+/*This is in the presenter*/
+.loadingAnimation {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 400px;
-  }
+}
 
 
   /*TABLETS*/
   @media screen and (max-width: 820px) {
-    .cardContainer{ 
+    .cardContainer{
+      width: 500px;
+    }
+    .tableBoarder {
       width: 500px;
     }
   }
-      
+
   /*ANDROIDS*/
-  @media screen and (max-width: 480px) {
-    .cardContainer{ 
+  @media screen and (max-width: 510px) {
+    .cardContainer{
       width: 400px;
+    }
+    .tableBoarder {
+        width: 400px;
     }
   }
 
     /*ANDROIDS*/
   @media screen and (max-width: 400px) {
-    .cardContainer{ 
+    .cardContainer{
       width: 300px;
+    }
+    .tableBoarder {
+        width: 300px;
     }
   }

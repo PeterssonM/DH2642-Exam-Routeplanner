@@ -18,7 +18,7 @@ export default function Header({signout, showSearchBar, filterNotes, email, home
         return (
             <div className="accountIcon">
                 <i className= {icon}/>
-                <h3 className="iconTitle">{title}</h3>
+                <h3 className="accountTitle">{title}</h3>
             </div>
         )
     }

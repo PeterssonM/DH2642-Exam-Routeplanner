@@ -8,9 +8,10 @@ export default function SummaryCardView({data, oriWeatherData, desWeatherData, t
             <div className="summaryTitleContainer">
                 <h2>{title}</h2>
             </div>
+            <div className="cardSubTitle">Selfmade note</div>
             <div className="textContainer" dangerouslySetInnerHTML={{__html: body}}>
             </div>
-            <div className="travelTitle">Here's the travel path</div>
+            <div className="cardSubTitle">Here's the travel path</div>
             <div className="routePlannerContainer">
                 <div className="routeTableContainer">
                     <div className="travelData">
@@ -40,14 +41,24 @@ export default function SummaryCardView({data, oriWeatherData, desWeatherData, t
                     </div>
                 </div>
             </div>
-            <div className="weatherInfo">
-                <div className="oriWeather">
-                    <span>{oriWeatherData.main["temp"]}</span>
-                </div>
-                <div className="desWeather">
-                    <span>{desWeatherData.main["temp"]}</span>
-                </div>
-            </div>
+            <div className="cardSubTitle">Weather forcast</div>
+            <table className="weatherInfo">
+                <tbody>
+                    <tr>
+                        <td className="stationWeather">{data.stops[0].stops.Stop[0]["name"]}</td>
+                        <td className="stationWeather">{data.stops[data.stops["length"]-1].stops.Stop[data.stops[1].stops.Stop["length"]-1]["name"]}</td>
+                    </tr>
+                    <tr>
+                        <td className="temperature">{oriWeatherData.main["temp"]} ℃</td>
+                        <td className="temperature">{desWeatherData.main["temp"]} ℃</td>
+                    </tr>
+                    <tr>
+                    {console.log(oriWeatherData)}
+                        <td className="weatherDescription">{oriWeatherData.weather[0]["main"]}</td>
+                        <td className="weatherDescription">{desWeatherData.weather[0]["main"]}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     )
 }

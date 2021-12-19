@@ -7,9 +7,7 @@
     margin: 10px;
 }
 .headerButtons:hover { color: black; }
-.iconTitle{
-
-}
+.iconTitle{}
 .accountIcon {
     display: flex;
     flex-direction: column;
@@ -20,6 +18,7 @@
     margin-right: 5px;
 }
 .accountIcon:hover { color: none; }
+.accountTitle{}
 
 /*BIG SCREENS*/
 .big{
@@ -186,7 +185,7 @@
 
 
 @media screen and (max-width: 1450px){
-  .iconTitle{
+  .accountTitle{
       text-overflow:ellipsis;
       width: 100px;
       overflow: hidden;
@@ -208,7 +207,7 @@
     .small{
       visibility: visible;
     }
-    .iconTitle{
+    .accountTitle{
         text-overflow:ellipsis;
         width: 100%;
         overflow: hidden;
@@ -230,7 +229,7 @@
 }
 
 @media screen and (max-width: 1000px){
-  .iconTitle{
+  .accountTitle{
     width: 100px;
   }
   .headerTitle{
@@ -254,8 +253,8 @@
     .headerTitle{
       font-size: 1.2em;
     }
-    .iconTitle{
-        width: 50px;
+    .accountTitle{
+        width: 60px;
     }
     .accountIcon{
     }
