@@ -41,13 +41,9 @@ export default function Header({signout, showSearchBar, filterNotes, email, home
                         <span className="headerTitle">Tenta Schedueler</span>
                     </div>
                     <div className="right-headerContainer">
-                        <Link to='/home' style={{ textDecoration: 'none' }}>
-                            <HeaderButtons icon={"fas fa-home fa-1g"} title="Home"/>
-                        </Link>
+                        <HeaderButtons icon={"fas fa-home fa-1g"} title="Home" onClick={home}/>
                         <AccountIcon className="accountIcon" icon={"fas fa-user fa-1g"} title={email}/>
-                        <Link to='/signin' style={{ textDecoration: 'none' }}>
-                            <HeaderButtons className="homeButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
-                        </Link>
+                        <HeaderButtons className="homeButton" icon={"fas fa-sign-out-alt fa-1g"} title="Sign Out" onClick={signout}/>
                     </div>
                 </div>
             </div>

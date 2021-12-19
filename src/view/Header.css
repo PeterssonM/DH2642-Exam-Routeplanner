@@ -22,7 +22,7 @@
 
 /*BIG SCREENS*/
 .big{
-  visibility: visible;
+    visibility: visible;
 }
 /*MAIN HEADER*/
 .headerContainer {
@@ -130,29 +130,29 @@
 
 /*SMALL SCREENS*/
 .small{
-  visibility: hidden;
+    visibility: hidden;
 }
 /*MAIN HEADER*/
 .headerSmallContianer{
-  position: absolute;
-  top: 0%;
-  width: 100%;
+    position: absolute;
+    top: 0%;
+    width: 100%;
 }
 /*UPPER HEADER CONTAINER*/
 .headerUpperContainer{
-  display: flex;
-  flex-flow: nowrap;
-  justify-content: space-between;
-  align-content: center;
-  border-bottom: 0.2px solid lightgray;
-  background-color: lightblue;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    border-bottom: 0.2px solid lightgray;
+    background-color: lightblue;
 }
 .left_headerContainer{
 
 }
 .right_headerContainer{
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 /*LOWER HEADER CONTAINER*/
 .headerLowerContainer{}
@@ -202,10 +202,10 @@
 /*New website layout*/
 @media screen and (max-width: 1280px) {
     .big{
-      visibility: hidden;
+        visibility: hidden;
     }
     .small{
-      visibility: visible;
+        visibility: visible;
     }
     .accountTitle{
         text-overflow:ellipsis;
@@ -229,12 +229,16 @@
 }
 
 @media screen and (max-width: 1000px){
+<<<<<<< HEAD
   .accountTitle{
+=======
+    .iconTitle{
+>>>>>>> 4008277845d2df6fe1cca927eed9ea6da68fe6b9
     width: 100px;
-  }
-  .headerTitle{
+    }
+    .headerTitle{
     font-size: 2em;
-  }
+    }
 }
 @media screen and (max-width: 510px) {
     .headerTitle {
@@ -251,7 +255,7 @@
 }
 @media screen and (max-width: 450px){
     .headerTitle{
-      font-size: 1.2em;
+    font-size: 1.2em;
     }
     .accountTitle{
         width: 60px;
@@ -261,6 +265,6 @@
 }
 @media screen and (max-width: 300px){
     .headerTitle{
-      font-size: 0.8em;
+    font-size: 0.8em;
     }
 }
