@@ -41,7 +41,7 @@ export default function SummaryCardView({data, oriWeatherData, desWeatherData, t
                     </div>
                 </div>
             </div>
-            <div className="cardSubTitle">Weather forcast</div>
+            <div className="cardSubTitle">Weather forecast</div>
             <table className="weatherInfo">
                 <tbody>
                     <tr>
