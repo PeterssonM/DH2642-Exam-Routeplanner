@@ -49,7 +49,7 @@ export default function EditPagePresenter() {
         let o = "";
         let d = "";
 
-        if (originRef.current === undefined || destinationRef.current === undefined || bodyRef.current === undefined || titleRef.current.value === "") {
+        if (originRef.current.value === "" || destinationRef.current.value === "" || bodyRef.current === undefined || titleRef.current.value === "") {
             return setMessage({
                 type: "red", 
                 msg: "You missed some parts"
