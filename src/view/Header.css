@@ -229,16 +229,13 @@
 }
 
 @media screen and (max-width: 1000px){
-<<<<<<< HEAD
+
   .accountTitle{
-=======
-    .iconTitle{
->>>>>>> 4008277845d2df6fe1cca927eed9ea6da68fe6b9
     width: 100px;
-    }
-    .headerTitle{
+  }
+  .headerTitle{
     font-size: 2em;
-    }
+  }
 }
 @media screen and (max-width: 510px) {
     .headerTitle {
