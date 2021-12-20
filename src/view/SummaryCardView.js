@@ -46,7 +46,7 @@ export default function SummaryCardView({data, oriWeatherData, desWeatherData, t
                 <tbody>
                     <tr>
                         <td className="stationWeather">{data.stops[0].stops.Stop[0].name}</td>
-                        <td className="stationWeather">{data.stops[data.stops["length"]-1].stops.Stop[data.stops[1].stops.Stop["length"]-1]["name"]}</td>
+                        <td className="stationWeather">{data.stops[data.stops["length"]-1].stops.Stop[data.stops[data.stops["length"]-1].stops.Stop["length"]-1]["name"]}</td>
                     </tr>
                     <tr>
                         <td className="temperature">{Number(oriWeatherData.main["temp"].toFixed(0))} ℃</td>

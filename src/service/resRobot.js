@@ -70,8 +70,6 @@ export function getPlan(origin, destination) {
                 }
             })
 
-            console.log(result);
-
             return resolve(result);
         })
         .catch( (error) => { alert(error); })
